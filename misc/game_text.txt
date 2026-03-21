@@ -5,7 +5,7 @@ aughh.... I am fine.....
 What was that? My life is quote-on-quote "on the edge"?
 Crikey Criminy! Such a vulgur *cough* statement! I am perfectly fine!
 I just need some of my famous life edging elixir, that's all...
-Raisins... I think some of those young'uns over in those other parts have the 3 ingredients needed to make it...
+Raisins... I think some of those young'uns over in those other parts have the 3-4 ingredients needed to make it...
 Be a good dearie and get them for me, will you?
 {I will get you your medication grandma-chan!!`grandma yes
 {Erm, sorry grandma-senpai... What were the ingredients again!???`grandma ingredients
@@ -63,7 +63,7 @@ Ahh... well, I am truly sorry...
 I've heard there's a grandma living back where you came from... perhaps you could confer with her?
 
 }not in the way
-That is wonderful! Have a nice day!
+This is wonderful news! Have a nice day!
 
 }killed by bee
 *bleeuughhhhh*
@@ -90,3 +90,9 @@ NUH UH I WILL NOT EVER NUH UH DIEEE!!!!!!!!
 }mask
 Wow... your life sounds so edgy...
 Infact, you seem like a worthy competitor for my edge! DIEE!!
+
+}flowery
+Howdy! I'm FLOWERY. FLOWERY the FLOWER!
+Hmmm... You're new to the Edge, aren'tcha?
+What? You live here?
+My mistake for assuming... Good luck with whatever you are doing! 

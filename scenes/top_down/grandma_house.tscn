@@ -172,7 +172,7 @@ dialogue = "press z"
 
 [node name="area_transition" parent="everything else" unique_id=1546945762 node_paths=PackedStringArray("camera_node") instance=ExtResource("8_6n4y5")]
 position = Vector2(370, 1173)
-new_area_scene_path = "top_down/waterfront"
+new_area_scene_path = "top_down/tutorial"
 camera_node = NodePath("../../Camera2D")
 new_player_position = Vector2(367, 211)
 
@@ -181,7 +181,7 @@ shape = SubResource("RectangleShape2D_itkox")
 
 [node name="area_transition2" parent="everything else" unique_id=1552557158 node_paths=PackedStringArray("camera_node") instance=ExtResource("8_6n4y5")]
 position = Vector2(370, 1002)
-new_area_scene_path = "top_down/waterfront"
+new_area_scene_path = "top_down/tutorial"
 camera_node = NodePath("../../Camera2D")
 new_player_position = Vector2(4470, -1370)
 

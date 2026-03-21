@@ -183,7 +183,7 @@ position = Vector2(2152, 361)
 dialogue = "in the way"
 
 [node name="npc4" parent="everything else" unique_id=1514651885 instance=ExtResource("5_3dnpt")]
-position = Vector2(3429, 535)
+position = Vector2(3806, 579)
 dialogue = "killed by bee"
 
 [node name="npc5" parent="everything else" unique_id=32069537 instance=ExtResource("5_3dnpt")]
@@ -193,6 +193,10 @@ dialogue = "killed by bee"
 [node name="npc6" parent="everything else" unique_id=2001180353 instance=ExtResource("5_3dnpt")]
 position = Vector2(4372, 48)
 dialogue = "killed by bee"
+
+[node name="npc7" parent="everything else" unique_id=1062025436 instance=ExtResource("5_3dnpt")]
+position = Vector2(3661, 579)
+dialogue = "flowery"
 
 [node name="bee" type="Area2D" parent="everything else" unique_id=1767891003]
 position = Vector2(4473, -1636)
