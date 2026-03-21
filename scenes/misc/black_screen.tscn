@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d3uq77p2gy6fw"]
+
+[sub_resource type="Gradient" id="Gradient_1v31t"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2kyxk"]
+gradient = SubResource("Gradient_1v31t")
+
+[node name="black_screen" type="Node2D" unique_id=1018320160]
+modulate = Color(0, 0, 0, 1)
+z_index = 4096
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=580433353]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1.000061, 1.000061)
+scale = Vector2(42.114697, 7074.2236)
+texture = SubResource("GradientTexture1D_2kyxk")

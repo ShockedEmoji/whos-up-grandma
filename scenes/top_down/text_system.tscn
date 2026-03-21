@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://xfbcm44i0sxi"]
+
+[ext_resource type="Script" uid="uid://qftnmh2giaty" path="res://scripts/text_system.gd" id="1_vk3ua"]
+[ext_resource type="Texture2D" uid="uid://bv8ww44r5vd5k" path="res://sprites/dialongboxplayceholde.png" id="2_dsw6c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enyge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dsw6c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="text_system" type="Node2D" unique_id=702931713]
+z_index = 1
+script = ExtResource("1_vk3ua")
+
+[node name="box" type="Node2D" parent="." unique_id=1400723878]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="box" unique_id=982123491]
+position = Vector2(588, 509)
+scale = Vector2(3.6466668, 1.5584418)
+sprite_frames = SubResource("SpriteFrames_enyge")
+
+[node name="Label" type="Label" parent="box" unique_id=737820401]
+offset_left = 119.0
+offset_top = 447.0
+offset_right = 1021.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "hello yay"
+
+[node name="options_box" type="BoxContainer" parent="." unique_id=82188209]
+offset_left = 758.0
+offset_top = 16.0
+offset_right = 1117.0
+offset_bottom = 324.0
+vertical = true

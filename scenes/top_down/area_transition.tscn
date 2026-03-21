@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dq0yltl1yj71i"]
+
+[ext_resource type="Script" uid="uid://b37vy8ut1x2s1" path="res://scripts/area_transition.gd" id="1_oroh2"]
+
+[node name="area_transition" type="Area2D" unique_id=1546945762]
+collision_layer = 2
+script = ExtResource("1_oroh2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://d0gly6uwhdpqx"]
+
+[ext_resource type="Script" uid="uid://dndihc8v5q8tw" path="res://scripts/settings.gd" id="1_dxr1k"]
+[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="2_37860"]
+[ext_resource type="Texture2D" uid="uid://ds5vmicvhnpn7" path="res://sprites/stupid/maid.jpg" id="3_37860"]
+
+[sub_resource type="Animation" id="Animation_6wm04"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("parent:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1109, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r6d6q"]
+resource_name = "slide_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("parent:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.18946461, 1),
+"update": 0,
+"values": [Vector2(1109, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dxr1k"]
+resource_name = "slide_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("parent:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.15931998, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1109, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4mfi"]
+_data = {
+&"RESET": SubResource("Animation_6wm04"),
+&"slide_in": SubResource("Animation_r6d6q"),
+&"slide_out": SubResource("Animation_dxr1k")
+}
+
+[node name="settings" type="Node2D" unique_id=1374721479]
+z_index = 3
+script = ExtResource("1_dxr1k")
+
+[node name="parent" type="Node2D" parent="." unique_id=532683825]
+position = Vector2(1109, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="parent" unique_id=1509062798]
+position = Vector2(1084.0762, 153.94763)
+scale = Vector2(2.844941, 0.65543187)
+texture = ExtResource("2_37860")
+
+[node name="Sprite2D3" type="Sprite2D" parent="parent" unique_id=589279700]
+position = Vector2(1084.0762, 490.94763)
+scale = Vector2(2.844941, 0.65543187)
+texture = ExtResource("2_37860")
+
+[node name="Sprite2D" type="Sprite2D" parent="parent/Sprite2D3" unique_id=1797442786]
+position = Vector2(-178.58937, -257.7653)
+scale = Vector2(2.586829, 6.3174005)
+texture = ExtResource("2_37860")
+
+[node name="master_slider" type="HSlider" parent="parent" unique_id=1472447864]
+offset_left = 475.31067
+offset_top = 182.0
+offset_right = 792.31067
+offset_bottom = 198.0
+value = 2.0
+
+[node name="music_slider" type="HSlider" parent="parent" unique_id=1419905602]
+offset_left = 547.31067
+offset_top = 226.0
+offset_right = 792.31067
+offset_bottom = 242.0
+value = 2.0
+
+[node name="sound_slider" type="HSlider" parent="parent" unique_id=514138916]
+offset_left = 547.31067
+offset_top = 258.0
+offset_right = 792.31067
+offset_bottom = 274.0
+value = 2.0
+
+[node name="Label" type="Label" parent="parent" unique_id=547418612]
+offset_left = 456.31055
+offset_top = 166.0
+offset_right = 691.31055
+offset_bottom = 189.0
+rotation = 0.7179258
+scale = Vector2(0.6848677, 1.2763165)
+text = "MASTER     MUSIC     SOUNDqw"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="parent" unique_id=523895333]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_f4mfi")
+autoplay = &"slide_in"
+
+[node name="leave" type="Button" parent="parent" unique_id=172470547]
+offset_left = 850.0
+offset_top = 107.0
+offset_right = 958.0
+offset_bottom = 165.0
+text = "XXXXXXXXXX"
+
+[node name="Maid" type="Sprite2D" parent="parent" unique_id=1634412811]
+texture_filter = 1
+position = Vector2(582, 470)
+scale = Vector2(0.101938725, 0.021938734)
+texture = ExtResource("3_37860")
+
+[node name="delete" type="VSlider" parent="parent" unique_id=789620055]
+offset_left = 168.0
+offset_top = 125.0
+offset_right = 184.0
+offset_bottom = 518.0
+
+[node name="Label2" type="Label" parent="parent" unique_id=158190504]
+offset_left = 220.00002
+offset_top = 119.00003
+offset_right = 455.0
+offset_bottom = 142.00003
+rotation = 1.5707964
+scale = Vector2(1.6448678, 1.2763165)
+text = "Bumpscosity"

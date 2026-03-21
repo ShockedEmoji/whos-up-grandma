@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cgccoiie6g1d1"]
+
+[ext_resource type="Script" uid="uid://b11r4ipfu3lx6" path="res://scripts/option_selector.gd" id="1_m6fmr"]
+[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="1_y4rpo"]
+
+[node name="option_selector" type="Node2D" unique_id=878186361]
+script = ExtResource("1_m6fmr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2110130805]
+scale = Vector2(0.484375, 1.015625)
+texture = ExtResource("1_y4rpo")

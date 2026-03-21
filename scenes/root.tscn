@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2lpyj70ogi8c"]
+
+[ext_resource type="Script" uid="uid://xqmm7emwfahx" path="res://scripts/root.gd" id="1_j5px3"]
+
+[node name="root" type="Node2D" unique_id=349814300]
+script = ExtResource("1_j5px3")
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1516381879]
+
+[node name="sounds" type="AudioStreamPlayer" parent="." unique_id=1406954944]
+max_polyphony = 50
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2023451612]
+position = Vector2(576, 324)
+enabled = false
