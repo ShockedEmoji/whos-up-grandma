@@ -1,20 +1,3 @@
-}test npc
-Hi i am the test npc yayyyy
-TEST  2 TEST 2 TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
-test 2
-
-}npc test 2
-hi I am mr npc cool 2 wowee Im so hot
-{yes you are hot`hot
-{no you are cold`cold
-
-}hot
-thank you yes I am such a sexy beast mwah mwah
-{no you are cold`cold
-
-}cold
-wahhhh why are you so mean :sob:
-
 }grandma
 *cough cough wheeze*
 I am sorry, my child...
@@ -43,3 +26,67 @@ bye bye my little sweet bread roll!!
 Hello pretend I look like a recipe
 ~~ life edging elixir recipe ~~
 - 1 green Herb|- 1 bundle shredded bracken leaves|- 1 buttercuppy|- 1 pepperoni spaggetthi
+
+}npc 1
+hewwoo~~~! im joe-chan, your gwandmas cat-nya!!
+i LUV LUV LUV dog food-nya!
+evir since we werre outcwasted to the edje of societwy, life hass been wather harsh-nya!!!
+UWU... i fear that my lwife mwight also be on the edge-nya!
+but.... i hav hope!! joe-chan wiwll prevail-nya!!
+
+}scared wasp
+uwawawa..... I heard a rumor about a scary bee near here....
+What, me? No, I'm not the bee!
+I'm a wasp, stupid.
+
+}press z
+Press Z to interact with 'people'!
+
+}in the way
+I love this spot.
+Sitting here, watching all the comedic little gremlins run by.
+Oh, sorry, am I in your way?
+{yes`in the way 2
+{no`not in the way
+
+}in the way 2
+Ahh, I do apologize...
+Could you, perhaps... walk around me?
+{yes`walk around
+{no`turn back
+
+}walk around
+Well, hooray! That sounds like a wonderful plan!
+
+}turn back
+Ahh... well, I am truly sorry...
+I've heard there's a grandma living back where you came from... perhaps you could confer with her?
+
+}not in the way
+That is wonderful! Have a nice day!
+
+}killed by bee
+*bleeuughhhhh*
+
+}bee intro
+GRRRR GOD DAMN THIS FLOWERING EXILATION
+I HATE LIVING ON THE EDGE OF SOCIETY... THEY HAVE ALL THE GOOD FLOWERS!! ALL I HAVE ARE THESE ICKY, GROSS DISGUSTING SALASPLANTS!!!!!
+WAIT... THIS ISN'T A SALASPLANT.... WHAT ARE YOU???
+{I am a salasplant`salasplant
+{Hello!! nya~ do you have the recipe for the medicine my grandmother requires??`bee medicine
+{I am worthless... I wear a mask with a smile for hours at a time...`mask
+
+}salasplant
+Oh ok I will polinate you now
+
+}bee medicine
+hmm I might.... BUT I'M NOT GIVING IT TO YOU!!
+{give it please`bee beg
+
+}bee beg
+Oh ok thank you for asking so nicely!!!! I love it when people do their best to avoid conflict&
+NUH UH I WILL NOT EVER NUH UH DIEEE!!!!!!!!
+
+}mask
+Wow... your life sounds so edgy...
+Infact, you seem like a worthy competitor for my edge! DIEE!!

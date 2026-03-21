@@ -12,6 +12,13 @@ var post_transition_player_pos: Vector2 = Vector2.ZERO
 
 var rng = RandomNumberGenerator.new()
 
+
+
+var bee_triggered: bool = false
+
+
+
+
 func _rand(extra_thing: String):
 	rng.seed = hash(seed_sauce + extra_thing)
 	

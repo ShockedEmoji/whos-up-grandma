@@ -168,10 +168,10 @@ dialogue = "grandma"
 position = Vector2(582, 293)
 animation = &"idle"
 frame_progress = 0.0
-dialogue = "recipe"
+dialogue = "press z"
 
 [node name="area_transition" parent="everything else" unique_id=1546945762 node_paths=PackedStringArray("camera_node") instance=ExtResource("8_6n4y5")]
-position = Vector2(370, 1002)
+position = Vector2(370, 1173)
 new_area_scene_path = "top_down/waterfront"
 camera_node = NodePath("../../Camera2D")
 new_player_position = Vector2(367, 211)
@@ -179,12 +179,21 @@ new_player_position = Vector2(367, 211)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition" unique_id=1624499319]
 shape = SubResource("RectangleShape2D_itkox")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_I_following")]
+[node name="area_transition2" parent="everything else" unique_id=1552557158 node_paths=PackedStringArray("camera_node") instance=ExtResource("8_6n4y5")]
+position = Vector2(370, 1002)
+new_area_scene_path = "top_down/waterfront"
+camera_node = NodePath("../../Camera2D")
+new_player_position = Vector2(4470, -1370)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition2" unique_id=1697773567]
+shape = SubResource("RectangleShape2D_itkox")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
 zoom = Vector2(0.9, 0.9)
 position_smoothing_speed = 3.355
 script = ExtResource("6_mtajo")
-what_am_I_following = NodePath("../everything else/player")
+what_am_i_following = NodePath("../everything else/player")
 
 [node name="text_system" parent="Camera2D" unique_id=702931713 instance=ExtResource("7_77yx0")]
 position = Vector2(-576, -328)

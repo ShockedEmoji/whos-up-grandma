@@ -95,6 +95,7 @@ func _say_dialogue(title_name: String):
 				DATA.player_frozen = false
 			
 			$"../.."._shut_up_npc()
+			$"../..".dialogue_finished.emit()
 			
 			box.visible = false
 
