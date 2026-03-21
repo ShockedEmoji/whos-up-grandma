@@ -196,6 +196,8 @@ dialogue = "killed by bee"
 
 [node name="npc7" parent="everything else" unique_id=1062025436 instance=ExtResource("5_3dnpt")]
 position = Vector2(3661, 579)
+frame = 1
+frame_progress = 0.7966499
 dialogue = "flowery"
 
 [node name="bee" type="Area2D" parent="everything else" unique_id=1767891003]

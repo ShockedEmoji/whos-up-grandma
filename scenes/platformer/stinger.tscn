@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dl4ujoy2meqtm"]
+
+[ext_resource type="Script" uid="uid://ctr7i6mqdmkxb" path="res://scripts/stinger.gd" id="1_hvt0q"]
+[ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="2_tfy80"]
+
+[node name="stinger" type="Node2D" unique_id=1247190128]
+script = ExtResource("1_hvt0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393062688]
+position = Vector2(-14, 93)
+scale = Vector2(0.78443974, 0.78443974)
+texture = ExtResource("2_tfy80")
+hframes = 4
+vframes = 3
+frame = 3

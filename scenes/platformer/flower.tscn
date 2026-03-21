@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ckeig7geaqv2a"]
+
+[ext_resource type="Script" uid="uid://hoiwd4uq0503" path="res://scripts/flower.gd" id="1_nycw5"]
+[ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="1_oxb3c"]
+
+[node name="flower" type="Node2D" unique_id=1247190128]
+script = ExtResource("1_nycw5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393062688]
+position = Vector2(26, -36)
+scale = Vector2(0.78443974, 0.78443974)
+texture = ExtResource("1_oxb3c")
+hframes = 4
+vframes = 3
+frame = 10

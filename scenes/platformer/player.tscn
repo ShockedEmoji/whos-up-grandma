@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://brckbc30k8m3f"]
+
+[ext_resource type="Script" uid="uid://nwdo3gu7mmoc" path="res://scripts/plat_player.gd" id="1_8l6at"]
+[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="1_ga6tx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4vl06"]
+radius = 28.0
+height = 98.0
+
+[node name="player" type="CharacterBody2D" unique_id=302510047]
+script = ExtResource("1_8l6at")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=909752022]
+shape = SubResource("CapsuleShape2D_4vl06")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=354380495]
+scale = Vector2(0.46875, 0.8231708)
+texture = ExtResource("1_ga6tx")
+
+[node name="coyote" type="Timer" parent="." unique_id=668378778]
+wait_time = 0.3
+one_shot = true
