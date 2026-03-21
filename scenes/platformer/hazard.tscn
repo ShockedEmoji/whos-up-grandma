@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bfbucd0usre1o"]
+
+[ext_resource type="Script" uid="uid://cojfifb4wr2mw" path="res://scripts/hazard.gd" id="1_2o50g"]
+
+[node name="Area2D" type="Area2D" unique_id=261412062]
+script = ExtResource("1_2o50g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

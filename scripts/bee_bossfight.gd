@@ -6,8 +6,23 @@ extends Node2D
 
 const FLOWER = preload("uid://ckeig7geaqv2a")
 const STINGER = preload("uid://dl4ujoy2meqtm")
+@onready var health: AnimatedSprite2D = $health
 
 var idle_count: int = 0
+
+var touching_legal: bool = true
+@onready var animation_player: AnimationPlayer = $Camera2D/AnimationPlayer
+
+func _death():
+	get_tree().paused = true
+	animation_player.play("zoom")
+
+func _reduce_health():
+	if touching_legal:
+		health._reduce_health()
+		touching_legal = false
+		await get_tree().create_timer(1.0).timeout
+		touching_legal = true
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "idle":

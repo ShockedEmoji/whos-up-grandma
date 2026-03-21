@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="2_hw5wm"]
 [ext_resource type="PackedScene" uid="uid://brckbc30k8m3f" path="res://scenes/platformer/player.tscn" id="4_s6qv4"]
 [ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="5_12yx4"]
+[ext_resource type="Texture2D" uid="uid://dh8y3d14wg43v" path="res://sprites/stupidplaceholderrpg.png" id="6_pcyaa"]
+[ext_resource type="Script" uid="uid://bp2s75vnvsuck" path="res://scripts/health.gd" id="7_2vv4f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6qv4"]
 atlas = ExtResource("2_hw5wm")
@@ -268,10 +270,98 @@ size = Vector2(71, 666)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcyaa"]
 size = Vector2(336, 37)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0g8v"]
+atlas = ExtResource("6_pcyaa")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_186kt"]
+atlas = ExtResource("6_pcyaa")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5gj8"]
+atlas = ExtResource("6_pcyaa")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltqqx"]
+atlas = ExtResource("6_pcyaa")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_12yx4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0g8v")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_186kt")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5gj8")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltqqx")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_3mf7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_efkvs"]
+resource_name = "zoom"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35355344, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(3.245, 3.245)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccqoc"]
+_data = {
+&"RESET": SubResource("Animation_3mf7a"),
+&"zoom": SubResource("Animation_efkvs")
+}
+
 [node name="bee_bossfight" type="Node2D" unique_id=1366835008]
 script = ExtResource("1_oi6u1")
 
 [node name="background" type="Sprite2D" parent="." unique_id=820905394]
+z_index = -1
 position = Vector2(576, 324)
 texture = ExtResource("1_h3cgc")
 hframes = 2
@@ -279,6 +369,7 @@ vframes = 2
 frame = 1
 
 [node name="bee" type="Node2D" parent="." unique_id=438975062]
+z_index = 1
 position = Vector2(997, 449)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="bee" unique_id=2018948329]
@@ -304,14 +395,17 @@ frame = 2
 libraries/ = SubResource("AnimationLibrary_pcyaa")
 autoplay = &"bob"
 
-[node name="player" parent="flowers" unique_id=302510047 instance=ExtResource("4_s6qv4")]
-position = Vector2(-243, 210)
-
 [node name="grass" type="Sprite2D" parent="." unique_id=1235101251]
+z_index = 2
 position = Vector2(576, 324)
 texture = ExtResource("1_h3cgc")
 hframes = 2
 vframes = 2
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1763999819]
+position = Vector2(559, 448)
+scale = Vector2(2.7265625, 0.3359375)
+texture = ExtResource("5_12yx4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=329581111]
 
@@ -331,9 +425,22 @@ shape = SubResource("RectangleShape2D_12yx4")
 position = Vector2(560, 449)
 shape = SubResource("RectangleShape2D_pcyaa")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1763999819]
-position = Vector2(562.5, 448)
-scale = Vector2(2.7265625, 0.3359375)
-texture = ExtResource("5_12yx4")
+[node name="health" type="AnimatedSprite2D" parent="." unique_id=2114434786]
+z_index = 4
+position = Vector2(1102, 598)
+sprite_frames = SubResource("SpriteFrames_12yx4")
+animation = &"3"
+autoplay = "3"
+script = ExtResource("7_2vv4f")
+
+[node name="player" parent="." unique_id=302510047 instance=ExtResource("4_s6qv4")]
+position = Vector2(333, 534)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1037330775]
+process_mode = 3
+position = Vector2(576, 324)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=507474310]
+libraries/ = SubResource("AnimationLibrary_ccqoc")
 
 [connection signal="animation_finished" from="bee/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

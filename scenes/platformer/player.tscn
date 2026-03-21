@@ -20,3 +20,7 @@ texture = ExtResource("1_ga6tx")
 [node name="coyote" type="Timer" parent="." unique_id=668378778]
 wait_time = 0.3
 one_shot = true
+
+[node name="variable_jump" type="Timer" parent="." unique_id=335354494]
+wait_time = 0.25
+one_shot = true

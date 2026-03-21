@@ -2,14 +2,23 @@
 
 [ext_resource type="Script" uid="uid://hoiwd4uq0503" path="res://scripts/flower.gd" id="1_nycw5"]
 [ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="1_oxb3c"]
+[ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="3_tkm63"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjpsd"]
+radius = 37.01351
 
 [node name="flower" type="Node2D" unique_id=1247190128]
 script = ExtResource("1_nycw5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393062688]
-position = Vector2(26, -36)
+position = Vector2(17.000002, -28)
 scale = Vector2(0.78443974, 0.78443974)
 texture = ExtResource("1_oxb3c")
 hframes = 4
 vframes = 3
 frame = 10
+
+[node name="Area2D" parent="." unique_id=261412062 instance=ExtResource("3_tkm63")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1787829638]
+shape = SubResource("CircleShape2D_vjpsd")
