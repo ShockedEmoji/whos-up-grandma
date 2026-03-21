@@ -1,227 +1,13 @@
 [gd_scene format=3 uid="uid://bs3xhh3we4ukq"]
 
-[ext_resource type="Texture2D" uid="uid://cbxdmy2c5wti7" path="res://sprites/beearena.png" id="1_h3cgc"]
 [ext_resource type="Script" uid="uid://cxhq0vdatduoo" path="res://scripts/bee_bossfight.gd" id="1_oi6u1"]
-[ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="2_hw5wm"]
+[ext_resource type="PackedScene" uid="uid://jf84fc2mvfng" path="res://scenes/platformer/big_bee.tscn" id="3_3mf7a"]
+[ext_resource type="Texture2D" uid="uid://b3cwhcsfvrki0" path="res://sprites/beearenaremastered.png" id="4_efkvs"]
 [ext_resource type="PackedScene" uid="uid://brckbc30k8m3f" path="res://scenes/platformer/player.tscn" id="4_s6qv4"]
-[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="5_12yx4"]
 [ext_resource type="Texture2D" uid="uid://dh8y3d14wg43v" path="res://sprites/stupidplaceholderrpg.png" id="6_pcyaa"]
 [ext_resource type="Script" uid="uid://bp2s75vnvsuck" path="res://scripts/health.gd" id="7_2vv4f"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s6qv4"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(0, 0, 524, 474)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_12yx4"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(524, 0, 524, 474)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pcyaa"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(1048, 474, 524, 474)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2vv4f"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(524, 474, 524, 474)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ybtv1"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(1048, 0, 524, 474)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3mf7a"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(0, 474, 524, 474)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_efkvs"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(1048, 0, 524, 474)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ccqoc"]
-atlas = ExtResource("2_hw5wm")
-region = Rect2(0, 0, 524, 474)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_h3cgc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s6qv4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_12yx4")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pcyaa")
-}],
-"loop": true,
-"name": &"naked pain",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2vv4f")
-}],
-"loop": true,
-"name": &"pain",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ybtv1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3mf7a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_efkvs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ccqoc")
-}],
-"loop": false,
-"name": &"shoot",
-"speed": 16.0
-}]
-
-[sub_resource type="Animation" id="Animation_oi6u1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(997, 449)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ybtv1"]
-resource_name = "flower"
-length = 8.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.99, 6, 7.99),
-"transitions": PackedFloat32Array(3.0314333, 1, 0.3186402, 1),
-"update": 0,
-"values": [Vector2(997, 449), Vector2(997, -217), Vector2(997, -217), Vector2(997, 449)]
-}
-
-[sub_resource type="Animation" id="Animation_hw5wm"]
-resource_name = "idle"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(997, 449), Vector2(997, 428), Vector2(997, 449)]
-}
-
-[sub_resource type="Animation" id="Animation_pcyaa"]
-resource_name = "spit"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0333333, 1.2666667, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(997, 449), Vector2(1119, 449), Vector2(1119, 449), Vector2(997, 449)]
-}
-
-[sub_resource type="Animation" id="Animation_2vv4f"]
-resource_name = "stinger"
-length = 2.3
-capture_included = true
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.56666666, 1.9, 2.29),
-"transitions": PackedFloat32Array(0.36602208, 1, 1, 1),
-"update": 2,
-"values": [0.0, 3.1415927, 3.1415927, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.4, 1.4666666, 1.5333333, 2.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(997, 449), Vector2(1044, 326.68), Vector2(973, 326), Vector2(1044, 326), Vector2(997, 449)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath(".:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.55, 1.91, 2.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_oi6u1"]
-_data = {
-&"RESET": SubResource("Animation_oi6u1"),
-&"flower": SubResource("Animation_ybtv1"),
-&"idle": SubResource("Animation_hw5wm"),
-&"spit": SubResource("Animation_pcyaa"),
-&"stinger": SubResource("Animation_2vv4f")
-}
+[ext_resource type="Script" uid="uid://bw3dap77t5fbv" path="res://scripts/death_camera_2d.gd" id="9_3mf7a"]
+[ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="10_efkvs"]
 
 [sub_resource type="Animation" id="Animation_s6qv4"]
 length = 0.001
@@ -268,7 +54,7 @@ size = Vector2(1250, 56)
 size = Vector2(71, 666)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcyaa"]
-size = Vector2(336, 37)
+size = Vector2(386, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0g8v"]
 atlas = ExtResource("6_pcyaa")
@@ -363,33 +149,20 @@ script = ExtResource("1_oi6u1")
 [node name="background" type="Sprite2D" parent="." unique_id=820905394]
 z_index = -1
 position = Vector2(576, 324)
-texture = ExtResource("1_h3cgc")
-hframes = 2
-vframes = 2
-frame = 1
-
-[node name="bee" type="Node2D" parent="." unique_id=438975062]
-z_index = 1
-position = Vector2(997, 449)
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="bee" unique_id=2018948329]
-position = Vector2(29, -24)
-sprite_frames = SubResource("SpriteFrames_h3cgc")
-animation = &"shoot"
-autoplay = "idle"
-frame = 3
-frame_progress = 1.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="bee" unique_id=1685941590]
-libraries/ = SubResource("AnimationLibrary_oi6u1")
-autoplay = &"idle"
-
-[node name="flowers" type="Sprite2D" parent="." unique_id=1900918938]
-position = Vector2(576, 324)
-texture = ExtResource("1_h3cgc")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_efkvs")
 hframes = 2
 vframes = 2
 frame = 2
+
+[node name="bee" parent="." unique_id=56333617 instance=ExtResource("3_3mf7a")]
+
+[node name="flowers" type="Sprite2D" parent="." unique_id=1900918938]
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_efkvs")
+hframes = 2
+vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="flowers" unique_id=1954183640]
 libraries/ = SubResource("AnimationLibrary_pcyaa")
@@ -398,14 +171,11 @@ autoplay = &"bob"
 [node name="grass" type="Sprite2D" parent="." unique_id=1235101251]
 z_index = 2
 position = Vector2(576, 324)
-texture = ExtResource("1_h3cgc")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_efkvs")
 hframes = 2
 vframes = 2
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1763999819]
-position = Vector2(559, 448)
-scale = Vector2(2.7265625, 0.3359375)
-texture = ExtResource("5_12yx4")
+frame = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=329581111]
 
@@ -422,7 +192,7 @@ position = Vector2(1140, 323)
 shape = SubResource("RectangleShape2D_12yx4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=958692935]
-position = Vector2(560, 449)
+position = Vector2(580, 433)
 shape = SubResource("RectangleShape2D_pcyaa")
 
 [node name="health" type="AnimatedSprite2D" parent="." unique_id=2114434786]
@@ -439,8 +209,11 @@ position = Vector2(333, 534)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1037330775]
 process_mode = 3
 position = Vector2(576, 324)
+script = ExtResource("9_3mf7a")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=507474310]
 libraries/ = SubResource("AnimationLibrary_ccqoc")
 
-[connection signal="animation_finished" from="bee/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[node name="text_system" type="Node2D" parent="." unique_id=2131457891]
+
+[node name="text_system" parent="text_system" unique_id=702931713 instance=ExtResource("10_efkvs")]

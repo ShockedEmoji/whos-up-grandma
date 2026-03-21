@@ -6,6 +6,8 @@ extends Node2D
 
 const FLOWER = preload("uid://ckeig7geaqv2a")
 const STINGER = preload("uid://dl4ujoy2meqtm")
+const GOOP = preload("uid://3071pwnomwdy")
+
 @onready var health: AnimatedSprite2D = $health
 
 var idle_count: int = 0
@@ -13,9 +15,18 @@ var idle_count: int = 0
 var touching_legal: bool = true
 @onready var animation_player: AnimationPlayer = $Camera2D/AnimationPlayer
 
+@onready var camera_2d: Camera2D = $Camera2D
+
+func _ready() -> void:
+	await text_system._say_dialogue("bee fight intro")
+	
+	bee_anim_player.animation_finished.connect(_on_animation_player_animation_finished)
+	
+	bee_anim_player.play("idle")
+
 func _death():
 	get_tree().paused = true
-	animation_player.play("zoom")
+	camera_2d._death()
 
 func _reduce_health():
 	if touching_legal:
@@ -40,6 +51,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 					
 					await get_tree().create_timer(1.25).timeout
 					sprite_2d.play("shoot")
+					var inst = GOOP.instantiate()
+					self.add_child(inst)
 					await get_tree().create_timer(1.0/4.0).timeout
 					sprite_2d.play("idle")
 				2:
@@ -62,3 +75,22 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	else:
 		bee_anim_player.play("idle")
 		sprite_2d.play("idle")
+
+
+
+@onready var text_system: Node2D = $text_system/text_system
+
+var npc_to_shut_up: AnimatedSprite2D = null
+
+@warning_ignore("unused_signal")
+signal dialogue_finished
+
+func _say_dialogue(dialogue: String, npc: AnimatedSprite2D) -> void:
+	text_system._say_dialogue(dialogue)
+	
+	npc_to_shut_up = npc
+
+func _shut_up_npc():
+	if npc_to_shut_up != null:
+		npc_to_shut_up.play("idle")
+		npc_to_shut_up = null

@@ -1,13 +1,13 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	self.position = Vector2(856.0, 350.0)
-	await get_tree().create_timer(5).timeout
-	self.queue_free()
+@export var start_position: Vector2
 
 var speed: float = 600
+
+func _ready() -> void:
+	self.position = start_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	self.position += Vector2.LEFT * speed * delta
+	if self.position.x < -500: self.queue_free()

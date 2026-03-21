@@ -4,6 +4,7 @@ extends Node2D
 
 var npc_to_shut_up: AnimatedSprite2D = null
 
+@warning_ignore("unused_signal")
 signal dialogue_finished
 
 func _say_dialogue(dialogue: String, npc: AnimatedSprite2D) -> void:
@@ -15,7 +16,3 @@ func _shut_up_npc():
 	if npc_to_shut_up != null:
 		npc_to_shut_up.play("idle")
 		npc_to_shut_up = null
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
