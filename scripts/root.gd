@@ -11,6 +11,9 @@ var bumpscosity: int = 0
 
 func _process(_delta):
 	camera_2d.position.y = 324 + sin(Time.get_ticks_msec() / 1000.0 * (bumpscosity / 10.0)) * bumpscosity
+	
+	if Input.is_action_just_pressed("fullscreen"):
+		_toggle_fullscreen()
 
 ## INSTRUCTIONS AS TO HOW TO USE SCENE TRANSITIONS
 
@@ -49,6 +52,12 @@ func _ready():
 	music_2.finished.connect(_restart_music)
 
 var save_file = "user://save_DATA.spinglespongle"
+
+func _toggle_fullscreen():
+	if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _save_DATA(save_game: bool):
 	var DATA_file = FileAccess.open(save_file, FileAccess.WRITE)
