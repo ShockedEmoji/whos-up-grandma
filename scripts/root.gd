@@ -32,14 +32,16 @@ var song_loop: bool = true
 
 
 func _stop_music():
-	active_player.stop()
+	if active_player != null:
+		active_player.stop()
 
 func _ready():
 	
 	# Make sure that no config things have null value
 	_config_load_stuff()
 	
-	_change_scene("menu/main_menu")
+	#_change_scene("menu/main_menu")
+	_change_scene("platformer/mafia_bossfight")
 	
 	_fix_music_volume()
 	
@@ -206,6 +208,10 @@ func _play_music(song: String):
 			loop = true
 		"death":
 			m_path = "res://audio/Edge of Life.ogg"
+			music_high = 1.0
+			loop = true
+		"mafia fight":
+			m_path = "res://audio/Flight of the Killer B.ogg"
 			music_high = 1.0
 			loop = true
 	

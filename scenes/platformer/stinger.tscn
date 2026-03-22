@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="3_tfy80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pkh7"]
-size = Vector2(90, 38)
+size = Vector2(171, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfy80"]
-size = Vector2(20, 116)
+size = Vector2(156, 116)
 
 [node name="stinger" type="Node2D" unique_id=1247190128]
 script = ExtResource("1_hvt0q")
@@ -26,9 +26,9 @@ frame = 7
 [node name="Area2D" parent="." unique_id=261412062 instance=ExtResource("3_tfy80")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1204795810]
-position = Vector2(-11, -1)
+position = Vector2(-51.5, -1)
 shape = SubResource("RectangleShape2D_8pkh7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=154544343]
-position = Vector2(65, 0)
+position = Vector2(45, 7)
 shape = SubResource("RectangleShape2D_tfy80")

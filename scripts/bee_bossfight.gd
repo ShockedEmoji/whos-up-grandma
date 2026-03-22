@@ -12,7 +12,7 @@ const GOOP = preload("uid://3071pwnomwdy")
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 5 # set it to like 5 or something
+var bullet_damage: int = 8 # set it to like 5 or something
 
 var idle_count: int = 0
 
@@ -56,7 +56,7 @@ func _reduce_health():
 		health._reduce_health()
 		touching_legal = false
 		player._take_damage()
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(3.0).timeout
 		touching_legal = true
 
 var dying: bool = false
@@ -119,6 +119,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 						self.add_child(inst)
 		else:
 			bee_anim_player.play("idle")
+	elif anim_name == "death":
+		pass
 	else:
 		bee_anim_player.play("idle")
 		sprite_2d.play("idle")

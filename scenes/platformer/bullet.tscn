@@ -78,6 +78,7 @@ script = ExtResource("1_rwpsn")
 scale = Vector2(0.19083971, 0.059071727)
 sprite_frames = SubResource("SpriteFrames_xsh8b")
 animation = &"break"
+autoplay = "1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1429559652]
 position = Vector2(-4, 0)
