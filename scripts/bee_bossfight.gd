@@ -1,12 +1,13 @@
 extends Node2D
 
-@onready var bee: Node2D = $bee
-@onready var bee_anim_player: AnimationPlayer = $bee/AnimationPlayer
-@onready var sprite_2d: AnimatedSprite2D = $bee/Sprite2D
+@onready var bee: Node2D = $boss
+@onready var bee_anim_player: AnimationPlayer = $boss/AnimationPlayer
+@onready var sprite_2d: AnimatedSprite2D = $boss/Sprite2D
 
 const FLOWER = preload("uid://ckeig7geaqv2a")
 const STINGER = preload("uid://dl4ujoy2meqtm")
 const GOOP = preload("uid://3071pwnomwdy")
+@onready var player: CharacterBody2D = $player
 
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
@@ -19,12 +20,28 @@ var touching_legal: bool = true
 @onready var animation_player: AnimationPlayer = $Camera2D/AnimationPlayer
 
 @onready var camera_2d: Camera2D = $Camera2D
+@onready var small_bee: Area2D = $small_bee
 
 func _ready() -> void:
+	bee.hide()
+	bee.position = Vector2(9999, 9999)
 	await text_system._say_dialogue("bee fight intro")
+	
+	await small_bee.damaged
+	
+	await text_system._say_dialogue("bee ouch")
+	
+	small_bee._leave()
+	await small_bee.left
+	
+	$".."._play_music("bee_fight")
 	
 	bee_anim_player.animation_finished.connect(_on_animation_player_animation_finished)
 	
+	bee_anim_player.play("intro")
+	bee.show()
+	
+	await bee_anim_player.animation_finished
 	bee_anim_player.play("idle")
 
 func _death():
@@ -35,10 +52,12 @@ func _reduce_health():
 	if touching_legal:
 		health._reduce_health()
 		touching_legal = false
+		player._take_damage()
 		await get_tree().create_timer(1.0).timeout
 		touching_legal = true
 
 func _reduce_boss_health():
+	print("boss health reduced")
 	texture_progress_bar.value -= bullet_damage
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:

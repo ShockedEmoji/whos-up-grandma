@@ -145,10 +145,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.99, 6, 7.99),
-"transitions": PackedFloat32Array(3.0314333, 1, 0.3186402, 1),
+"times": PackedFloat32Array(0, 0.99, 1.08, 5.87, 6, 7.99),
+"transitions": PackedFloat32Array(3.0314333, 1, 1, 1, 0.3186402, 1),
 "update": 0,
-"values": [Vector2(997, 449), Vector2(997, -217), Vector2(997, -217), Vector2(997, 449)]
+"values": [Vector2(997, 449), Vector2(997, -217), Vector2(2242, -217), Vector2(2242, -217), Vector2(997, -217), Vector2(997, 449)]
 }
 
 [sub_resource type="Animation" id="Animation_hw5wm"]
@@ -164,6 +164,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(997, 449), Vector2(997, 428), Vector2(997, 449)]
+}
+
+[sub_resource type="Animation" id="Animation_83vcb"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1447, 449), Vector2(997, 449)]
 }
 
 [sub_resource type="Animation" id="Animation_pcyaa"]
@@ -228,6 +243,7 @@ _data = {
 &"RESET": SubResource("Animation_oi6u1"),
 &"flower": SubResource("Animation_ybtv1"),
 &"idle": SubResource("Animation_hw5wm"),
+&"intro": SubResource("Animation_83vcb"),
 &"spit": SubResource("Animation_pcyaa"),
 &"stinger": SubResource("Animation_2vv4f")
 }
@@ -235,7 +251,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_ybtv1"]
 radius = 176.02557
 
-[node name="bee" type="Node2D" unique_id=56333617]
+[node name="boss" type="Node2D" unique_id=56333617]
 z_index = 1
 position = Vector2(997, 449)
 

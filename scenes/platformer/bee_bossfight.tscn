@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxhq0vdatduoo" path="res://scripts/bee_bossfight.gd" id="1_oi6u1"]
 [ext_resource type="PackedScene" uid="uid://jf84fc2mvfng" path="res://scenes/platformer/big_bee.tscn" id="3_3mf7a"]
+[ext_resource type="PackedScene" uid="uid://baqepsdq1q41o" path="res://scenes/platformer/small_bee.tscn" id="3_o0g8v"]
 [ext_resource type="Texture2D" uid="uid://b3cwhcsfvrki0" path="res://sprites/beearenaremastered.png" id="4_efkvs"]
 [ext_resource type="PackedScene" uid="uid://brckbc30k8m3f" path="res://scenes/platformer/player.tscn" id="4_s6qv4"]
 [ext_resource type="Texture2D" uid="uid://dh8y3d14wg43v" path="res://sprites/stupidplaceholderrpg.png" id="6_pcyaa"]
@@ -150,7 +151,7 @@ _data = {
 script = ExtResource("1_oi6u1")
 
 [node name="background" type="Sprite2D" parent="." unique_id=820905394]
-z_index = -1
+z_index = -2
 position = Vector2(576, 324)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_efkvs")
@@ -158,7 +159,9 @@ hframes = 2
 vframes = 2
 frame = 2
 
-[node name="bee" parent="." unique_id=56333617 instance=ExtResource("3_3mf7a")]
+[node name="small_bee" parent="." unique_id=1791813134 instance=ExtResource("3_o0g8v")]
+
+[node name="boss" parent="." unique_id=56333617 instance=ExtResource("3_3mf7a")]
 
 [node name="flowers" type="Sprite2D" parent="." unique_id=1900918938]
 position = Vector2(576, 324)

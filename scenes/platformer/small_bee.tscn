@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://baqepsdq1q41o"]
+
+[ext_resource type="Script" uid="uid://cr6ogwspfyv87" path="res://scripts/small_bee.gd" id="1_0udct"]
+[ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="1_ys8qj"]
+
+[sub_resource type="Animation" id="Animation_0udct"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(921, 190)]
+}
+
+[sub_resource type="Animation" id="Animation_qgp2c"]
+resource_name = "exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(921, 190), Vector2(1222, 190)]
+}
+
+[sub_resource type="Animation" id="Animation_ys8qj"]
+resource_name = "fly"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(921, 190), Vector2(932, 199), Vector2(915, 195), Vector2(934, 181), Vector2(912, 217), Vector2(925, 213), Vector2(918, 197), Vector2(921, 190), Vector2(912, 217), Vector2(921, 190)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0udct"]
+_data = {
+&"RESET": SubResource("Animation_0udct"),
+&"exit": SubResource("Animation_qgp2c"),
+&"fly": SubResource("Animation_ys8qj")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ys8qj"]
+radius = 14.035668
+
+[node name="small_bee" type="Area2D" unique_id=495566029]
+position = Vector2(921, 190)
+script = ExtResource("1_0udct")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=538182888]
+scale = Vector2(0.029535864, 0.029535864)
+texture = ExtResource("1_ys8qj")
+hframes = 4
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2119010224]
+libraries/ = SubResource("AnimationLibrary_0udct")
+autoplay = &"fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=804707340]
+shape = SubResource("CircleShape2D_ys8qj")
+
+[node name="Label" type="Label" parent="." unique_id=146337470]
+offset_left = -5.0
+offset_top = -29.0
+offset_right = 5.0
+offset_bottom = -6.0
+text = "X"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

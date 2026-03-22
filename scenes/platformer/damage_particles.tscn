@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://da3flgkgmdqof"]
+
+[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="1_yb5mm"]
+
+[sub_resource type="Curve" id="Curve_yb5mm"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_neldy"]
+curve = SubResource("Curve_yb5mm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yb5mm"]
+particle_flag_disable_z = true
+radial_velocity_min = 111.10998
+radial_velocity_max = 422.21997
+gravity = Vector3(0, 500, 0)
+scale_min = 0.099999994
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_neldy")
+
+[node name="damage" type="GPUParticles2D" unique_id=891070361]
+process_mode = 3
+z_index = -1
+emitting = false
+amount = 15
+texture = ExtResource("1_yb5mm")
+lifetime = 0.72
+one_shot = true
+explosiveness = 1.0
+randomness = 0.57
+process_material = SubResource("ParticleProcessMaterial_yb5mm")

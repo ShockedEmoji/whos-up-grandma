@@ -21,4 +21,4 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		await $"../..".dialogue_finished
 		
-		print("YAYAYAYAYAY")
+		$"../../.."._fade_transition("platformer/bee_bossfight")

@@ -31,6 +31,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.get_parent().name == "bee" && !dying: 
+	if area.get_parent().name == "boss" && !dying: 
 		$".."._reduce_boss_health()
 		_die()

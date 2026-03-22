@@ -12,6 +12,7 @@ var gravity = 1500
 
 var touched_floor_recently: bool = true
 const BULLET = preload("uid://cxi0ncap5jkgi")
+const DAMAGE_PARTICLES = preload("uid://da3flgkgmdqof")
 
 var last_x: int = 1
 
@@ -66,4 +67,26 @@ func _physics_process(delta: float) -> void:
 	if velocity.x < 0: last_x = -1
 	elif velocity.x > 0: last_x = 1
 	
+	velocity.x += x_velocity_add * 80
+	x_velocity_add = move_toward(x_velocity_add, 0, 1)
+	
 	move_and_slide()
+
+
+
+var x_velocity_add: float = 0
+
+func _take_damage():
+	print("ouchie")
+	
+	var inst = DAMAGE_PARTICLES.instantiate()
+	inst.position = self.position
+	inst.emitting = true
+	$"..".add_child(inst)
+	
+	x_velocity_add = -10
+	velocity.y = -700
+	
+	await inst.finished
+	
+	inst.queue_free()
