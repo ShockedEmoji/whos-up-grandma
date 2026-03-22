@@ -31,10 +31,10 @@ func _ready() -> void:
 	
 	await text_system._say_dialogue("bee ouch")
 	
+	$".."._play_music("bee_fight")
+	
 	small_bee._leave()
 	await small_bee.left
-	
-	$".."._play_music("bee_fight")
 	
 	bee_anim_player.animation_finished.connect(_on_animation_player_animation_finished)
 	
