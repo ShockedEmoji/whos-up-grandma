@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjsyo8ho80mwh"
-path="res://.godot/imported/grass_tilest.png-a648ef5a4a878b4d21a83cc580503244.ctex"
+uid="uid://dvo6kovgkwtgf"
+path="res://.godot/imported/salas_plant_4.png-5f13295cccefac59385aeddaef6a46b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/grass_tilest.png"
-dest_files=["res://.godot/imported/grass_tilest.png-a648ef5a4a878b4d21a83cc580503244.ctex"]
+source_file="res://sprites/tutorial_props/salas_plant_4.png"
+dest_files=["res://.godot/imported/salas_plant_4.png-5f13295cccefac59385aeddaef6a46b7.ctex"]
 
 [params]
 
