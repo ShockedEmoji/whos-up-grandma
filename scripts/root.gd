@@ -24,6 +24,7 @@ func _process(_delta):
 
 
 func _restart_music():
+	print("music restart")
 	if song_loop:
 		active_player.play(0)
 
@@ -41,7 +42,9 @@ func _ready():
 	_change_scene("menu/main_menu")
 	
 	_fix_music_volume()
+	
 	music.finished.connect(_restart_music)
+	music_2.finished.connect(_restart_music)
 
 var save_file = "user://save_DATA.spinglespongle"
 
@@ -186,18 +189,21 @@ func _play_music(song: String):
 	
 	match song:
 		"menu":
-			m_path = "res://audio/Waterfront.ogg"
+			m_path = "res://audio/Life on the Edge.ogg"
 			music_high = 1.0
+			loop = true
 		"grandma_house":
 			m_path = "res://audio/What's Up Grandma.ogg"
 			music_high = 1.0
-			loop = false
+			loop = true
 		"tutorial":
-			m_path = "res://audio/What's Up Grandma.ogg"
+			m_path = "res://audio/Waterfront.ogg"
 			music_high = 1.0
+			loop = true
 		"bee_fight":
 			m_path = "res://audio/Flight of the Killer B.ogg"
 			music_high = 1.0
+			loop = true
 	
 	next_player.stream = load(m_path)
 	next_player.volume_linear = 0 # Start silent
@@ -212,6 +218,8 @@ func _play_music(song: String):
 	active_player.stop()
 	
 	song_loop = loop
+	
+	active_player = next_player
 
 func _fix_music_volume():
 	music.volume_linear = DATA.master_volume * music_high * DATA.music_volume

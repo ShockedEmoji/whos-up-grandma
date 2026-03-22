@@ -22,7 +22,6 @@ ENUM="*uid://bk8mg5l0c1g2x"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [file_customization]

@@ -8,8 +8,12 @@ var gravity = 1500
 
 @onready var coyote: Timer = $coyote
 @onready var variable_jump: Timer = $variable_jump
+@onready var shoot: Timer = $shoot
 
 var touched_floor_recently: bool = true
+const BULLET = preload("uid://cxi0ncap5jkgi")
+
+var last_x: int = 1
 
 func _physics_process(delta: float) -> void:
 	
@@ -28,6 +32,26 @@ func _physics_process(delta: float) -> void:
 		if variable_jump.time_left > 0: velocity.y = -150
 		variable_jump.stop()
 	
+	if Input.is_action_pressed("cancel"):
+		if shoot.time_left <= 0:
+			shoot.start(0.0)
+			var inst = BULLET.instantiate()
+			inst.start_position = self.position
+			
+			
+			var bullet_x: int = last_x
+			var bullet_y: int = 0
+			if Input.is_action_pressed("up"): bullet_y -= 1
+			if Input.is_action_pressed("down"): bullet_y += 1
+			
+			if Input.is_action_pressed("up") && !Input.is_action_pressed("left") && !Input.is_action_pressed("right"):
+				bullet_x = 0
+			
+			inst.direction = Vector2(bullet_x, bullet_y)
+			inst.direction = inst.direction.normalized()
+			
+			$"..".add_child(inst)
+	
 	if variable_jump.time_left > 0:
 		velocity.y = JUMP_VELOCITY
 	
@@ -38,5 +62,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if velocity.x < 0: last_x = -1
+	elif velocity.x > 0: last_x = 1
 	
 	move_and_slide()

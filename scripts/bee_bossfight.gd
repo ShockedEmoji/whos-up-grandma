@@ -9,6 +9,9 @@ const STINGER = preload("uid://dl4ujoy2meqtm")
 const GOOP = preload("uid://3071pwnomwdy")
 
 @onready var health: AnimatedSprite2D = $health
+@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+
+var bullet_damage: int = 8
 
 var idle_count: int = 0
 
@@ -35,17 +38,20 @@ func _reduce_health():
 		await get_tree().create_timer(1.0).timeout
 		touching_legal = true
 
+func _reduce_boss_health():
+	texture_progress_bar.value -= bullet_damage
+
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "idle":
 		idle_count += 1
 		
-		if idle_count > 2:
+		if idle_count > 0:
 			idle_count = 0
 			
-			var random: int = randi_range(1, 3)
+			var random: int = randi_range(1, 5)
 			
 			match random:
-				1:
+				1, 2:
 					bee_anim_player.play("spit")
 					sprite_2d.play("idle")
 					
@@ -55,7 +61,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 					self.add_child(inst)
 					await get_tree().create_timer(1.0/4.0).timeout
 					sprite_2d.play("idle")
-				2:
+				3, 4:
 					bee_anim_player.play("stinger")
 					sprite_2d.play("pain")
 					await get_tree().create_timer(1.47).timeout
@@ -63,11 +69,11 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 					self.add_child(inst)
 					
 					sprite_2d.play("naked pain")
-				3:
+				5:
 					bee_anim_player.play("flower")
 					await get_tree().create_timer(1.25).timeout
-					for i in range(16):
-						await get_tree().create_timer(0.25).timeout
+					for i in range(10):
+						await get_tree().create_timer(0.35).timeout
 						var inst = FLOWER.instantiate()
 						self.add_child(inst)
 		else:

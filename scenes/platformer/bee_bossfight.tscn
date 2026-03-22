@@ -7,7 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dh8y3d14wg43v" path="res://sprites/stupidplaceholderrpg.png" id="6_pcyaa"]
 [ext_resource type="Script" uid="uid://bp2s75vnvsuck" path="res://scripts/health.gd" id="7_2vv4f"]
 [ext_resource type="Script" uid="uid://bw3dap77t5fbv" path="res://scripts/death_camera_2d.gd" id="9_3mf7a"]
+[ext_resource type="Texture2D" uid="uid://bb6y52oep7ql8" path="res://sprites/progressbars/1.PNG" id="9_efkvs"]
+[ext_resource type="Texture2D" uid="uid://dqpau54ubip84" path="res://sprites/progressbars/3.PNG" id="10_ccqoc"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="10_efkvs"]
+[ext_resource type="Texture2D" uid="uid://b0e4qhqngiim6" path="res://sprites/progressbars/2.PNG" id="11_o0g8v"]
 
 [sub_resource type="Animation" id="Animation_s6qv4"]
 length = 0.001
@@ -177,21 +180,21 @@ hframes = 2
 vframes = 2
 frame = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=329581111]
+[node name="blocks" type="StaticBody2D" parent="." unique_id=329581111]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1051090408]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blocks" unique_id=1051090408]
 position = Vector2(559, 639)
 shape = SubResource("RectangleShape2D_s6qv4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1652840850]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="blocks" unique_id=1652840850]
 position = Vector2(11, 323)
 shape = SubResource("RectangleShape2D_12yx4")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2140521447]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="blocks" unique_id=2140521447]
 position = Vector2(1140, 323)
 shape = SubResource("RectangleShape2D_12yx4")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=958692935]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="blocks" unique_id=958692935]
 position = Vector2(580, 433)
 shape = SubResource("RectangleShape2D_pcyaa")
 
@@ -215,5 +218,18 @@ script = ExtResource("9_3mf7a")
 libraries/ = SubResource("AnimationLibrary_ccqoc")
 
 [node name="text_system" type="Node2D" parent="." unique_id=2131457891]
+z_index = 3
 
 [node name="text_system" parent="text_system" unique_id=702931713 instance=ExtResource("10_efkvs")]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=717912164]
+z_index = 2
+offset_left = 106.0
+offset_top = 617.0
+offset_right = 1052.0
+offset_bottom = 639.0
+max_value = 1000.0
+value = 1000.0
+texture_under = ExtResource("9_efkvs")
+texture_over = ExtResource("10_ccqoc")
+texture_progress = ExtResource("11_o0g8v")

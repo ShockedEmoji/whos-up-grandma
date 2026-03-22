@@ -233,7 +233,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ybtv1"]
-radius = 147.12239
+radius = 176.02557
 
 [node name="bee" type="Node2D" unique_id=56333617]
 z_index = 1
