@@ -2,13 +2,19 @@ extends Area2D
 
 @export var start_position: Vector2
 
-var speed: float = 300
+@export var speed: float = 350
 var direction: Vector2 = Vector2.ZERO
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hazard: Area2D = $hazard
 
+var big_daddy: Node2D = null
+
 func _ready() -> void:
 	self.position = start_position
+	
+	self.rotation = direction.angle()
+	
+	hazard.big_daddy = self.big_daddy
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

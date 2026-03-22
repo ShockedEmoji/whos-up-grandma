@@ -83,7 +83,7 @@ script = ExtResource("1_8jlsb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazard" unique_id=1787090637]
 shape = SubResource("CircleShape2D_othxm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1148976044]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=333155935]
 position = Vector2(-10, 1.9999981)
 rotation = -3.1415925
 scale = Vector2(0.19083971, 0.088607594)
@@ -93,3 +93,5 @@ autoplay = "1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=55135114]
 shape = SubResource("CircleShape2D_45ro2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

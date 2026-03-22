@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c205emvaea3sb"]
+
+[ext_resource type="Script" uid="uid://rnumm41i02ff" path="res://scripts/mafia_bullet.gd" id="1_p2qk6"]
+[ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="2_pma48"]
+[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="3_p2qk6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_othxm"]
+radius = 17.029387
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_324y4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p2qk6")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p2qk6")
+}],
+"loop": true,
+"name": &"break",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_45ro2"]
+radius = 29.068884
+
+[node name="mafia_laser" type="Area2D" unique_id=2000449668]
+script = ExtResource("1_p2qk6")
+speed = 2000.0
+
+[node name="hazard" parent="." unique_id=261412062 instance=ExtResource("2_pma48")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hazard" unique_id=1787090637]
+shape = SubResource("CircleShape2D_othxm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1148976044]
+position = Vector2(-1.4210855e-14, 0)
+rotation = -3.1415925
+scale = Vector2(0.45762756, 0.45762753)
+sprite_frames = SubResource("SpriteFrames_324y4")
+animation = &"1"
+autoplay = "1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=55135114]
+shape = SubResource("CircleShape2D_45ro2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
