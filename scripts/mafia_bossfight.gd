@@ -40,6 +40,9 @@ func _new_attack():
 		BOSS_STATES.IDLE:
 			animated_sprite_2d.play("idle")
 			
+			if texture_progress_bar.value <= 500 && !enraged:
+				enraged = true
+			
 			if !enraged:
 				await get_tree().create_timer(randf_range(1.0, 2.0)).timeout
 			
@@ -126,7 +129,7 @@ func _new_attack():
 						inst.start_position = boss.position
 						inst.direction = Vector2.from_angle(((j * TAU / 4) + ((i * 4 + h) * 0.1)) * left_or_right)
 						
-						$"..".add_child(inst)
+						self.add_child(inst)
 						
 						inst.big_daddy = self
 					await get_tree().create_timer(0.2).timeout
@@ -160,7 +163,7 @@ func _new_attack():
 				
 				inst.big_daddy = self
 				
-				$"..".add_child(inst)
+				self.add_child(inst)
 				
 				
 				if enraged:
@@ -170,7 +173,7 @@ func _new_attack():
 					
 					inst.big_daddy = self
 					
-					$"..".add_child(inst)
+					self.add_child(inst)
 				
 				
 				await get_tree().create_timer(0.3).timeout
@@ -215,7 +218,7 @@ func _new_attack():
 				inst.start_position = boss.position
 				inst.direction = Vector2.DOWN
 				
-				$"..".add_child(inst)
+				self.add_child(inst)
 				
 				inst.big_daddy = self
 				await get_tree().create_timer(0.1 * move_time).timeout
@@ -235,7 +238,7 @@ func _new_attack():
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 3
+var bullet_damage: int = 5
 
 var dying: bool = false
 

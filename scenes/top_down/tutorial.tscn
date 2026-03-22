@@ -471,6 +471,7 @@ script = ExtResource("8_2rfvf")
 what_am_i_following = NodePath("../everything else/player")
 
 [node name="text_system" parent="Camera2D" unique_id=702931713 instance=ExtResource("9_gddja")]
+z_index = 5
 position = Vector2(-576, -328)
 
 [node name="props" type="Node2D" parent="." unique_id=1878516110]
