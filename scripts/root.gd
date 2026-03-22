@@ -208,6 +208,10 @@ func _play_music(song: String):
 			m_path = "res://audio/Edge of Life.ogg"
 			music_high = 1.0
 			loop = true
+		"mafia fight":
+			m_path = "res://audio/Flight of the Killer B.ogg"
+			music_high = 1.0
+			loop = true
 	
 	next_player.stream = load(m_path)
 	next_player.volume_linear = 0 # Start silent

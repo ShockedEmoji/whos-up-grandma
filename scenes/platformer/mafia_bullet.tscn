@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://d3gg5o6nym2cu"]
+
+[ext_resource type="Script" uid="uid://rnumm41i02ff" path="res://scripts/mafia_bullet.gd" id="1_8jlsb"]
+[ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="1_othxm"]
+[ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="3_45ro2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_othxm"]
+radius = 17.029387
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwpsn"]
+atlas = ExtResource("3_45ro2")
+region = Rect2(0, 0, 524, 474)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhdru"]
+atlas = ExtResource("3_45ro2")
+region = Rect2(524, 474, 524, 474)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kitqs"]
+atlas = ExtResource("3_45ro2")
+region = Rect2(1048, 0, 524, 474)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlpgq"]
+atlas = ExtResource("3_45ro2")
+region = Rect2(524, 474, 524, 474)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1c0j"]
+atlas = ExtResource("3_45ro2")
+region = Rect2(1048, 474, 524, 474)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkj44"]
+atlas = ExtResource("3_45ro2")
+region = Rect2(524, 948, 524, 474)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_06luk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwpsn")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhdru")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kitqs")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlpgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1c0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkj44")
+}],
+"loop": false,
+"name": &"break",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_45ro2"]
+radius = 29.068884
+
+[node name="mafia_bullet" type="Area2D" unique_id=2000449668]
+script = ExtResource("1_8jlsb")
+
+[node name="hazard" parent="." unique_id=261412062 instance=ExtResource("1_othxm")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hazard" unique_id=1787090637]
+shape = SubResource("CircleShape2D_othxm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1148976044]
+position = Vector2(-10, 1.9999981)
+rotation = -3.1415925
+scale = Vector2(0.19083971, 0.088607594)
+sprite_frames = SubResource("SpriteFrames_06luk")
+animation = &"break"
+autoplay = "1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=55135114]
+shape = SubResource("CircleShape2D_45ro2")
