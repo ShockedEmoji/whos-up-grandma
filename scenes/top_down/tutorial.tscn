@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="4_5kmvl"]
 [ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="5_3dnpt"]
 [ext_resource type="Script" uid="uid://cdvj0fsevbrjt" path="res://scripts/area2D_scripts/bee.gd" id="6_yf7se"]
-[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="7_rujjn"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="8_2rfvf"]
+[ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="8_7hhwr"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="9_gddja"]
 [ext_resource type="Texture2D" uid="uid://47hl2a21ljrr" path="res://sprites/tutorial_props/daisies.png" id="11_5stby"]
 [ext_resource type="Texture2D" uid="uid://c42rwld1gwa2t" path="res://sprites/tutorial_props/daisies_2.png" id="12_17ryx"]
@@ -224,8 +224,10 @@ shape = SubResource("RectangleShape2D_0sbdo")
 
 [node name="bee_sprite" type="Sprite2D" parent="everything else" unique_id=1756287398]
 position = Vector2(5398, -1794)
-scale = Vector2(0.070312396, 0.07812561)
-texture = ExtResource("7_rujjn")
+scale = Vector2(0.037974045, 0.042193778)
+texture = ExtResource("8_7hhwr")
+hframes = 4
+vframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="everything else/bee_sprite" unique_id=1213697382]
 libraries/ = SubResource("AnimationLibrary_km1gf")

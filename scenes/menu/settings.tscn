@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dndihc8v5q8tw" path="res://scripts/settings.gd" id="1_dxr1k"]
 [ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="2_37860"]
-[ext_resource type="Texture2D" uid="uid://ds5vmicvhnpn7" path="res://sprites/stupid/maid.jpg" id="3_37860"]
 
 [sub_resource type="Animation" id="Animation_6wm04"]
 length = 0.001
@@ -120,12 +119,6 @@ offset_right = 958.0
 offset_bottom = 165.0
 text = "XXXXXXXXXX"
 
-[node name="Maid" type="Sprite2D" parent="parent" unique_id=1634412811]
-texture_filter = 1
-position = Vector2(582, 470)
-scale = Vector2(0.101938725, 0.021938734)
-texture = ExtResource("3_37860")
-
 [node name="delete" type="VSlider" parent="parent" unique_id=789620055]
 offset_left = 168.0
 offset_top = 125.0
@@ -140,3 +133,10 @@ offset_bottom = 142.00003
 rotation = 1.5707964
 scale = Vector2(1.6448678, 1.2763165)
 text = "Bumpscosity"
+
+[node name="fullscreen" type="Button" parent="parent" unique_id=1645912887]
+offset_left = 554.0
+offset_top = 293.0
+offset_right = 793.0
+offset_bottom = 343.0
+text = "Toggle fullscreen"

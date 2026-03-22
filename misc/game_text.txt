@@ -8,7 +8,7 @@ I just need some of my famous life edging elixir, that's all...
 Raisins... I think some of those young'uns over in those other parts have the 3-4 ingredients needed to make it...
 Be a good dearie and get them for me, will you?
 {I will get you your medication grandma-chan!!`grandma yes
-{Erm, sorry grandma-senpai... What were the ingredients again!???`grandma ingredients
+{Erm, sorry grandma... What were the ingredients again!???`grandma ingredients
 
 }grandma yes
 Thank you so much, dearie~~
@@ -20,14 +20,14 @@ Haha, see what I did there?
 {goodbye grandma`grandma bye
 
 }grandma bye
-bye bye my little sweet bread roll!!
+Goodbye my little sweet bread roll!!
 
 }npc 1
-hewwoo~~~! im joe-chan, your gwandmas cat-nya!!
-i LUV LUV LUV dog food-nya!
+hewwoo~~~! im kitten-chan, your gwandmas cat-nya!!
+i LUV LUV LUV tha dog food-nya!
 evir since we werre outcwasted to the edje of societwy, life hass been wather harsh-nya!!!
 UWU... i fear that my lwife mwight also be on the edge-nya!
-but.... i hav hope!! joe-chan wiwll prevail-nya!!
+but.... i hav hope!! kitten-chan wiwll prevail-nya!!
 
 }scared wasp
 uwawawa..... I heard a rumor about a scary bee near here....
@@ -38,8 +38,7 @@ I'm a wasp, stupid.
 Press Z to interact with 'people'!
 
 }in the way
-I love this spot.
-Sitting here, watching all the comedic little gremlins run by.
+Hello!! How are you?
 Oh, sorry, am I in your way?
 {yes`in the way 2
 {no`not in the way
@@ -51,7 +50,7 @@ Could you, perhaps... walk around me?
 {no`turn back
 
 }walk around
-Well, hooray! That sounds like a wonderful plan!
+Well, hooray! That sounds wonderful!
 
 }turn back
 Ahh... well, I am truly sorry...
@@ -65,10 +64,10 @@ This is wonderful news! Have a nice day!
 
 }bee intro
 GRRRR GOD DAMN THIS FLOWERING EXILATION
-I HATE LIVING ON THE EDGE OF SOCIETY... THEY HAVE ALL THE GOOD FLOWERS!! ALL I HAVE ARE THESE ICKY, GROSS DISGUSTING SALASPLANTS!!!!! and these random ones on the floor.s
+I HATE LIVING ON THE EDGE OF SOCIETY... THEY HAVE ALL THE GOOD FLOWERS!! ALL I HAVE ARE THESE ICKY, GROSS DISGUSTING SALASPLANTS!!!!!
 WAIT... THIS ISN'T A SALASPLANT.... WHAT ARE YOU???
 {I am a salasplant`salasplant
-{Hello!! nya~ do you have the recipe for the medicine my grandmother requires??`bee medicine
+{I am a human... Do you have the recipe for the medicine my grandmother requires??`bee medicine
 {I am worthless... I wear a mask with a smile for hours at a time...`mask
 
 }salasplant
@@ -79,7 +78,7 @@ hmm I might.... BUT I'M NOT GIVING IT TO YOU!!
 {give it please`bee beg
 
 }bee beg
-Oh ok thank you for asking so nicely!!!! I love it when people do their best to avoid conflict&
+Oh ok thank you for asking so nicely!!!!&
 NUH UH I WILL NOT EVER NUH UH DIEEE!!!!!!!!
 
 }mask
@@ -88,9 +87,9 @@ Infact, you seem like a worthy competitor for my edge! DIEE!!
 
 }flowery
 Howdy! I'm FLOWERY. FLOWERY the FLOWER!
-Hmmm... You're new to the Edge, aren'tcha?
-What? You live here?
-My mistake for assuming... Good luck with whatever you are doing! 
+I am a FLOWER!
+That guy right next to me - He's my best bud!
+Too bad some bee stung him! Hahahaha, should've dodged!
 
 }bee fight intro
 Hhahahaa..... There is no way you shall escape my pollination of doom now!! Prepare to DIEE!!!!!!
@@ -98,15 +97,16 @@ Hhahahaa..... There is no way you shall escape my pollination of doom now!! Prep
 
 }bee ouch
 GYAAAHHHHHHH OUCHIE
-Okay.... I see how it is...
-You want to fight? Lets fight!!
+dih... did you just shot me?
+That was, like, so painful!! I'm not going to let you get away with this...
+neoooww beoowwwww|*bee power up noises*
 
 }bee death
 Gyaaaahhhhh~~~~~~
 fhhghhhhhhh~~~~~~~
 mmmmmmmmmmmffffggghhhhhhhhhhhhhh~~~~~~~
 {GIVE ME THE MEDICINE RECIPEEE`recipe
-{hahaa L bro really just lost all his aura`aura loss
+{rest in peace`rest peace
 
 }recipe
 Whhuahhuhhhh...... you want the recipe!?????
@@ -117,10 +117,10 @@ Oh right here's what you need:
 yippee ok goodbye
 *dies*
 
-}aura loss
-waaahhhhh that's so meeaannnnnn :(
-You have made me so *cough* sad *cough*
-h-here is your grandmother's medicine recipe I guess.....
+}rest peace
+Hey, *cough*, are you stupid?
+Don't you want the recipe for the medicine that will *cough* save your grandma?
+Well, here it is!|*wheeze*
 - 1 green Herb|- 1 bundle shredded bracken leaves|- 1 buttercuppy|- 1 pepperoni spaggetthi
 yippee ok goodbye
 *dies*

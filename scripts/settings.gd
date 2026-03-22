@@ -4,6 +4,8 @@ extends Node2D
 @onready var music_slider = $parent/music_slider
 @onready var sound_slider = $parent/sound_slider
 
+@onready var fullscreen: Button = $parent/fullscreen
+
 @onready var leave = $parent/leave
 @onready var animation_player = $parent/AnimationPlayer
 
@@ -23,6 +25,14 @@ func _ready():
 	sound_slider.drag_ended.connect(_save_config)
 	
 	leave.pressed.connect(_close)
+	
+	fullscreen.pressed.connect(_toggle_fullscreen)
+
+func _toggle_fullscreen():
+	if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _edit_volume(_ignore):
 	DATA.master_volume = master_slider.value / 100.0
