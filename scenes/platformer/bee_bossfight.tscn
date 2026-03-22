@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://baqepsdq1q41o" path="res://scenes/platformer/small_bee.tscn" id="3_o0g8v"]
 [ext_resource type="Texture2D" uid="uid://b3cwhcsfvrki0" path="res://sprites/beearenaremastered.png" id="4_efkvs"]
 [ext_resource type="PackedScene" uid="uid://brckbc30k8m3f" path="res://scenes/platformer/player.tscn" id="4_s6qv4"]
-[ext_resource type="Texture2D" uid="uid://dh8y3d14wg43v" path="res://sprites/stupidplaceholderrpg.png" id="6_pcyaa"]
+[ext_resource type="Texture2D" uid="uid://bkk1jmht520gk" path="res://sprites/heartsheet.png" id="5_186kt"]
 [ext_resource type="Script" uid="uid://bp2s75vnvsuck" path="res://scripts/health.gd" id="7_2vv4f"]
 [ext_resource type="Script" uid="uid://bw3dap77t5fbv" path="res://scripts/death_camera_2d.gd" id="9_3mf7a"]
 [ext_resource type="AudioStream" uid="uid://wqfe2vqjmhk7" path="res://audio/Edge of Life.ogg" id="9_186kt"]
@@ -61,27 +61,27 @@ size = Vector2(71, 666)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcyaa"]
 size = Vector2(386, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o0g8v"]
-atlas = ExtResource("6_pcyaa")
-region = Rect2(200, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_186kt"]
-atlas = ExtResource("6_pcyaa")
-region = Rect2(100, 0, 100, 100)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_d5gj8"]
-atlas = ExtResource("6_pcyaa")
-region = Rect2(0, 100, 100, 100)
+atlas = ExtResource("5_186kt")
+region = Rect2(200, 200, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ltqqx"]
-atlas = ExtResource("6_pcyaa")
-region = Rect2(0, 0, 100, 100)
+atlas = ExtResource("5_186kt")
+region = Rect2(0, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whwj3"]
+atlas = ExtResource("5_186kt")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvwkv"]
+atlas = ExtResource("5_186kt")
+region = Rect2(0, 0, 200, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_12yx4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o0g8v")
+"texture": SubResource("AtlasTexture_d5gj8")
 }],
 "loop": true,
 "name": &"0",
@@ -89,7 +89,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_186kt")
+"texture": SubResource("AtlasTexture_ltqqx")
 }],
 "loop": true,
 "name": &"1",
@@ -97,7 +97,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d5gj8")
+"texture": SubResource("AtlasTexture_whwj3")
 }],
 "loop": true,
 "name": &"2",
@@ -105,7 +105,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ltqqx")
+"texture": SubResource("AtlasTexture_uvwkv")
 }],
 "loop": true,
 "name": &"3",
@@ -205,6 +205,7 @@ shape = SubResource("RectangleShape2D_pcyaa")
 [node name="health" type="AnimatedSprite2D" parent="." unique_id=2114434786]
 z_index = 4
 position = Vector2(1102, 598)
+scale = Vector2(0.43, 0.43)
 sprite_frames = SubResource("SpriteFrames_12yx4")
 animation = &"3"
 autoplay = "3"
