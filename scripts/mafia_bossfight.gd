@@ -16,7 +16,7 @@ func _reduce_health():
 		health._reduce_health()
 		touching_legal = false
 		player._take_damage()
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(3.0).timeout
 		touching_legal = true
 
 
@@ -123,12 +123,33 @@ func _new_attack():
 	_new_attack()
 
 @onready var camera_2d: Camera2D = $Camera2D
+@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+
+var bullet_damage: int = 8
+
+var dying: bool = false
+
+func _reduce_boss_health():
+	print("boss health reduced")
+	texture_progress_bar.value -= bullet_damage
+	
+	if texture_progress_bar.value <= 0 && !dying:
+		touching_legal = false
+		dying = true
+		
+		$".."._stop_music()
+		
+		
+		#DATA.post_transition_player_pos = Vector2(4471.0, -1510)
+		#DATA.bee_just_killed = true
+		$".."._play_music("tutorial")
+		$".."._fade_transition("top_down/tutorial", 0.2, 0, 3, $Camera2D)
 
 func _death():
 	$".."._stop_music()
 	get_tree().paused = true
 	await camera_2d._death()
-	$".."._play_music("mafia fight")
+	#".."._play_music("mafia fight")
 
 
 enum BOSS_STATES {

@@ -32,14 +32,16 @@ var song_loop: bool = true
 
 
 func _stop_music():
-	active_player.stop()
+	if active_player != null:
+		active_player.stop()
 
 func _ready():
 	
 	# Make sure that no config things have null value
 	_config_load_stuff()
 	
-	_change_scene("menu/main_menu")
+	#_change_scene("menu/main_menu")
+	_change_scene("platformer/mafia_bossfight")
 	
 	_fix_music_volume()
 	

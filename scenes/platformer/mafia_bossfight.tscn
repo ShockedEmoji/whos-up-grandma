@@ -258,6 +258,7 @@ position = Vector2(333, 444)
 process_mode = 3
 position = Vector2(576, 324)
 script = ExtResource("4_mqafl")
+default_scene = "platformer/mafia_bossfight"
 
 [node name="death_music" type="AudioStreamPlayer" parent="Camera2D" unique_id=1180635685]
 stream = ExtResource("5_tvr8v")

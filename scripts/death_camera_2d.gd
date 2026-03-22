@@ -7,6 +7,8 @@ extends Camera2D
 
 var move_yes: int = 0
 
+@export var default_scene: String = "platformer/bee_bossfight"
+
 func _death():
 	await get_tree().create_timer(1.0).timeout
 	animation_player.play("zoom")
@@ -22,7 +24,7 @@ func _death():
 	
 	death_music.stop()
 	
-	$"../.."._fade_transition("platformer/bee_bossfight")
+	$"../.."._fade_transition(default_scene)
 
 func _process(delta: float) -> void:
 	self.position += (player.position - self.position) * delta * 2 * move_yes
