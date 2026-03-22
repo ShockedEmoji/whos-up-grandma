@@ -119,6 +119,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 						self.add_child(inst)
 		else:
 			bee_anim_player.play("idle")
+	elif anim_name == "death":
+		pass
 	else:
 		bee_anim_player.play("idle")
 		sprite_2d.play("idle")
