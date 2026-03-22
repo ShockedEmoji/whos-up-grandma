@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bem6qjsp0prcq"
+path="res://.godot/imported/What's Up Grandma.ogg-25cfe67893624483705bb547aaa69fba.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/What's Up Grandma.ogg"
+dest_files=["res://.godot/imported/What's Up Grandma.ogg-25cfe67893624483705bb547aaa69fba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

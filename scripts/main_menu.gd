@@ -10,10 +10,13 @@ func _ready() -> void:
 	play_button.pressed.connect(_load_game)
 	settings_button.pressed.connect(_load_settings)
 	quit_button.pressed.connect(_close_game)
+	
+	$".."._play_music("menu")
 
 func _load_game():
 	if are_buttons_legal:
 		are_buttons_legal = false
+		$".."._play_music("grandma_house")
 		$".."._fade_transition("top_down/grandma_house", 0.1, 0.1, 0.1)
 		DATA.post_transition_player_pos = Vector2(354.0, 286.0)
 

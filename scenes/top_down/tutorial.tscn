@@ -160,6 +160,7 @@ collision_mask = 6
 position = Vector2(371, 95)
 new_area_scene_path = "top_down/grandma_house"
 camera_node = NodePath("../../Camera2D")
+new_song = "grandma_house"
 new_player_position = Vector2(368, 900)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition" unique_id=282331165]

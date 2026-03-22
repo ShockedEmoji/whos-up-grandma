@@ -22,18 +22,16 @@ func _process(_delta):
 ## Eg. res://scenes/menu/different_buttons/stupid_button.tscn would be _change_scene("menu/different_buttons/stupid_button")
 # Also I haven't tested this so if it breaks then it is broken
 
-@onready var music = $music
-
 
 func _restart_music():
 	if song_loop:
-		music.play(0)
+		active_player.play(0)
 
 var song_loop: bool = true
 
 
 func _stop_music():
-	music.stop()
+	active_player.stop()
 
 func _ready():
 	
@@ -160,27 +158,60 @@ func _fade_transition(scene_name: String, transin_time: float = 0.5, hold_black:
 var music_low: float = 0.0
 var music_high: float = 1.0
 
-#func _play_music(song: String):
-	#music.stop()
-	#
-	#var m_path: String = ""
-	#var loop: bool = true
-	#
-	#match song:
-		#"menu":
-			#m_path = "res://audio/Len_Suzaki__UP_IS_DOWN.wav"
-			#music_high = 1.0
-		#"game":
-			#m_path = "res://audio/Len Suzaki - COSMOS.mp3"
-			#music_high = 1.0
-			#loop = false
-	#
-	#music.volume_linear = DATA.master_volume * DATA.music_volume * music_high
-	#var audio = load(m_path)
-	#music.stream = audio
-	#music.play()
-	#
-	#song_loop = loop
+@onready var music: AudioStreamPlayer = $music
+@onready var music_2: AudioStreamPlayer = $music2
+
+var music_1_selected: bool = true
+
+var active_player: AudioStreamPlayer
+
+var music_fade_length: float = 2
+
+var music_tween: Tween
+
+func _play_music(song: String):
+	
+	if music_tween:
+		music_tween.kill()
+	
+	music_tween = create_tween()
+	
+	active_player = music if music.playing else music_2
+	var next_player = music_2 if music.playing else music
+	
+	var m_path: String = ""
+	var loop: bool = true
+	
+	music_tween.tween_property(active_player, "volume_linear", 0, music_fade_length).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	
+	match song:
+		"menu":
+			m_path = "res://audio/Waterfront.ogg"
+			music_high = 1.0
+		"grandma_house":
+			m_path = "res://audio/What's Up Grandma.ogg"
+			music_high = 1.0
+			loop = false
+		"tutorial":
+			m_path = "res://audio/What's Up Grandma.ogg"
+			music_high = 1.0
+		"bee_fight":
+			m_path = "res://audio/Flight of the Killer B.ogg"
+			music_high = 1.0
+	
+	next_player.stream = load(m_path)
+	next_player.volume_linear = 0 # Start silent
+	next_player.play()
+	
+	# Fade out active, Fade in next
+	
+	music_tween.parallel().tween_property(next_player, "volume_linear", DATA.master_volume * DATA.music_volume * music_high, music_fade_length).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	
+	await music_tween.finished
+	
+	active_player.stop()
+	
+	song_loop = loop
 
 func _fix_music_volume():
 	music.volume_linear = DATA.master_volume * music_high * DATA.music_volume

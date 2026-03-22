@@ -7,6 +7,8 @@ script = ExtResource("1_j5px3")
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=1516381879]
 
+[node name="music2" type="AudioStreamPlayer" parent="." unique_id=610713542]
+
 [node name="sounds" type="AudioStreamPlayer" parent="." unique_id=1406954944]
 max_polyphony = 50
 
