@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wqfe2vqjmhk7"
+path="res://.godot/imported/Edge of Life.ogg-3e01d4f1fee785d0f4aba4a3ba41aa17.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Edge of Life.ogg"
+dest_files=["res://.godot/imported/Edge of Life.ogg-3e01d4f1fee785d0f4aba4a3ba41aa17.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

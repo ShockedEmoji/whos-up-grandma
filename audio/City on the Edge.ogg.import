@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://j7ir7ygvx3yq"
+path="res://.godot/imported/City on the Edge.ogg-c1847e6f368050a5a59704c021cc202a.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/City on the Edge.ogg"
+dest_files=["res://.godot/imported/City on the Edge.ogg-c1847e6f368050a5a59704c021cc202a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

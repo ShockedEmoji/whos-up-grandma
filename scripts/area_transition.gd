@@ -14,5 +14,5 @@ func _on_body_entered(body: Node2D) -> void:
 		DATA.player_frozen = true
 		DATA.post_transition_player_pos = new_player_position
 		if new_song != "none":
-			$"../../.."._play_music("grandma_house")
+			$"../../.."._play_music(new_song)
 		$"../../.."._fade_transition(new_area_scene_path, fade_in, fade_hold, fade_out, camera_node)

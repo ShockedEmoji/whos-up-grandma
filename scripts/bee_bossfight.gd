@@ -12,7 +12,7 @@ const GOOP = preload("uid://3071pwnomwdy")
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 8
+var bullet_damage: int = 5 # set it to like 5 or something
 
 var idle_count: int = 0
 
@@ -23,6 +23,7 @@ var touching_legal: bool = true
 @onready var small_bee: Area2D = $small_bee
 
 func _ready() -> void:
+	get_tree().paused = false
 	bee.hide()
 	bee.position = Vector2(9999, 9999)
 	await text_system._say_dialogue("bee fight intro")
@@ -45,8 +46,10 @@ func _ready() -> void:
 	bee_anim_player.play("idle")
 
 func _death():
+	$".."._stop_music()
 	get_tree().paused = true
-	camera_2d._death()
+	await camera_2d._death()
+	$".."._play_music("tutorial")
 
 func _reduce_health():
 	if touching_legal:
@@ -56,9 +59,28 @@ func _reduce_health():
 		await get_tree().create_timer(1.0).timeout
 		touching_legal = true
 
+var dying: bool = false
+
 func _reduce_boss_health():
 	print("boss health reduced")
 	texture_progress_bar.value -= bullet_damage
+	
+	if texture_progress_bar.value <= 0 && !dying:
+		touching_legal = false
+		dying = true
+		
+		$".."._stop_music()
+		
+		bee_anim_player.stop()
+		bee_anim_player.play("death")
+		sprite_2d.play("pain")
+		await bee_anim_player.animation_finished
+		
+		DATA.post_transition_player_pos = Vector2(4471.0, -1510)
+		DATA.bee_just_killed = true
+		$".."._play_music("tutorial")
+		$".."._fade_transition("top_down/tutorial", 0.2, 0, 3, $Camera2D)
+
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "idle":

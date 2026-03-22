@@ -197,11 +197,15 @@ func _play_music(song: String):
 			music_high = 1.0
 			loop = true
 		"tutorial":
-			m_path = "res://audio/Waterfront.ogg"
+			m_path = "res://audio/Touch of Grass.ogg"
 			music_high = 1.0
 			loop = true
 		"bee_fight":
 			m_path = "res://audio/Flight of the Killer B.ogg"
+			music_high = 1.1
+			loop = true
+		"death":
+			m_path = "res://audio/Edge of Life.ogg"
 			music_high = 1.0
 			loop = true
 	

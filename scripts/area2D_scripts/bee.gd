@@ -22,3 +22,18 @@ func _on_body_entered(body: Node2D) -> void:
 		await $"../..".dialogue_finished
 		
 		$"../../.."._fade_transition("platformer/bee_bossfight")
+
+func _ready():
+	if DATA.bee_just_killed:
+		print("that bee really died 💀💀💀")
+		DATA.bee_just_killed = false
+		DATA.player_frozen = true
+		print("that bee really died 💀💀💀 2")
+		animation_player.play("bee death")
+		print("that bee really died 💀💀💀 3")
+		await get_tree().process_frame
+		print("that bee really died 💀💀💀 4")
+		$"../.."._say_dialogue("bee death")
+		print("that bee really died 💀💀💀 5")
+		animation_player.play("bee death last")
+		print("that bee really died 💀💀💀 6")

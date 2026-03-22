@@ -22,11 +22,6 @@ Haha, see what I did there?
 }grandma bye
 bye bye my little sweet bread roll!!
 
-}recipe
-Hello pretend I look like a recipe
-~~ life edging elixir recipe ~~
-- 1 green Herb|- 1 bundle shredded bracken leaves|- 1 buttercuppy|- 1 pepperoni spaggetthi
-
 }npc 1
 hewwoo~~~! im joe-chan, your gwandmas cat-nya!!
 i LUV LUV LUV dog food-nya!
@@ -105,3 +100,27 @@ Hhahahaa..... There is no way you shall escape my pollination of doom now!! Prep
 GYAAAHHHHHHH OUCHIE
 Okay.... I see how it is...
 You want to fight? Lets fight!!
+
+}bee death
+Gyaaaahhhhh~~~~~~
+fhhghhhhhhh~~~~~~~
+mmmmmmmmmmmffffggghhhhhhhhhhhhhh~~~~~~~
+{GIVE ME THE MEDICINE RECIPEEE`recipe
+{hahaa L bro really just lost all his aura`aura loss
+
+}recipe
+Whhuahhuhhhh...... you want the recipe!?????
+its.... auhhhhhhh..........|(gah what was it!!?!??)
+...
+Oh right here's what you need:
+- 1 green Herb|- 1 bundle shredded bracken leaves|- 1 buttercuppy|- 1 pepperoni spaggetthi
+yippee ok goodbye
+*dies*
+
+}aura loss
+waaahhhhh that's so meeaannnnnn :(
+You have made me so *cough* sad *cough*
+h-here is your grandmother's medicine recipe I guess.....
+- 1 green Herb|- 1 bundle shredded bracken leaves|- 1 buttercuppy|- 1 pepperoni spaggetthi
+yippee ok goodbye
+*dies*

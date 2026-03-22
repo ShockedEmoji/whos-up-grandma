@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dh8y3d14wg43v" path="res://sprites/stupidplaceholderrpg.png" id="6_pcyaa"]
 [ext_resource type="Script" uid="uid://bp2s75vnvsuck" path="res://scripts/health.gd" id="7_2vv4f"]
 [ext_resource type="Script" uid="uid://bw3dap77t5fbv" path="res://scripts/death_camera_2d.gd" id="9_3mf7a"]
+[ext_resource type="AudioStream" uid="uid://wqfe2vqjmhk7" path="res://audio/Edge of Life.ogg" id="9_186kt"]
 [ext_resource type="Texture2D" uid="uid://bb6y52oep7ql8" path="res://sprites/progressbars/1.PNG" id="9_efkvs"]
 [ext_resource type="Texture2D" uid="uid://dqpau54ubip84" path="res://sprites/progressbars/3.PNG" id="10_ccqoc"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="10_efkvs"]
@@ -216,6 +217,9 @@ position = Vector2(333, 534)
 process_mode = 3
 position = Vector2(576, 324)
 script = ExtResource("9_3mf7a")
+
+[node name="death_music" type="AudioStreamPlayer" parent="Camera2D" unique_id=214687618]
+stream = ExtResource("9_186kt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=507474310]
 libraries/ = SubResource("AnimationLibrary_ccqoc")
