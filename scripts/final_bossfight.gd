@@ -150,8 +150,8 @@ func _new_attack():
 					var inst = FLOWER.instantiate()
 					self.add_child(inst)
 			else:
-				for i in range(45):
-					await get_tree().create_timer(0.1).timeout
+				for i in range(40):
+					await get_tree().create_timer(0.09).timeout
 					var inst = FLOWER.instantiate()
 					self.add_child(inst)
 			
