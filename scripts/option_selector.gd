@@ -7,8 +7,12 @@ var selected_option: int = 0
 func _process(_delta: float) -> void:
 	self.position = Vector2(710, 70 + selected_option * 100)
 	
-	if Input.is_action_just_pressed("up"): selected_option -= 1
-	if Input.is_action_just_pressed("down"): selected_option += 1
+	if Input.is_action_just_pressed("up"): 
+		selected_option -= 1
+		$"../../../.."._play_sound("select")
+	if Input.is_action_just_pressed("down"): 
+		selected_option += 1
+		$"../../../.."._play_sound("select")
 	
 	if selected_option < 0: selected_option += how_many_options
 	selected_option %= how_many_options

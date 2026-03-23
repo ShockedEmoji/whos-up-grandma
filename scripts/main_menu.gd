@@ -15,6 +15,8 @@ func _ready() -> void:
 
 func _load_game():
 	if are_buttons_legal:
+		$".."._play_sound("click")
+		
 		are_buttons_legal = false
 		$".."._play_music("grandma_house")
 		$".."._fade_transition("top_down/grandma_house", 0.1, 0.1, 0.1)
@@ -25,6 +27,7 @@ var settings_path = preload("res://scenes/menu/settings.tscn")
 
 func _load_settings():
 	if are_buttons_legal:
+		$".."._play_sound("click")
 		are_buttons_legal = false
 		print_rich("[color=cyan]Literally settings-ing it rn... and by 'it' let's just say.... my femboy")
 		
@@ -34,4 +37,5 @@ func _load_settings():
 
 func _close_game():
 	if are_buttons_legal:
+		$".."._play_sound("click")
 		get_tree().quit()

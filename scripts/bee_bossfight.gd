@@ -49,7 +49,7 @@ func _death():
 	$".."._stop_music()
 	get_tree().paused = true
 	await camera_2d._death()
-	$".."._play_music("tutorial")
+	$".."._play_music("bee buzz")
 
 func _reduce_health():
 	if touching_legal:

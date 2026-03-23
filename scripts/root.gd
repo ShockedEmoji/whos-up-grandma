@@ -42,7 +42,7 @@ func _ready():
 	
 	# Make sure that no config things have null value
 	_config_load_stuff()
-	
+	#
 	_change_scene("menu/main_menu")
 	#_change_scene("platformer/mafia_bossfight")
 	
@@ -215,8 +215,12 @@ func _play_music(song: String):
 			m_path = "res://audio/Flight of the Killer B.ogg"
 			music_high = 1.1
 			loop = true
+		"bee buzz":
+			m_path = "res://audio/Bee Buzzing.mp3"
+			music_high = 1.1
+			loop = true
 		"death":
-			m_path = "res://audio/Edge of Life.ogg"
+			m_path = "res://audio/No Medicine.ogg"
 			music_high = 1.0
 			loop = true
 		"mafia fight":
@@ -239,6 +243,32 @@ func _play_music(song: String):
 	song_loop = loop
 	
 	active_player = next_player
+
+const SELECTING = preload("uid://c6gon42n81jua")
+const BEE_VOICE = preload("uid://cva7c4fw4t334")
+
+func _play_sound(sound: String):
+	
+	var sound_stream = SELECTING
+	var volume_alter: float = 1.0
+	
+	match sound:
+		"select": 
+			sound_stream = SELECTING
+			volume_alter = 1.8
+		"bee voice":
+			print("bee noise")
+			sound_stream = BEE_VOICE
+			volume_alter = 1.0
+	
+	var player: AudioStreamPlayer = AudioStreamPlayer.new()
+	player.stream = sound_stream
+	
+	player.volume_linear = DATA.sound_volume * DATA.master_volume * volume_alter
+	
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
 
 func _fix_music_volume():
 	music.volume_linear = DATA.master_volume * music_high * DATA.music_volume

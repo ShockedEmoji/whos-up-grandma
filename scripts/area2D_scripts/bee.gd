@@ -12,6 +12,8 @@ func _on_body_entered(body: Node2D) -> void:
 		DATA.bee_triggered = true
 		camera_2d.what_am_i_following = bee_camera_marker
 		
+		$"../../.."._play_music("bee buzz")
+		
 		animation_player.play("bee intro")
 		await animation_player.animation_finished
 		
