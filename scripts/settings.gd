@@ -33,6 +33,8 @@ func _toggle_fullscreen():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	
+	$"../.."._play_sound("click")
 
 func _edit_volume(_ignore):
 	DATA.master_volume = master_slider.value / 100.0
@@ -40,6 +42,8 @@ func _edit_volume(_ignore):
 	DATA.sound_volume = sound_slider.value / 100.0
 	
 	$"../.."._fix_music_volume()
+	
+	$"../.."._play_sound("click")
 
 func _save_config(_ignore):
 	DATA.master_volume = master_slider.value / 100.0
@@ -49,8 +53,11 @@ func _save_config(_ignore):
 	$"../.."._fix_music_volume()
 
 func _close():
+	$"../.."._play_sound("click")
+	
 	animation_player.play("slide_out")
 	$"..".are_buttons_legal = true
 	await animation_player.animation_finished
 	print_rich("[color=violet]die")
+	
 	queue_free()

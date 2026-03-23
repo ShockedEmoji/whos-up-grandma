@@ -82,6 +82,7 @@ offset_left = 475.31067
 offset_top = 182.0
 offset_right = 792.31067
 offset_bottom = 198.0
+step = 5.0
 value = 2.0
 
 [node name="music_slider" type="HSlider" parent="parent" unique_id=1419905602]
@@ -89,6 +90,7 @@ offset_left = 547.31067
 offset_top = 226.0
 offset_right = 792.31067
 offset_bottom = 242.0
+step = 5.0
 value = 2.0
 
 [node name="sound_slider" type="HSlider" parent="parent" unique_id=514138916]
@@ -96,6 +98,7 @@ offset_left = 547.31067
 offset_top = 258.0
 offset_right = 792.31067
 offset_bottom = 274.0
+step = 5.0
 value = 2.0
 
 [node name="Label" type="Label" parent="parent" unique_id=547418612]
