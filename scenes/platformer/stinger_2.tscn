@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dr6jodmev1wbi"]
+
+[ext_resource type="Script" uid="uid://ctr7i6mqdmkxb" path="res://scripts/stinger.gd" id="1_1xr26"]
+[ext_resource type="Texture2D" uid="uid://cw4irqtt2ypn8" path="res://sprites/remasteredbee.png" id="2_s1d0k"]
+[ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="3_hul3q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pkh7"]
+size = Vector2(171, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfy80"]
+size = Vector2(156, 116)
+
+[node name="stinger" type="Node2D" unique_id=1247190128]
+rotation = -1.5707964
+scale = Vector2(0.3200009, 0.3200009)
+script = ExtResource("1_1xr26")
+start_position = Vector2(856, 350)
+move_direction = Vector2(0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393062688]
+position = Vector2(-8, 29)
+rotation = -3.1415927
+scale = Vector2(0.78443974, 0.78443974)
+texture = ExtResource("2_s1d0k")
+hframes = 4
+vframes = 4
+frame = 7
+
+[node name="Area2D" parent="." unique_id=261412062 instance=ExtResource("3_hul3q")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1204795810]
+position = Vector2(-51.5, -1)
+shape = SubResource("RectangleShape2D_8pkh7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=154544343]
+position = Vector2(45, 7)
+shape = SubResource("RectangleShape2D_tfy80")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

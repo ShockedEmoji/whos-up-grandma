@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://0382nyekm4jf"]
+
+[ext_resource type="Script" uid="uid://hoiwd4uq0503" path="res://scripts/flower.gd" id="1_ens5x"]
+[ext_resource type="Texture2D" uid="uid://cw4irqtt2ypn8" path="res://sprites/remasteredbee.png" id="2_k86yn"]
+[ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="3_o0sbr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjpsd"]
+radius = 44.04543
+
+[node name="flower" type="Node2D" unique_id=1247190128]
+modulate = Color(1, 0.63529414, 0.19215687, 1)
+script = ExtResource("1_ens5x")
+fall_speed = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393062688]
+position = Vector2(5.9604645e-08, -0.99999994)
+scale = Vector2(0.3818565, 0.38185653)
+texture = ExtResource("2_k86yn")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="Area2D" parent="." unique_id=261412062 instance=ExtResource("3_o0sbr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1787829638]
+shape = SubResource("CircleShape2D_vjpsd")

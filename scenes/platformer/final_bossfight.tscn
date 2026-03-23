@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://b2qqyj7v2w2db"]
+
+[ext_resource type="Script" uid="uid://bg1a4dsj6ao7u" path="res://scripts/final_bossfight.gd" id="1_60nqw"]
+[ext_resource type="Texture2D" uid="uid://b3cwhcsfvrki0" path="res://sprites/beearenaremastered.png" id="2_lful1"]
+[ext_resource type="PackedScene" uid="uid://vyf6laxd1ysg" path="res://scenes/platformer/final_boss.tscn" id="3_60nqw"]
+[ext_resource type="Texture2D" uid="uid://bkk1jmht520gk" path="res://sprites/heartsheet.png" id="5_fxegm"]
+[ext_resource type="Script" uid="uid://bp2s75vnvsuck" path="res://scripts/health.gd" id="6_ims22"]
+[ext_resource type="PackedScene" uid="uid://brckbc30k8m3f" path="res://scenes/platformer/player.tscn" id="7_jlbvh"]
+[ext_resource type="Script" uid="uid://bw3dap77t5fbv" path="res://scripts/death_camera_2d.gd" id="8_pqu0y"]
+[ext_resource type="AudioStream" uid="uid://wqfe2vqjmhk7" path="res://audio/Edge of Life.ogg" id="9_sghmd"]
+[ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="10_lqe5s"]
+[ext_resource type="Texture2D" uid="uid://bb6y52oep7ql8" path="res://sprites/progressbars/1.PNG" id="11_3848a"]
+[ext_resource type="Texture2D" uid="uid://dqpau54ubip84" path="res://sprites/progressbars/3.PNG" id="12_qmctw"]
+[ext_resource type="Texture2D" uid="uid://b0e4qhqngiim6" path="res://sprites/progressbars/2.PNG" id="13_3oqi0"]
+
+[sub_resource type="Animation" id="Animation_s6qv4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 324)]
+}
+
+[sub_resource type="Animation" id="Animation_12yx4"]
+resource_name = "bob"
+length = 1.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.8),
+"transitions": PackedFloat32Array(0.59460425, 2.0705297, 1),
+"update": 0,
+"values": [Vector2(576, 324), Vector2(576, 336), Vector2(576, 324)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pcyaa"]
+_data = {
+&"RESET": SubResource("Animation_s6qv4"),
+&"bob": SubResource("Animation_12yx4")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6qv4"]
+size = Vector2(1250, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12yx4"]
+size = Vector2(71, 666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcyaa"]
+size = Vector2(386, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5gj8"]
+atlas = ExtResource("5_fxegm")
+region = Rect2(200, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltqqx"]
+atlas = ExtResource("5_fxegm")
+region = Rect2(0, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whwj3"]
+atlas = ExtResource("5_fxegm")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvwkv"]
+atlas = ExtResource("5_fxegm")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_12yx4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5gj8")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltqqx")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whwj3")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvwkv")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_3mf7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_efkvs"]
+resource_name = "zoom"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.35355344, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(3.245, 3.245)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccqoc"]
+_data = {
+&"RESET": SubResource("Animation_3mf7a"),
+&"zoom": SubResource("Animation_efkvs")
+}
+
+[node name="final_bossfight" type="Node2D" unique_id=1366835008]
+script = ExtResource("1_60nqw")
+
+[node name="background" type="Sprite2D" parent="." unique_id=820905394]
+modulate = Color(0.81087315, 0, 0.14597401, 1)
+z_index = -2
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lful1")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="boss" parent="." unique_id=56333617 instance=ExtResource("3_60nqw")]
+
+[node name="flowers" type="Sprite2D" parent="." unique_id=1900918938]
+modulate = Color(0.82132816, 0.39493838, 0.5928325, 1)
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lful1")
+hframes = 2
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="flowers" unique_id=1954183640]
+libraries/ = SubResource("AnimationLibrary_pcyaa")
+autoplay = &"bob"
+
+[node name="grass" type="Sprite2D" parent="." unique_id=1235101251]
+modulate = Color(0.98248285, 0.51653296, 0.44732684, 1)
+z_index = 2
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lful1")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="blocks" type="StaticBody2D" parent="." unique_id=329581111]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blocks" unique_id=1051090408]
+position = Vector2(559, 639)
+shape = SubResource("RectangleShape2D_s6qv4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="blocks" unique_id=1652840850]
+position = Vector2(11, 323)
+shape = SubResource("RectangleShape2D_12yx4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="blocks" unique_id=2140521447]
+position = Vector2(1140, 323)
+shape = SubResource("RectangleShape2D_12yx4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="blocks" unique_id=958692935]
+position = Vector2(580, 433)
+shape = SubResource("RectangleShape2D_pcyaa")
+
+[node name="health" type="AnimatedSprite2D" parent="." unique_id=2114434786]
+z_index = 4
+position = Vector2(1102, 598)
+scale = Vector2(0.43, 0.43)
+sprite_frames = SubResource("SpriteFrames_12yx4")
+animation = &"3"
+autoplay = "3"
+script = ExtResource("6_ims22")
+
+[node name="player" parent="." unique_id=302510047 instance=ExtResource("7_jlbvh")]
+position = Vector2(333, 534)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1037330775]
+process_mode = 3
+position = Vector2(576, 324)
+script = ExtResource("8_pqu0y")
+
+[node name="death_music" type="AudioStreamPlayer" parent="Camera2D" unique_id=214687618]
+stream = ExtResource("9_sghmd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=507474310]
+libraries/ = SubResource("AnimationLibrary_ccqoc")
+
+[node name="text_system" type="Node2D" parent="." unique_id=2131457891]
+z_index = 3
+
+[node name="text_system" parent="text_system" unique_id=702931713 instance=ExtResource("10_lqe5s")]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=717912164]
+modulate = Color(1, 0.19215687, 0.28627452, 1)
+z_index = 2
+offset_left = 106.0
+offset_top = 617.0
+offset_right = 1052.0
+offset_bottom = 639.0
+max_value = 1000.0
+value = 1000.0
+texture_under = ExtResource("11_3848a")
+texture_over = ExtResource("12_qmctw")
+texture_progress = ExtResource("13_3oqi0")

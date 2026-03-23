@@ -45,8 +45,8 @@ func _ready():
 	# Make sure that no config things have null value
 	_config_load_stuff()
 	#
-	_change_scene("menu/main_menu")
-	#_change_scene("platformer/bee_bossfight_2#")
+	#_change_scene("menu/main_menu")
+	_change_scene("platformer/final_bossfight")
 	
 	_fix_music_volume()
 	
@@ -250,6 +250,12 @@ const SELECTING = preload("uid://c6gon42n81jua")
 const BEE_VOICE = preload("uid://cva7c4fw4t334")
 const CLICK = preload("uid://dywpiuiweiph5")
 const DAMAGE = preload("uid://cy35frr4cq6a3")
+const FOOTSTEPS = preload("uid://bb63wi80lm157")
+const HONEY_SPLATTER = preload("uid://boybap474n6d4")
+const JUMP = preload("uid://di8ok3cgnysya")
+const OH_HONEY = preload("uid://bvmxdr02cootr")
+const SHOOTER = preload("uid://cx70go7o2m3cv")
+
 
 func _play_sound(sound: String):
 	
@@ -270,6 +276,18 @@ func _play_sound(sound: String):
 		"damage":
 			sound_stream = DAMAGE
 			volume_alter = 1.0
+		"splurge":
+			sound_stream = HONEY_SPLATTER
+			volume_alter = 1.0
+		"jump":
+			sound_stream = JUMP
+			volume_alter = 0.2
+		"oh honey":
+			sound_stream = OH_HONEY
+			volume_alter = 1.0
+		"shoot":
+			sound_stream = SHOOTER
+			volume_alter = 0.4
 	
 	var player: AudioStreamPlayer = AudioStreamPlayer.new()
 	player.stream = sound_stream

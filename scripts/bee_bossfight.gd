@@ -74,6 +74,8 @@ func _reduce_boss_health():
 		bee_anim_player.stop()
 		bee_anim_player.play("death")
 		sprite_2d.play("pain")
+		await get_tree().create_timer(4.0).timeout
+		DATA.root._play_sound("oh honey")
 		await bee_anim_player.animation_finished
 		
 		DATA.post_transition_player_pos = Vector2(4471.0, -1510)
@@ -100,6 +102,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 					sprite_2d.play("shoot")
 					var inst = GOOP.instantiate()
 					self.add_child(inst)
+					DATA.root._play_sound("splurge")
 					await get_tree().create_timer(1.0/4.0).timeout
 					sprite_2d.play("idle")
 				4, 5, 6:

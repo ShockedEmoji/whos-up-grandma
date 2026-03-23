@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("confirm") and coyote.time_left > 0:
 		variable_jump.start(0.0)
+		DATA.root._play_sound("jump")
 		coyote.stop()
 	
 	if Input.is_action_just_released("confirm"):
@@ -39,6 +40,7 @@ func _physics_process(delta: float) -> void:
 			var inst = BULLET.instantiate()
 			inst.start_position = self.position
 			
+			DATA.root._play_sound("shoot")
 			
 			var bullet_x: int = last_x
 			var bullet_y: int = 0

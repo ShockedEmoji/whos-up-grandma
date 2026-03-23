@@ -48,6 +48,8 @@ func _physics_process(_delta: float) -> void:
 				var inst = BULLET.instantiate()
 				inst.start_position = self.position
 				
+				DATA.root._play_sound("shoot")
+				
 				var bullet_x: float = last_x
 				var bullet_y: float = last_y
 				

@@ -5,11 +5,8 @@ signal left
 
 @onready var label: Label = $Label
 
-var damaged_yet: bool = false
-
 func _on_area_entered(area: Area2D) -> void:
-	if area.name == "bullet" && !damaged_yet:
-		damaged_yet = true
+	if area.name == "bullet":
 		damaged.emit()
 		area._die()
 
