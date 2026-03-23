@@ -44,7 +44,7 @@ func _ready():
 	_config_load_stuff()
 	
 	_change_scene("menu/main_menu")
-	# _change_scene("platformer/mafia_bossfight")
+	#_change_scene("platformer/mafia_bossfight")
 	
 	_fix_music_volume()
 	
