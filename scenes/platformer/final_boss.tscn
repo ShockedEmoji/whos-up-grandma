@@ -135,6 +135,34 @@ tracks/2/keys = {
 "values": [Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_4jqmb"]
+resource_name = "bullet spiral"
+length = 9.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 1.1033332, 1.1533332, 1.2233334, 1.9433676, 1.9666667, 6.9933863, 7.007072, 7.4313283, 7.4997563, 7.9376984, 8, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(997, 449), Vector2(997, -82), Vector2(997, -82), Vector2(561, -82), Vector2(561, -82), Vector2(561, 108), Vector2(561, 108), Vector2(561, 108), Vector2(561, 108), Vector2(561, -101), Vector2(561, -101), Vector2(1055, -101), Vector2(1055, -101), Vector2(997, 449)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9666667, 7, 7.6229277, 7.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 62.831852, 62.831852, 0.0]
+}
+
 [sub_resource type="Animation" id="Animation_18aio"]
 resource_name = "death"
 length = 6.0
@@ -161,6 +189,22 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0, 17.43583922742335]
+}
+
+[sub_resource type="Animation" id="Animation_q34e8"]
+resource_name = "easy spit"
+length = 4.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6333333, 0.76666665, 0.93333334, 1.5, 1.66, 2.3, 2.48, 3.2, 3.3899999, 3.4700003, 4.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(997, 449), Vector2(1119, 500), Vector2(1119, 500), Vector2(997, 500), Vector2(1119, 390), Vector2(997, 390), Vector2(1119, 280), Vector2(997, 280), Vector2(1119, 170), Vector2(997, 170), Vector2(997, 170), Vector2(997, 449)]
 }
 
 [sub_resource type="Animation" id="Animation_ybtv1"]
@@ -191,7 +235,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(997, 449), Vector2(997, 500), Vector2(997, 449)]
+"values": [Vector2(997, 449), Vector2(997, 546.855), Vector2(997, 449)]
 }
 
 [sub_resource type="Animation" id="Animation_83vcb"]
@@ -284,7 +328,9 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oi6u1"]
 _data = {
 &"RESET": SubResource("Animation_oi6u1"),
+&"bullet spiral": SubResource("Animation_4jqmb"),
 &"death": SubResource("Animation_18aio"),
+&"easy spit": SubResource("Animation_q34e8"),
 &"flower": SubResource("Animation_ybtv1"),
 &"idle": SubResource("Animation_hw5wm"),
 &"intro": SubResource("Animation_83vcb"),

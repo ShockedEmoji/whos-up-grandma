@@ -12,7 +12,7 @@ const GOOP = preload("uid://3071pwnomwdy")
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 4 # set it to like 5 or something
+var bullet_damage: int = 8 # set it to like 5 or something
 
 
 var touching_legal: bool = true
@@ -56,24 +56,6 @@ var dying: bool = false
 func _reduce_boss_health():
 	print("boss health reduced")
 	texture_progress_bar.value -= bullet_damage
-	
-	if texture_progress_bar.value <= 0 && !dying:
-		touching_legal = false
-		dying = true
-		
-		$".."._stop_music()
-		
-		bee_anim_player.stop()
-		bee_anim_player.play("death")
-		sprite_2d.play("pain")
-		await get_tree().create_timer(4.0).timeout
-		DATA.root._play_sound("oh honey")
-		await bee_anim_player.animation_finished
-		
-		DATA.post_transition_player_pos = Vector2(4471.0, -1510)
-		DATA.bee_just_killed = true
-		$".."._play_music("tutorial")
-		$".."._fade_transition("top_down/tutorial", 0.2, 0, 3, $Camera2D)
 
 
 var boss_state = BOSS_STATES.IDLE
@@ -82,33 +64,53 @@ var arena_bottom_left: Vector2 = Vector2(100, 557)
 var arena_top_right: Vector2 = Vector2(1050, 59)
 
 var tween: Tween
-var enraged: bool = true
+var enraged: bool = false
 
 func _new_attack():
 	match boss_state:
 		BOSS_STATES.IDLE:
 			
-			bee_anim_player.play("idle")
-			await bee_anim_player.animation_finished
-			
-			boss_state = 4 as BOSS_STATES
+			if texture_progress_bar.value <= 0:
+				boss_state = BOSS_STATES.DEAD
+			else:
+				bee_anim_player.play("idle")
+				
+				await bee_anim_player.animation_finished
+				
+				if texture_progress_bar.value <= 500 && !enraged:
+					enraged = true
+				
+				boss_state = randi_range(1, 5) as BOSS_STATES
 			
 			_new_attack()
 			
-			#var random: int = randi_range(1, 8)
 		BOSS_STATES.SPITTING:
-			bee_anim_player.play("spit")
 			sprite_2d.play("pain")
 			
-			await get_tree().create_timer(0.8).timeout
-			for i in range(4):
-				sprite_2d.play("shoot")
-				var inst = GOOP.instantiate()
-				inst.start_position = bee.position + Vector2(-30, 5)
-				inst.scale = Vector2.ONE * 0.5
-				self.add_child(inst)
-				DATA.root._play_sound("splurge")
-				await get_tree().create_timer(1.4 / 4.0).timeout
+			if !enraged:
+				bee_anim_player.play("easy spit")
+				
+				await get_tree().create_timer(0.8).timeout
+				for i in range(4):
+					sprite_2d.play("shoot")
+					var inst = GOOP.instantiate()
+					inst.start_position = bee.position + Vector2(-30, 5)
+					inst.scale = Vector2.ONE * 0.5
+					self.add_child(inst)
+					DATA.root._play_sound("splurge")
+					await get_tree().create_timer(3.2 / 4.0).timeout
+			else:
+				bee_anim_player.play("spit")
+				
+				await get_tree().create_timer(0.8).timeout
+				for i in range(4):
+					sprite_2d.play("shoot")
+					var inst = GOOP.instantiate()
+					inst.start_position = bee.position + Vector2(-30, 5)
+					inst.scale = Vector2.ONE * 0.5
+					self.add_child(inst)
+					DATA.root._play_sound("splurge")
+					await get_tree().create_timer(1.4 / 4.0).timeout
 			sprite_2d.play("idle")
 			
 			await bee_anim_player.animation_finished
@@ -142,10 +144,16 @@ func _new_attack():
 		BOSS_STATES.FLOWER:
 			bee_anim_player.play("flower")
 			await get_tree().create_timer(1.25).timeout
-			for i in range(45):
-				await get_tree().create_timer(0.1).timeout
-				var inst = FLOWER.instantiate()
-				self.add_child(inst)
+			if !enraged:
+				for i in range(30):
+					await get_tree().create_timer(0.15).timeout
+					var inst = FLOWER.instantiate()
+					self.add_child(inst)
+			else:
+				for i in range(45):
+					await get_tree().create_timer(0.1).timeout
+					var inst = FLOWER.instantiate()
+					self.add_child(inst)
 			
 			await bee_anim_player.animation_finished
 			
@@ -167,7 +175,7 @@ func _new_attack():
 				if !enraged:
 					bee.position += direction_to_player * (500 + bounces * 30) * get_process_delta_time()
 				else:
-					bee.position += direction_to_player * (600 + bounces * 50) * get_process_delta_time()
+					bee.position += direction_to_player * (700 + bounces * 50) * get_process_delta_time()
 				bee.rotation = direction_to_player.angle()
 				
 				if bee.position.y > arena_bottom_left.y: 
@@ -200,6 +208,62 @@ func _new_attack():
 			
 			boss_state = BOSS_STATES.IDLE
 			_new_attack()
+		BOSS_STATES.BULLET_SPIRAL:
+			bee_anim_player.play("bullet spiral")
+			
+			await get_tree().create_timer(2.0).timeout
+			sprite_2d.play("pain")
+			if !enraged:
+				for i in range(5):
+					DATA.root._play_sound("splurge")
+					for j in range(6):
+						var inst = GOOP.instantiate()
+						inst.start_position = bee.position
+						inst.scale = Vector2.ONE * 0.5
+						inst.speed = 300
+						
+						inst.move_direction = Vector2.RIGHT.rotated(j * TAU / 6 + i * PI / 12)
+						
+						self.add_child(inst)
+					
+					await get_tree().create_timer(1.0).timeout
+			else:
+				for i in range(10):
+					DATA.root._play_sound("splurge")
+					for j in range(6):
+						var inst = GOOP.instantiate()
+						inst.start_position = bee.position
+						inst.scale = Vector2.ONE * 0.5
+						inst.speed = 450
+						
+						inst.move_direction = Vector2.RIGHT.rotated(j * TAU / 6 + i * PI / 12)
+						
+						self.add_child(inst)
+					
+					await get_tree().create_timer(0.5).timeout
+			
+			await bee_anim_player.animation_finished
+			
+			boss_state = BOSS_STATES.IDLE
+			_new_attack()
+			
+		BOSS_STATES.DEAD:
+			touching_legal = false
+			dying = true
+			
+			$".."._stop_music()
+			
+			bee_anim_player.stop()
+			bee_anim_player.play("death")
+			sprite_2d.play("pain")
+			await get_tree().create_timer(4.0).timeout
+			DATA.root._play_sound("oh honey")
+			await bee_anim_player.animation_finished
+			
+			DATA.post_transition_player_pos = Vector2(4471.0, -1510)
+			DATA.bee_just_killed = true
+			$".."._play_music("tutorial")
+			$".."._fade_transition("top_down/tutorial", 0.2, 0, 3, $Camera2D)
 
 var npc_to_shut_up: AnimatedSprite2D = null
 

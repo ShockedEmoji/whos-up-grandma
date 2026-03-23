@@ -11,6 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	self.rotation = PI + move_direction.angle()
 	self.position += move_direction * speed * delta
 	if self.position.x < -500 || self.position.y > 2000: self.queue_free()
 
