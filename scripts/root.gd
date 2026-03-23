@@ -40,11 +40,13 @@ func _stop_music():
 
 func _ready():
 	
+	DATA.root = self
+	
 	# Make sure that no config things have null value
 	_config_load_stuff()
 	#
 	_change_scene("menu/main_menu")
-	#_change_scene("platformer/mafia_bossfight")
+	#_change_scene("platformer/bee_bossfight_2#")
 	
 	_fix_music_volume()
 	

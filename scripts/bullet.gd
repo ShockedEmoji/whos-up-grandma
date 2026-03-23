@@ -27,6 +27,7 @@ func _die():
 	self.queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
+	print(body)
 	if body is StaticBody2D && !dying:
 		_die()
 

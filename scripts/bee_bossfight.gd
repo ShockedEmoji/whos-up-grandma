@@ -89,10 +89,10 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		if idle_count > 0:
 			idle_count = 0
 			
-			var random: int = randi_range(1, 5)
+			var random: int = randi_range(1, 8)
 			
 			match random:
-				1, 2:
+				1, 2, 3:
 					bee_anim_player.play("spit")
 					sprite_2d.play("idle")
 					
@@ -102,7 +102,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 					self.add_child(inst)
 					await get_tree().create_timer(1.0/4.0).timeout
 					sprite_2d.play("idle")
-				3, 4:
+				4, 5, 6:
 					bee_anim_player.play("stinger")
 					sprite_2d.play("pain")
 					await get_tree().create_timer(1.47).timeout
@@ -110,7 +110,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 					self.add_child(inst)
 					
 					sprite_2d.play("naked pain")
-				5:
+				7, 8:
 					bee_anim_player.play("flower")
 					await get_tree().create_timer(1.25).timeout
 					for i in range(10):

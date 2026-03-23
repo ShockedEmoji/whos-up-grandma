@@ -17,7 +17,7 @@ var rng = RandomNumberGenerator.new()
 var bee_triggered: bool = false
 var bee_just_killed: bool = false
 
-
+var root: Node
 
 
 func _rand(extra_thing: String):

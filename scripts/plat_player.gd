@@ -78,7 +78,7 @@ var x_velocity_add: float = 0
 
 func _take_damage():
 	print("ouchie")
-	$"../.."._play_sound("damage")
+	DATA.root._play_sound("damage")
 	
 	var inst = DAMAGE_PARTICLES.instantiate()
 	inst.position = self.position

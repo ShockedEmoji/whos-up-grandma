@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boybap474n6d4"
+path="res://.godot/imported/Honey Splatter.mp3-bced430a188f4c2bba16eaa5dc7a08d6.mp3str"
+
+[deps]
+
+source_file="res://audio/Honey Splatter.mp3"
+dest_files=["res://.godot/imported/Honey Splatter.mp3-bced430a188f4c2bba16eaa5dc7a08d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
