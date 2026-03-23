@@ -200,7 +200,7 @@ func _play_music(song: String):
 	
 	match song:
 		"menu":
-			m_path = "res://audio/Life on the Edge.ogg"
+			m_path = "res://audio/Touch of Grass.ogg"
 			music_high = 1.0
 			loop = true
 		"grandma_house":
@@ -208,7 +208,7 @@ func _play_music(song: String):
 			music_high = 1.0
 			loop = true
 		"tutorial":
-			m_path = "res://audio/Touch of Grass.ogg"
+			m_path = "res://audio/Life on the Edge.ogg"
 			music_high = 1.0
 			loop = true
 		"bee_fight":
@@ -247,6 +247,7 @@ func _play_music(song: String):
 const SELECTING = preload("uid://c6gon42n81jua")
 const BEE_VOICE = preload("uid://cva7c4fw4t334")
 const CLICK = preload("uid://dywpiuiweiph5")
+const DAMAGE = preload("uid://cy35frr4cq6a3")
 
 func _play_sound(sound: String):
 	
@@ -263,6 +264,9 @@ func _play_sound(sound: String):
 			volume_alter = 1.0
 		"click":
 			sound_stream = CLICK
+			volume_alter = 1.0
+		"damage":
+			sound_stream = DAMAGE
 			volume_alter = 1.0
 	
 	var player: AudioStreamPlayer = AudioStreamPlayer.new()

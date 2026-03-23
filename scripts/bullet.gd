@@ -8,6 +8,7 @@ var direction: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	self.position = start_position
+	self.rotation = direction.angle()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
