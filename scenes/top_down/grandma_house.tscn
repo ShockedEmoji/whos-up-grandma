@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="3_itkox"]
 [ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="4_nxpgj"]
 [ext_resource type="Texture2D" uid="uid://dc4bkukhnahwm" path="res://sprites/stupidplaceholdernpcs.png" id="5_2ioyi"]
+[ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="6_itkox"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="6_mtajo"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="7_77yx0"]
 [ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="8_6n4y5"]
@@ -137,6 +138,47 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxpgj"]
+atlas = ExtResource("6_itkox")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ioyi"]
+atlas = ExtResource("6_itkox")
+region = Rect2(400, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtajo"]
+atlas = ExtResource("6_itkox")
+region = Rect2(800, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77yx0"]
+atlas = ExtResource("6_itkox")
+region = Rect2(1200, 0, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6n4y5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxpgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ioyi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtajo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77yx0")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itkox"]
 size = Vector2(162, 82)
 
@@ -159,15 +201,14 @@ collision_mask = 6
 [node name="npc2" parent="everything else" unique_id=915963683 instance=ExtResource("4_nxpgj")]
 position = Vector2(357, 152)
 sprite_frames = SubResource("SpriteFrames_b5ftr")
-animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.0
 dialogue = "grandma"
 
 [node name="npc" parent="everything else" unique_id=1135864980 instance=ExtResource("4_nxpgj")]
 position = Vector2(582, 293)
-animation = &"idle"
-frame_progress = 0.0
+sprite_frames = SubResource("SpriteFrames_6n4y5")
+animation = &"talk"
+frame_progress = 0.27583826
 dialogue = "press z"
 
 [node name="area_transition2" parent="everything else" unique_id=1552557158 node_paths=PackedStringArray("camera_node") instance=ExtResource("8_6n4y5")]

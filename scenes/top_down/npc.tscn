@@ -1,32 +1,32 @@
 [gd_scene format=3 uid="uid://u5ukks8as8hi"]
 
-[ext_resource type="Texture2D" uid="uid://dc4bkukhnahwm" path="res://sprites/stupidplaceholdernpcs.png" id="1_cp61h"]
+[ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="1_d3568"]
 [ext_resource type="Script" uid="uid://bhl4fk1sy85an" path="res://scripts/npc.gd" id="2_d3568"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d3568"]
-atlas = ExtResource("1_cp61h")
-region = Rect2(100, 0, 100, 100)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2qiym"]
-atlas = ExtResource("1_cp61h")
-region = Rect2(200, 0, 100, 100)
+atlas = ExtResource("1_d3568")
+region = Rect2(1600, 1600, 400, 400)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d32kj"]
-atlas = ExtResource("1_cp61h")
-region = Rect2(100, 100, 100, 100)
+atlas = ExtResource("1_d3568")
+region = Rect2(2000, 0, 400, 400)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3tlad"]
-atlas = ExtResource("1_cp61h")
-region = Rect2(200, 100, 100, 100)
+atlas = ExtResource("1_d3568")
+region = Rect2(2000, 400, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vttku"]
+atlas = ExtResource("1_d3568")
+region = Rect2(2000, 800, 400, 400)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xgefk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d3568")
+"texture": SubResource("AtlasTexture_2qiym")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2qiym")
+"texture": SubResource("AtlasTexture_d32kj")
 }],
 "loop": true,
 "name": &"idle",
@@ -34,10 +34,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d32kj")
+"texture": SubResource("AtlasTexture_3tlad")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3tlad")
+"texture": SubResource("AtlasTexture_vttku")
 }],
 "loop": true,
 "name": &"talk",
@@ -45,24 +45,25 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cp61h"]
-radius = 50.635956
+radius = 120.90514
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d3568"]
-radius = 72.0
+radius = 229.31812
 
 [node name="npc" type="AnimatedSprite2D" unique_id=1135864980]
 z_as_relative = false
 y_sort_enabled = true
 texture_filter = 1
+scale = Vector2(0.24000001, 0.24)
 sprite_frames = SubResource("SpriteFrames_xgefk")
-animation = &"talk"
-frame_progress = 0.5217415
+animation = &"idle"
 script = ExtResource("2_d3568")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1807790511]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1520915941]
+position = Vector2(0, 58.333332)
 shape = SubResource("CircleShape2D_cp61h")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1071985486]

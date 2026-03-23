@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://drlpg66pmewg3" path="res://scenes/top_down/player_2.tscn" id="2_gtr57"]
 [ext_resource type="Texture2D" uid="uid://bkk1jmht520gk" path="res://sprites/heartsheet.png" id="3_dqmnh"]
 [ext_resource type="Script" uid="uid://bp2s75vnvsuck" path="res://scripts/health.gd" id="4_hw1p8"]
-[ext_resource type="Texture2D" uid="uid://dc4bkukhnahwm" path="res://sprites/stupidplaceholdernpcs.png" id="4_j57d5"]
 [ext_resource type="Script" uid="uid://bw3dap77t5fbv" path="res://scripts/death_camera_2d.gd" id="5_j57d5"]
 [ext_resource type="AudioStream" uid="uid://wqfe2vqjmhk7" path="res://audio/Edge of Life.ogg" id="6_vvdnt"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="7_r2af8"]
@@ -99,86 +98,6 @@ terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "purple"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_hw1p8")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j57d5"]
-atlas = ExtResource("4_j57d5")
-region = Rect2(200, 100, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vvdnt"]
-atlas = ExtResource("4_j57d5")
-region = Rect2(0, 200, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r2af8"]
-atlas = ExtResource("4_j57d5")
-region = Rect2(100, 200, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h0sgl"]
-atlas = ExtResource("4_j57d5")
-region = Rect2(100, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5t63g"]
-atlas = ExtResource("4_j57d5")
-region = Rect2(200, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_llv7q"]
-atlas = ExtResource("4_j57d5")
-region = Rect2(100, 100, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wq4nb"]
-atlas = ExtResource("4_j57d5")
-region = Rect2(200, 100, 100, 100)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hw1p8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j57d5")
-}],
-"loop": false,
-"name": &"emerge",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vvdnt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r2af8")
-}],
-"loop": true,
-"name": &"flexing",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h0sgl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5t63g")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_llv7q")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wq4nb")
-}],
-"loop": false,
-"name": &"submerge",
-"speed": 5.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_j57d5"]
-radius = 49.09175
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wq4nb"]
 size = Vector2(2552, 56)
@@ -289,16 +208,6 @@ tile_set = SubResource("TileSet_j57d5")
 position = Vector2(715, 398)
 
 [node name="boss" type="Node2D" parent="." unique_id=795985630]
-position = Vector2(895, -569)
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="boss" unique_id=2134598346]
-sprite_frames = SubResource("SpriteFrames_hw1p8")
-animation = &"flexing"
-
-[node name="Area2D" type="Area2D" parent="boss" unique_id=206805322]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="boss/Area2D" unique_id=385051943]
-shape = SubResource("CircleShape2D_j57d5")
 
 [node name="blocks" type="StaticBody2D" parent="." unique_id=216909247]
 
@@ -331,7 +240,7 @@ script = ExtResource("4_hw1p8")
 process_mode = 3
 position = Vector2(720, 405)
 script = ExtResource("5_j57d5")
-default_scene = "top_down/mafia_bossfight"
+default_scene = "platformer/final_bossfight"
 camera_zoom = 0.8
 
 [node name="death_music" type="AudioStreamPlayer" parent="Camera2D" unique_id=1015822493]
@@ -342,7 +251,6 @@ libraries/ = SubResource("AnimationLibrary_h6tld")
 
 [node name="text_system" type="Node2D" parent="." unique_id=841939257]
 z_index = 3
-scale = Vector2(1.25, 1.25)
 
 [node name="text_system" parent="text_system" unique_id=702931713 instance=ExtResource("7_r2af8")]
 
@@ -359,5 +267,3 @@ value = 1000.0
 texture_under = ExtResource("8_h0sgl")
 texture_over = ExtResource("9_5t63g")
 texture_progress = ExtResource("10_llv7q")
-
-[connection signal="area_entered" from="boss/Area2D" to="." method="_on_area_2d_area_entered"]

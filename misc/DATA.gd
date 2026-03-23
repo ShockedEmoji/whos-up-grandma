@@ -17,6 +17,8 @@ var rng = RandomNumberGenerator.new()
 var bee_triggered: bool = false
 var bee_just_killed: bool = false
 
+var mafia_killed: bool = false
+
 var root: Node
 
 

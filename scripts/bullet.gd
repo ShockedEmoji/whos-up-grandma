@@ -13,8 +13,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	self.position += direction * speed * delta
-	if self.position.x > 1200 || self.position.x < -80: self.queue_free()
-	if self.position.y > 1200 || self.position.y < -80: self.queue_free()
 
 
 var dying: bool = false

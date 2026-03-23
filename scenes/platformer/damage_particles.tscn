@@ -20,7 +20,7 @@ scale_curve = SubResource("CurveTexture_neldy")
 
 [node name="damage" type="GPUParticles2D" unique_id=891070361]
 process_mode = 3
-z_index = -1
+z_index = 3
 emitting = false
 amount = 15
 texture = ExtResource("1_yb5mm")

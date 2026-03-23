@@ -202,6 +202,10 @@ shape = SubResource("RectangleShape2D_12yx4")
 position = Vector2(580, 433)
 shape = SubResource("RectangleShape2D_pcyaa")
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="blocks" unique_id=2114627495]
+position = Vector2(559, -32)
+shape = SubResource("RectangleShape2D_s6qv4")
+
 [node name="health" type="AnimatedSprite2D" parent="." unique_id=2114434786]
 z_index = 4
 position = Vector2(1102, 598)

@@ -9,6 +9,11 @@ var move_yes: int = 0
 
 @export var default_scene: String = "platformer/bee_bossfight"
 
+@export var camera_zoom: float = 1.0
+
+func _ready():
+	zoom = Vector2.ONE * camera_zoom
+
 func _death():
 	await get_tree().create_timer(1.0).timeout
 	animation_player.play("zoom")

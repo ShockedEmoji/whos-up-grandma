@@ -83,7 +83,12 @@ func _new_attack():
 					enraged = true
 					sprite_anim_thingy_before = "p_"
 				
-				boss_state = randi_range(1, 5) as BOSS_STATES
+				if !enraged:
+					boss_state = randi_range(1, 5) as BOSS_STATES
+				else:
+					boss_state = randi_range(2, 5) as BOSS_STATES
+					if boss_state == BOSS_STATES.NEEDLE:
+						boss_state = BOSS_STATES.SPITTING
 			
 			_new_attack()
 			

@@ -47,6 +47,7 @@ func _ready():
 	#
 	_change_scene("menu/main_menu")
 	#_change_scene("platformer/final_bossfight")
+	#_change_scene("top_down/mafia_bossfight")
 	
 	_fix_music_volume()
 	
@@ -229,6 +230,12 @@ func _play_music(song: String):
 			m_path = "res://audio/Flight of the Killer B.ogg"
 			music_high = 1.0
 			loop = true
+		"waterfront":
+			m_path = "res://audio/Waterfront.ogg"
+			music_high = 1.0
+			loop = true
+	
+	print("playing song ", m_path, "   from input " + song)
 	
 	next_player.stream = load(m_path)
 	next_player.volume_linear = 0 # Start silent
