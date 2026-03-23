@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://duv8e1b6huw2g"]
 
+[ext_resource type="Script" uid="uid://dim5lonyq21ch" path="res://scripts/barrel_spawner.gd" id="1_jjju3"]
+
 [node name="barrel_spawner" type="Node2D" unique_id=1649187504]
+script = ExtResource("1_jjju3")
+
+[node name="Timer" type="Timer" parent="." unique_id=601973857]

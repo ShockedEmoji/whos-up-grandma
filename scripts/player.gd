@@ -9,6 +9,12 @@ func _ready():
 	self.position = DATA.post_transition_player_pos
 	DATA.player_frozen = false
 
+func _teleport_to(where: Vector2):
+	var tween = create_tween()
+	
+	tween.tween_property(self, "position", where, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	await tween.finished
+
 func _physics_process(_delta: float) -> void:
 	
 	var direction: DIR

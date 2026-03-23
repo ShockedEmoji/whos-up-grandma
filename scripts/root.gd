@@ -45,8 +45,8 @@ func _ready():
 	# Make sure that no config things have null value
 	_config_load_stuff()
 	#
-	#_change_scene("menu/main_menu")
-	_change_scene("platformer/final_bossfight")
+	_change_scene("menu/main_menu")
+	#_change_scene("platformer/final_bossfight")
 	
 	_fix_music_volume()
 	
@@ -278,7 +278,7 @@ func _play_sound(sound: String):
 			volume_alter = 1.0
 		"splurge":
 			sound_stream = HONEY_SPLATTER
-			volume_alter = 1.0
+			volume_alter = 0.6
 		"jump":
 			sound_stream = JUMP
 			volume_alter = 0.2

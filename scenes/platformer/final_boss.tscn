@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cw4irqtt2ypn8" path="res://sprites/remasteredbee.png" id="1_72fyy"]
 [ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="2_4jqmb"]
+[ext_resource type="Texture2D" uid="uid://kdaw5u6isqqp" path="res://sprites/remasteredbee2.png" id="2_q34e8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18aio"]
 atlas = ExtResource("1_72fyy")
@@ -18,6 +19,46 @@ region = Rect2(3144, 1896, 1048, 948)
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkof6"]
 atlas = ExtResource("1_72fyy")
 region = Rect2(0, 2844, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udpof"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(0, 1896, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayesi"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(1048, 1896, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr5ia"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(3144, 1896, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e05s3"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(0, 2844, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4un4"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(0, 948, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yaejq"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(1048, 948, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p607d"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(2096, 1896, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2rvn"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(3144, 0, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp5v3"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(2096, 1896, 1048, 948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l465r"]
+atlas = ExtResource("2_q34e8")
+region = Rect2(1048, 1896, 1048, 948)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xlq21"]
 atlas = ExtResource("1_72fyy")
@@ -66,6 +107,56 @@ animations = [{
 "loop": true,
 "name": &"naked pain",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udpof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayesi")
+}],
+"loop": true,
+"name": &"p_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr5ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e05s3")
+}],
+"loop": true,
+"name": &"p_naked pain",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4un4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yaejq")
+}],
+"loop": true,
+"name": &"p_pain",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p607d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2rvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp5v3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l465r")
+}],
+"loop": true,
+"name": &"p_shoot",
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -350,7 +441,7 @@ position = Vector2(997, 449)
 position = Vector2(9, -11)
 scale = Vector2(0.16033758, 0.1603376)
 sprite_frames = SubResource("SpriteFrames_h3cgc")
-animation = &"shoot"
+animation = &"p_idle"
 autoplay = "idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=870609076]

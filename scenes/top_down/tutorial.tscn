@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c42rwld1gwa2t" path="res://sprites/tutorial_props/daisies_2.png" id="12_17ryx"]
 [ext_resource type="Texture2D" uid="uid://crr8xc011t404" path="res://sprites/tutorial_props/daisies_3.png" id="13_2un3y"]
 [ext_resource type="Texture2D" uid="uid://cmg6jsmtn6kin" path="res://sprites/tutorial_props/salas_plant_hanging.png" id="14_17ryx"]
+[ext_resource type="PackedScene" uid="uid://duv8e1b6huw2g" path="res://scenes/top_down/barrel_spawner.tscn" id="14_43pdy"]
 [ext_resource type="Texture2D" uid="uid://c06dorqjij7xu" path="res://sprites/tutorial_props/salas_plant.png" id="14_algh5"]
 [ext_resource type="Texture2D" uid="uid://bey87vv2tg4gj" path="res://sprites/tutorial_props/salas_plant_hanging_side.png" id="15_2un3y"]
 [ext_resource type="Texture2D" uid="uid://c53ew816vqbqc" path="res://sprites/tutorial_props/salas_plant_2.png" id="15_8cv4m"]
@@ -464,6 +465,13 @@ texture = ExtResource("18_7hhwr")
 position = Vector2(4341, -198.00002)
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("18_7hhwr")
+
+[node name="barrel_spawner" parent="everything else" unique_id=1649187504 instance=ExtResource("14_43pdy")]
+position = Vector2(1076, -62)
+barrel_interval = 2.0
+barrel_speed = 200.0
+barrel_life = 7.0
+player_send_back_position = Vector2(400, 200)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)

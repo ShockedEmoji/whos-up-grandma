@@ -66,6 +66,8 @@ var arena_top_right: Vector2 = Vector2(1050, 59)
 var tween: Tween
 var enraged: bool = false
 
+var sprite_anim_thingy_before: String = ""
+
 func _new_attack():
 	match boss_state:
 		BOSS_STATES.IDLE:
@@ -79,20 +81,21 @@ func _new_attack():
 				
 				if texture_progress_bar.value <= 500 && !enraged:
 					enraged = true
+					sprite_anim_thingy_before = "p_"
 				
 				boss_state = randi_range(1, 5) as BOSS_STATES
 			
 			_new_attack()
 			
 		BOSS_STATES.SPITTING:
-			sprite_2d.play("pain")
+			sprite_2d.play(sprite_anim_thingy_before + "pain")
 			
 			if !enraged:
 				bee_anim_player.play("easy spit")
 				
 				await get_tree().create_timer(0.8).timeout
 				for i in range(4):
-					sprite_2d.play("shoot")
+					sprite_2d.play(sprite_anim_thingy_before + "shoot")
 					var inst = GOOP.instantiate()
 					inst.start_position = bee.position + Vector2(-30, 5)
 					inst.scale = Vector2.ONE * 0.5
@@ -104,14 +107,14 @@ func _new_attack():
 				
 				await get_tree().create_timer(0.8).timeout
 				for i in range(4):
-					sprite_2d.play("shoot")
+					sprite_2d.play(sprite_anim_thingy_before + "shoot")
 					var inst = GOOP.instantiate()
 					inst.start_position = bee.position + Vector2(-30, 5)
 					inst.scale = Vector2.ONE * 0.5
 					self.add_child(inst)
 					DATA.root._play_sound("splurge")
 					await get_tree().create_timer(1.4 / 4.0).timeout
-			sprite_2d.play("idle")
+			sprite_2d.play(sprite_anim_thingy_before + "idle")
 			
 			await bee_anim_player.animation_finished
 			
@@ -120,7 +123,7 @@ func _new_attack():
 			_new_attack()
 		BOSS_STATES.NEEDLE:
 			bee_anim_player.play("stinger")
-			sprite_2d.play("pain")
+			sprite_2d.play(sprite_anim_thingy_before + "pain")
 			await get_tree().create_timer(1.0).timeout
 			for i in range(25):
 				var inst = STINGER.instantiate()
@@ -212,7 +215,7 @@ func _new_attack():
 			bee_anim_player.play("bullet spiral")
 			
 			await get_tree().create_timer(2.0).timeout
-			sprite_2d.play("pain")
+			sprite_2d.play(sprite_anim_thingy_before + "pain")
 			if !enraged:
 				for i in range(5):
 					DATA.root._play_sound("splurge")
@@ -255,7 +258,7 @@ func _new_attack():
 			
 			bee_anim_player.stop()
 			bee_anim_player.play("death")
-			sprite_2d.play("pain")
+			sprite_2d.play(sprite_anim_thingy_before + "pain")
 			await get_tree().create_timer(4.0).timeout
 			DATA.root._play_sound("oh honey")
 			await bee_anim_player.animation_finished
