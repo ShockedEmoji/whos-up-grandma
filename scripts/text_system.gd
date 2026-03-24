@@ -35,7 +35,7 @@ func _input(_event: InputEvent) -> void:
 const TEXT_OPTION = preload("res://scenes/top_down/text_option.tscn")
 @onready var options_box: Control = $options_box
 
-var current_voice: String = "bee voice"
+var current_voice: String = "default"
 
 func _say_dialogue(title_name: String):
 	
@@ -131,7 +131,7 @@ func _option_selected(which_option: int):
 
 var letter_length: float = 0.01
 
-const letters_before_new_line: int = 50
+const letters_before_new_line: int = 73
 
 func _load_text(text_to_load: String):
 	
@@ -188,7 +188,11 @@ func _load_text(text_to_load: String):
 			current_letter += 1
 		label.text = current_text
 		
-		DATA.root._play_sound("bee voice")
+		match current_voice:
+			"default":
+				DATA.root._play_sound("voice")
+			"bee":
+				DATA.root._play_sound("bee voice")
 		
 		await get_tree().process_frame
 	

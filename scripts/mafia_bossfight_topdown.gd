@@ -33,6 +33,8 @@ func _ready() -> void:
 	await tween.finished
 	
 	_new_attack()
+	timer.timeout.connect(_spawn_barrel)
+	timer.start()
 
 func _death():
 	$".."._stop_music()
@@ -67,6 +69,29 @@ const WATER_DROP = preload("uid://d2jmp3plcdvs2")
 const BARREL_PROJECTILE = preload("uid://br4kcvx2ft70a")
 
 var attacks_since_last_jump: int = 0
+@onready var timer: Timer = $Timer
+
+func _spawn_barrel():
+	var inst = BARREL_PROJECTILE.instantiate()
+	
+	var barrel_pos: int = randi_range(1, 6)
+	
+	if barrel_pos <= 3:
+		inst.move_direction = Vector2.DOWN
+		inst.start_position = Vector2(380 + (barrel_pos - 1) * 342, -100)
+	else:
+		var rand_one_or_minus_one = randi_range(0, 1)
+		if rand_one_or_minus_one == 0: rand_one_or_minus_one = - 1
+		inst.move_direction = Vector2.RIGHT * rand_one_or_minus_one
+		inst.start_position.y = 66 + 340 * (barrel_pos - 4)
+		
+		if rand_one_or_minus_one == 1: inst.start_position.x = -80
+		else: inst.start_position.x = 1515
+	
+	inst.speed = 200
+	
+	self.add_child(inst)
+
 
 func _new_attack():
 	match boss_state:
@@ -81,7 +106,7 @@ func _new_attack():
 					boss_state = BOSS_STATES.JUMPING
 					attacks_since_last_jump = 0
 				else: 
-					boss_state = randi_range(2, 5) as BOSS_STATES
+					boss_state = randi_range(2, 4) as BOSS_STATES
 					attacks_since_last_jump += 1
 				await get_tree().create_timer(1.0).timeout
 			
@@ -183,43 +208,11 @@ func _new_attack():
 			
 			boss_state = BOSS_STATES.IDLE
 			_new_attack()
-		BOSS_STATES.BARRELS:
-			sprite_2d.play("submerge")
-			await sprite_2d.animation_finished
-			boss.hide()
-			
-			boss.position = Vector2.ONE * 9999
-			
-			await get_tree().create_timer(1.0).timeout
-			
-			for i in range(45):
-				var inst = BARREL_PROJECTILE.instantiate()
-				
-				inst.move_direction = Vector2.DOWN
-				inst.start_position = Vector2(randf_range(70, 1370), -100)
-				
-				inst.speed = 400
-				
-				self.add_child(inst)
-				
-				await get_tree().create_timer(0.1).timeout
-			await get_tree().create_timer(1.0).timeout
-			
-			var target_pos: Vector2 = corners.get(randi_range(0, 3))
-			
-			boss.position = target_pos
-			
-			boss.show()
-			sprite_2d.play("emerge")
-			await sprite_2d.animation_finished
-			
-			sprite_2d.play("idle")
-			
-			boss_state = BOSS_STATES.IDLE
-			_new_attack()
 		BOSS_STATES.DEAD:
 			touching_legal = false
 			dying = true
+			
+			timer.stop()
 			
 			$".."._stop_music()
 			
@@ -254,6 +247,5 @@ enum BOSS_STATES {
 	FIREWORK,
 	SPINNY_FIREWORK,
 	BULLET_STREAM,
-	BARRELS,
 	DEAD
 }

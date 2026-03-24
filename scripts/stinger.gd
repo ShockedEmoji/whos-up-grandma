@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var start_position: Vector2
+@export var slow_at_start: bool = false
 
 var speed: float = 600
 
@@ -8,6 +9,13 @@ var speed: float = 600
 
 func _ready() -> void:
 	self.position = start_position
+	if slow_at_start: 
+		var real_speed = speed
+		speed = 50
+		
+		await get_tree().create_timer(3.0).timeout
+		
+		speed = real_speed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

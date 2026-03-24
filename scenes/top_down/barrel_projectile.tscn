@@ -4,17 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="3_igexx"]
 [ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="3_iv410"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fxtg"]
-size = Vector2(86, 86)
+[sub_resource type="CircleShape2D" id="CircleShape2D_iv410"]
+radius = 24.083189
 
 [node name="barrel_projectile" type="Node2D" unique_id=623778350]
 script = ExtResource("1_iv410")
 start_position = Vector2(985, 535)
+slow_at_start = true
 
 [node name="Area2D" parent="." unique_id=261412062 instance=ExtResource("3_igexx")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=937720585]
-shape = SubResource("RectangleShape2D_6fxtg")
+shape = SubResource("CircleShape2D_iv410")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=601072002]
 scale = Vector2(0.734375, 0.734375)

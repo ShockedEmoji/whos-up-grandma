@@ -26,11 +26,14 @@ func _ready() -> void:
 	get_tree().paused = false
 	bee.hide()
 	bee.position = Vector2(9999, 9999)
+	text_system.current_voice = "bee"
 	await text_system._say_dialogue("bee fight intro")
 	
 	await small_bee.damaged
 	
 	await text_system._say_dialogue("bee ouch")
+	
+	DATA.root._play_sound("buzz off")
 	
 	$".."._play_music("bee_fight")
 	
@@ -76,6 +79,8 @@ func _reduce_boss_health():
 		sprite_2d.play("pain")
 		await get_tree().create_timer(4.0).timeout
 		DATA.root._play_sound("oh honey")
+		await get_tree().create_timer(0.5).timeout
+		DATA.root._play_sound("fling away")
 		await bee_anim_player.animation_finished
 		
 		DATA.post_transition_player_pos = Vector2(4471.0, -1510)
