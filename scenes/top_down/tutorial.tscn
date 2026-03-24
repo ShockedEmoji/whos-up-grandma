@@ -19,14 +19,22 @@
 [ext_resource type="Texture2D" uid="uid://c06dorqjij7xu" path="res://sprites/tutorial_props/salas_plant.png" id="14_algh5"]
 [ext_resource type="Texture2D" uid="uid://bey87vv2tg4gj" path="res://sprites/tutorial_props/salas_plant_hanging_side.png" id="15_2un3y"]
 [ext_resource type="Texture2D" uid="uid://c53ew816vqbqc" path="res://sprites/tutorial_props/salas_plant_2.png" id="15_8cv4m"]
+[ext_resource type="Texture2D" uid="uid://ecrh6mxgpyhc" path="res://sprites/tutorial_props/tree.png" id="16_8cn0q"]
 [ext_resource type="Texture2D" uid="uid://b3hai8wfqqhr1" path="res://sprites/tutorial_props/salas_plant_hanging_side_2.png" id="16_algh5"]
 [ext_resource type="Texture2D" uid="uid://vxpr7c5wd67w" path="res://sprites/tutorial_props/salas_plant_3.png" id="16_y2jc6"]
 [ext_resource type="Texture2D" uid="uid://dvo6kovgkwtgf" path="res://sprites/tutorial_props/salas_plant_4.png" id="17_7vavp"]
 [ext_resource type="Texture2D" uid="uid://cl1j88vuknyb6" path="res://sprites/tutorial_props/branch_4.png" id="17_8cv4m"]
+[ext_resource type="Texture2D" uid="uid://cn4y8e1lk657a" path="res://sprites/tutorial_props/tree_3.png" id="17_r5axp"]
 [ext_resource type="Texture2D" uid="uid://dchix1wxq1025" path="res://sprites/tutorial_props/salas_plant_5.png" id="18_7hhwr"]
+[ext_resource type="Texture2D" uid="uid://cdvmfx43tuyw8" path="res://sprites/tutorial_props/tree_2.png" id="18_n0rgj"]
 [ext_resource type="Texture2D" uid="uid://xtv0ntyxnaj2" path="res://sprites/tutorial_props/branch.png" id="18_y2jc6"]
+[ext_resource type="Texture2D" uid="uid://bxadr7180kg0j" path="res://sprites/tutorial_props/car_tire.png" id="19_6l674"]
 [ext_resource type="Texture2D" uid="uid://dukthc5ul4tpj" path="res://sprites/tutorial_props/branch_3.png" id="19_7vavp"]
+[ext_resource type="Texture2D" uid="uid://cxctapwtnvv5g" path="res://sprites/tutorial_props/dirt_patch.png" id="23_j4psk"]
+[ext_resource type="Texture2D" uid="uid://dnifaih1xhbhb" path="res://sprites/tutorial_props/dirt_patch_2.png" id="24_n0rgj"]
+[ext_resource type="Texture2D" uid="uid://ihowxrbqdy1t" path="res://sprites/tutorial_props/dirt_patch_3.png" id="25_6l674"]
 [ext_resource type="Texture2D" uid="uid://cxms1kxdccqjv" path="res://sprites/tutorial_props/branch_2.png" id="25_7hhwr"]
+[ext_resource type="Texture2D" uid="uid://ryeti167i5et" path="res://sprites/tutorial_props/bike_wheel.png" id="28_p5tcy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43pdy"]
 texture = ExtResource("2_7ejar")
@@ -304,7 +312,19 @@ _data = {
 &"bee intro": SubResource("Animation_0v5ou")
 }
 
-[node name="tutorial" type="Node2D" unique_id=1000960487]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5tcy"]
+size = Vector2(256, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1102"]
+size = Vector2(96, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvdny"]
+size = Vector2(152, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t680i"]
+size = Vector2(308, 244)
+
+[node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_fw3hl")
 
 [node name="Black" type="Sprite2D" parent="." unique_id=489202517]
@@ -555,11 +575,6 @@ position = Vector2(4678, -689)
 scale = Vector2(0.31367934, 0.31367934)
 texture = ExtResource("16_y2jc6")
 
-[node name="SalasPlant29" type="Sprite2D" parent="everything else" unique_id=551423863]
-position = Vector2(4710, -624)
-scale = Vector2(0.31367934, 0.31367934)
-texture = ExtResource("16_y2jc6")
-
 [node name="SalasPlant31" type="Sprite2D" parent="everything else" unique_id=1162296322]
 position = Vector2(4607, -534)
 scale = Vector2(0.31367934, 0.31367934)
@@ -586,12 +601,7 @@ scale = Vector2(0.31, 0.31)
 texture = ExtResource("14_algh5")
 
 [node name="SalasPlant35" type="Sprite2D" parent="everything else" unique_id=181591750]
-position = Vector2(4685, -645.99994)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("17_7vavp")
-
-[node name="SalasPlant36" type="Sprite2D" parent="everything else" unique_id=1648678787]
-position = Vector2(4699.0005, -543)
+position = Vector2(4563.0005, -695)
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("17_7vavp")
 
@@ -599,11 +609,6 @@ texture = ExtResource("17_7vavp")
 position = Vector2(4660, -575)
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("17_7vavp")
-
-[node name="SalasPlant38" type="Sprite2D" parent="everything else" unique_id=943209209]
-position = Vector2(4712, -595)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("15_8cv4m")
 
 [node name="SalasPlant40" type="Sprite2D" parent="everything else" unique_id=575173388]
 position = Vector2(4741, -577)
@@ -659,6 +664,63 @@ texture = ExtResource("18_7hhwr")
 position = Vector2(4630.0005, -1675)
 scale = Vector2(0.2560219, 0.2560219)
 texture = ExtResource("18_7hhwr")
+
+[node name="Tree" type="Sprite2D" parent="everything else" unique_id=618991951]
+position = Vector2(606.625, 164.375)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_8cn0q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Tree" unique_id=1454935047]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Tree/StaticBody2D" unique_id=218503573]
+position = Vector2(-30.5, 78.5)
+shape = SubResource("RectangleShape2D_p5tcy")
+
+[node name="Tree3" type="Sprite2D" parent="everything else" unique_id=1041791203]
+position = Vector2(814, 49)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("17_r5axp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Tree3" unique_id=1984464044]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Tree3/StaticBody2D" unique_id=1852367918]
+position = Vector2(16, 118)
+shape = SubResource("RectangleShape2D_o1102")
+
+[node name="Tree2" type="Sprite2D" parent="everything else" unique_id=1403007695]
+position = Vector2(3205, 161)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("18_n0rgj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Tree2" unique_id=1828211010]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Tree2/StaticBody2D" unique_id=632692712]
+position = Vector2(-44, 100)
+shape = SubResource("RectangleShape2D_pvdny")
+
+[node name="CarTire" type="Sprite2D" parent="everything else" unique_id=557873955]
+position = Vector2(105, 595)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("19_6l674")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/CarTire" unique_id=1826944658]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/CarTire/StaticBody2D" unique_id=714114001]
+position = Vector2(-2, -14)
+shape = SubResource("RectangleShape2D_t680i")
+
+[node name="SalasPlant50" type="Sprite2D" parent="everything else" unique_id=922534619]
+position = Vector2(-79, 95.00001)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("16_y2jc6")
+
+[node name="SalasPlant36" type="Sprite2D" parent="everything else" unique_id=1766184008]
+position = Vector2(4368, -654)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("17_7vavp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
@@ -728,7 +790,7 @@ position = Vector2(1960, 1264)
 texture = ExtResource("13_2un3y")
 
 [node name="Daisies14" type="Sprite2D" parent="props" unique_id=1741987085]
-position = Vector2(2352, 956)
+position = Vector2(2420, 1004)
 texture = ExtResource("11_5stby")
 
 [node name="Daisies15" type="Sprite2D" parent="props" unique_id=10121298]
@@ -955,17 +1017,125 @@ texture = ExtResource("11_5stby")
 position = Vector2(712, 2608)
 texture = ExtResource("12_17ryx")
 
-[node name="Daisies74" type="Sprite2D" parent="props" unique_id=1839617000]
-position = Vector2(212, 1340)
-texture = ExtResource("13_2un3y")
-
-[node name="Daisies75" type="Sprite2D" parent="props" unique_id=1873825240]
-position = Vector2(360, 1356)
-texture = ExtResource("12_17ryx")
-
 [node name="Daisies76" type="Sprite2D" parent="props" unique_id=1332315397]
 position = Vector2(76, 800)
 texture = ExtResource("12_17ryx")
+
+[node name="DirtPatch" type="Sprite2D" parent="props" unique_id=1749702159]
+position = Vector2(2980, -184)
+texture = ExtResource("23_j4psk")
+
+[node name="DirtPatch2" type="Sprite2D" parent="props" unique_id=120701956]
+position = Vector2(3192, 128)
+texture = ExtResource("24_n0rgj")
+
+[node name="DirtPatch3" type="Sprite2D" parent="props" unique_id=268820747]
+position = Vector2(2516, 500)
+texture = ExtResource("25_6l674")
+
+[node name="DirtPatch4" type="Sprite2D" parent="props" unique_id=256059293]
+position = Vector2(20, 1804)
+texture = ExtResource("25_6l674")
+
+[node name="Daisies70" type="Sprite2D" parent="props" unique_id=862249585]
+position = Vector2(196, 2564)
+texture = ExtResource("13_2un3y")
+
+[node name="Daisies71" type="Sprite2D" parent="props" unique_id=1687494713]
+position = Vector2(308, 2640)
+texture = ExtResource("12_17ryx")
+
+[node name="Daisies73" type="Sprite2D" parent="props" unique_id=2030334237]
+position = Vector2(540, 2112)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies77" type="Sprite2D" parent="props" unique_id=828497910]
+position = Vector2(724, 2096)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies79" type="Sprite2D" parent="props" unique_id=468435150]
+position = Vector2(252, 76)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies80" type="Sprite2D" parent="props" unique_id=1417550186]
+position = Vector2(208, 196)
+texture = ExtResource("12_17ryx")
+
+[node name="Daisies81" type="Sprite2D" parent="props" unique_id=1776468262]
+position = Vector2(420, 176)
+texture = ExtResource("13_2un3y")
+
+[node name="BikeWheel" type="Sprite2D" parent="props" unique_id=115112224]
+position = Vector2(12408, 1884)
+texture = ExtResource("28_p5tcy")
+
+[node name="BikeWheel2" type="Sprite2D" parent="props" unique_id=2019522038]
+position = Vector2(2548, 208)
+texture = ExtResource("28_p5tcy")
+
+[node name="Daisies82" type="Sprite2D" parent="props" unique_id=1487356061]
+position = Vector2(2692, 356)
+texture = ExtResource("11_5stby")
+
+[node name="DirtPatch5" type="Sprite2D" parent="props" unique_id=87178401]
+position = Vector2(12784, 2008)
+texture = ExtResource("24_n0rgj")
+
+[node name="DirtPatch6" type="Sprite2D" parent="props" unique_id=1834529511]
+position = Vector2(18560, -2420)
+texture = ExtResource("25_6l674")
+
+[node name="Daisies83" type="Sprite2D" parent="props" unique_id=1074573137]
+position = Vector2(17036, -1816)
+texture = ExtResource("13_2un3y")
+
+[node name="Daisies84" type="Sprite2D" parent="props" unique_id=970103083]
+position = Vector2(17132, -1920)
+texture = ExtResource("12_17ryx")
+
+[node name="Daisies85" type="Sprite2D" parent="props" unique_id=727258726]
+position = Vector2(17332, -2024)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies86" type="Sprite2D" parent="props" unique_id=947042432]
+position = Vector2(17448, -668)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies87" type="Sprite2D" parent="props" unique_id=1084630031]
+position = Vector2(18492, 492)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies88" type="Sprite2D" parent="props" unique_id=1765294814]
+position = Vector2(12676, 1848)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies89" type="Sprite2D" parent="props" unique_id=1934117658]
+position = Vector2(12656, 1984)
+texture = ExtResource("13_2un3y")
+
+[node name="Daisies90" type="Sprite2D" parent="props" unique_id=772139484]
+position = Vector2(12236, 1688)
+texture = ExtResource("12_17ryx")
+
+[node name="Daisies91" type="Sprite2D" parent="props" unique_id=2062375585]
+position = Vector2(13444, 2216)
+texture = ExtResource("12_17ryx")
+
+[node name="Daisies92" type="Sprite2D" parent="props" unique_id=1346716009]
+position = Vector2(13584, 2100)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies93" type="Sprite2D" parent="props" unique_id=22479684]
+position = Vector2(16804, 1320)
+texture = ExtResource("11_5stby")
+
+[node name="Daisies94" type="Sprite2D" parent="props" unique_id=1928784541]
+position = Vector2(17012, 1288)
+texture = ExtResource("12_17ryx")
+
+[node name="Daisies95" type="Sprite2D" parent="props" unique_id=976728765]
+position = Vector2(17092, 1008)
+texture = ExtResource("13_2un3y")
 
 [node name="aboveprops" type="Node2D" parent="." unique_id=245509154]
 z_index = 1
@@ -986,12 +1156,6 @@ texture = ExtResource("15_2un3y")
 [node name="SalasPlantHangingSide2" type="Sprite2D" parent="aboveprops" unique_id=2078768333]
 position = Vector2(3432, 2676)
 texture = ExtResource("16_algh5")
-
-[node name="Branch4" type="Sprite2D" parent="aboveprops" unique_id=621662380]
-position = Vector2(1836.0002, 2448.0002)
-rotation = -0.32828963
-scale = Vector2(4.8737097, 4.8737097)
-texture = ExtResource("17_8cv4m")
 
 [node name="Branch" type="Sprite2D" parent="aboveprops" unique_id=1380772054]
 position = Vector2(556, 2928)
@@ -1219,16 +1383,6 @@ position = Vector2(4224, 424)
 rotation = -2.8497407
 texture = ExtResource("17_8cv4m")
 
-[node name="Branch19" type="Sprite2D" parent="aboveprops" unique_id=843718068]
-position = Vector2(1448, 2224)
-rotation = -1.7398754
-scale = Vector2(1.2629027, 1.2629029)
-texture = ExtResource("17_8cv4m")
-
-[node name="Branch20" type="Sprite2D" parent="aboveprops" unique_id=1916971495]
-position = Vector2(1868, 2084)
-texture = ExtResource("19_7vavp")
-
 [node name="Branch21" type="Sprite2D" parent="aboveprops" unique_id=1890783758]
 position = Vector2(1780.0001, 2648.0002)
 scale = Vector2(2.3402555, 2.3402555)
@@ -1238,55 +1392,15 @@ texture = ExtResource("17_8cv4m")
 position = Vector2(1988, 2816)
 texture = ExtResource("19_7vavp")
 
-[node name="Branch23" type="Sprite2D" parent="aboveprops" unique_id=537867790]
-position = Vector2(2256, 2120)
-texture = ExtResource("18_y2jc6")
-
-[node name="Branch24" type="Sprite2D" parent="aboveprops" unique_id=175453497]
-position = Vector2(2068, 2556)
-rotation = -1.1613373
-scale = Vector2(1.2544054, 1.2544054)
-texture = ExtResource("25_7hhwr")
-
-[node name="Branch25" type="Sprite2D" parent="aboveprops" unique_id=379928300]
-position = Vector2(1916, 2324)
-texture = ExtResource("19_7vavp")
-
 [node name="Branch26" type="Sprite2D" parent="aboveprops" unique_id=1906989170]
 position = Vector2(1540, 2496)
 texture = ExtResource("19_7vavp")
-
-[node name="Branch27" type="Sprite2D" parent="aboveprops" unique_id=1335862831]
-position = Vector2(1228, 2496)
-texture = ExtResource("17_8cv4m")
-
-[node name="Branch28" type="Sprite2D" parent="aboveprops" unique_id=436468698]
-position = Vector2(2480, 2708)
-rotation = 0.38518924
-texture = ExtResource("19_7vavp")
-
-[node name="Branch30" type="Sprite2D" parent="aboveprops" unique_id=1117092872]
-position = Vector2(2148, 2812.0002)
-rotation = -1.0676438
-scale = Vector2(2.2391925, 2.2391922)
-texture = ExtResource("18_y2jc6")
-
-[node name="Branch31" type="Sprite2D" parent="aboveprops" unique_id=1331425361]
-position = Vector2(2612, 2824)
-rotation = 0.2284731
-scale = Vector2(1.62236, 1.62236)
-texture = ExtResource("25_7hhwr")
 
 [node name="Branch32" type="Sprite2D" parent="aboveprops" unique_id=109465784]
 position = Vector2(1272, 2852)
 rotation = -1.1019943
 scale = Vector2(1.23214, 1.23214)
 texture = ExtResource("19_7vavp")
-
-[node name="Branch33" type="Sprite2D" parent="aboveprops" unique_id=1114996320]
-position = Vector2(1308, 1940)
-rotation = -1.0707319
-texture = ExtResource("17_8cv4m")
 
 [node name="Branch29" type="Sprite2D" parent="aboveprops" unique_id=52475472]
 position = Vector2(17860.002, 1080.002)
@@ -1372,5 +1486,21 @@ texture = ExtResource("16_algh5")
 [node name="SalasPlantHangingSide17" type="Sprite2D" parent="aboveprops" unique_id=1262502459]
 position = Vector2(19040, -2912)
 texture = ExtResource("16_algh5")
+
+[node name="Branch4" type="Sprite2D" parent="aboveprops" unique_id=1990899410]
+position = Vector2(10460, 2063.9998)
+rotation = 0.74561137
+texture = ExtResource("25_7hhwr")
+
+[node name="Branch19" type="Sprite2D" parent="aboveprops" unique_id=1312687312]
+position = Vector2(13636.001, 864.0001)
+rotation = 2.8029664
+texture = ExtResource("19_7vavp")
+
+[node name="Branch20" type="Sprite2D" parent="aboveprops" unique_id=2101770610]
+position = Vector2(17264, -6103.9995)
+rotation = 1.4998037
+scale = Vector2(1.1817108, 1.1817108)
+texture = ExtResource("17_8cv4m")
 
 [connection signal="body_entered" from="everything else/bee" to="everything else/bee" method="_on_body_entered"]
