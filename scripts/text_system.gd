@@ -131,7 +131,7 @@ func _option_selected(which_option: int):
 
 var letter_length: float = 0.01
 
-const letters_before_new_line: int = 73
+const letters_before_new_line: int = 50
 
 func _load_text(text_to_load: String):
 	
@@ -188,7 +188,7 @@ func _load_text(text_to_load: String):
 			current_letter += 1
 		label.text = current_text
 		
-		$"../../.."._play_sound("bee voice")
+		DATA.root._play_sound("bee voice")
 		
 		await get_tree().process_frame
 	

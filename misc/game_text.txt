@@ -61,6 +61,14 @@ This is wonderful news! Have a nice day!
 
 }killed by bee
 *bleeuughhhhh*
+{eat the corpse`corpse eat
+{do not eat`no corpse eat
+
+}corpse eat
+nom nom
+
+}no corpse eat
+no nom nom
 
 }bee intro
 GRRRR GOD DAMN THIS FLOWERING EXILATION
@@ -88,8 +96,8 @@ Infact, you seem like a worthy competitor for my edge! DIEE!!
 }flowery
 Howdy! I'm FLOWERY. FLOWERY the FLOWER!
 I am a FLOWER!
-That guy right next to me - He's my best bud!
-Too bad some bee stung him! Hahahaha, should've dodged!
+That guy right next to me - He's my best friend!
+Too bad some bee stung him!
 
 }bee fight intro
 Hhahahaa..... There is no way you shall escape my pollination of doom now!! Prepare to DIEE!!!!!!
@@ -146,3 +154,7 @@ gaaaahjkkgfjuhoansdoinwoiuncdszojnxczokjbnasdojd
 likujbndioal;kkjjnposiaduhbnzxcoutyyvvfoukajshbek,awjmn
 xco;zuhiycvsdbggbjn awdkljndashkuczxhkasdjnlaskdngihhoasidhjj
 *dies*
+
+}brendan defeat
+Hi my name is Brendan woww you just killed me owwww
+waaaaa

@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="10_dqmnh"]
 [ext_resource type="Texture2D" uid="uid://b0e4qhqngiim6" path="res://sprites/progressbars/2.PNG" id="10_llv7q"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hw1p8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j57d5"]
 texture = ExtResource("10_dqmnh")
 texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
@@ -98,7 +98,7 @@ physics_layer_0/collision_layer = 2
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "purple"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_hw1p8")
+sources/0 = SubResource("TileSetAtlasSource_j57d5")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j57d5"]
 atlas = ExtResource("4_j57d5")
