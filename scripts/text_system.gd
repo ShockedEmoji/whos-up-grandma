@@ -131,7 +131,7 @@ func _option_selected(which_option: int):
 
 var letter_length: float = 0.01
 
-const letters_before_new_line: int = 50
+const letters_before_new_line: int = 73
 
 func _load_text(text_to_load: String):
 	

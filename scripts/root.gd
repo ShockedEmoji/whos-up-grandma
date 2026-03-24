@@ -47,8 +47,8 @@ func _ready():
 	#
 	#_change_scene("menu/main_menu")
 	#_change_scene("top_down/neo_bossfight")
-	_change_scene("platformer/final_bossfight")
-	#_change_scene("top_down/mafia_bossfight")
+	#_change_scene("platformer/final_bossfight")
+	_change_scene("top_down/mafia_bossfight")
 	
 	_fix_music_volume()
 	

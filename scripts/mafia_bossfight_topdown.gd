@@ -81,7 +81,7 @@ func _new_attack():
 					boss_state = BOSS_STATES.JUMPING
 					attacks_since_last_jump = 0
 				else: 
-					boss_state = randi_range(2, 5) as BOSS_STATES
+					boss_state = BOSS_STATES.BARRELS #randi_range(2, 5) as BOSS_STATES
 					attacks_since_last_jump += 1
 				await get_tree().create_timer(1.0).timeout
 			
@@ -192,17 +192,28 @@ func _new_attack():
 			
 			await get_tree().create_timer(1.0).timeout
 			
-			for i in range(45):
+			for i in range(10):
 				var inst = BARREL_PROJECTILE.instantiate()
 				
-				inst.move_direction = Vector2.DOWN
-				inst.start_position = Vector2(randf_range(70, 1370), -100)
+				var barrel_pos: int = randi_range(1, 6)
+				
+				if barrel_pos <= 3:
+					inst.move_direction = Vector2.DOWN
+					inst.start_position = Vector2(380 + (barrel_pos - 1) * 342, -100)
+				else:
+					var rand_one_or_minus_one = randi_range(0, 1)
+					if rand_one_or_minus_one == 0: rand_one_or_minus_one = - 1
+					inst.move_direction = Vector2.RIGHT * rand_one_or_minus_one
+					inst.start_position.y = 66 + 340 * (barrel_pos - 4)
+					
+					if rand_one_or_minus_one == 1: inst.start_position.x = -80
+					else: inst.start_position.x = 1515
 				
 				inst.speed = 400
 				
 				self.add_child(inst)
 				
-				await get_tree().create_timer(0.1).timeout
+				await get_tree().create_timer(0.5).timeout
 			await get_tree().create_timer(1.0).timeout
 			
 			var target_pos: Vector2 = corners.get(randi_range(0, 3))
