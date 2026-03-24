@@ -32,6 +32,8 @@ func _ready() -> void:
 	
 	await text_system._say_dialogue("bee ouch")
 	
+	DATA.root._play_sound("buzz off")
+	
 	$".."._play_music("bee_fight")
 	
 	small_bee._leave()
@@ -76,6 +78,8 @@ func _reduce_boss_health():
 		sprite_2d.play("pain")
 		await get_tree().create_timer(4.0).timeout
 		DATA.root._play_sound("oh honey")
+		await get_tree().create_timer(0.5).timeout
+		DATA.root._play_sound("fling away")
 		await bee_anim_player.animation_finished
 		
 		DATA.post_transition_player_pos = Vector2(4471.0, -1510)

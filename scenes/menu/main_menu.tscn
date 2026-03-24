@@ -28,7 +28,14 @@ text = "SETTINGS!!"
 
 [node name="quit_button" type="Button" parent="." unique_id=1297479044]
 offset_left = 279.0
-offset_top = 295.0
+offset_top = 524.0
 offset_right = 795.0
-offset_bottom = 327.0
+offset_bottom = 556.0
 text = "NAUUU QUIT"
+
+[node name="credits_button" type="Button" parent="." unique_id=738596117]
+offset_left = 433.0
+offset_top = 276.0
+offset_right = 641.0
+offset_bottom = 346.0
+text = "CREDITS"

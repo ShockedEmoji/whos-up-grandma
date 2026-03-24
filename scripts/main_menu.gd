@@ -3,6 +3,7 @@ extends Node2D
 @onready var play_button: Button = $play_button
 @onready var settings_button: Button = $settings_button
 @onready var quit_button: Button = $quit_button
+@onready var credits_button: Button = $credits_button
 
 var are_buttons_legal: bool = true
 
@@ -10,6 +11,7 @@ func _ready() -> void:
 	play_button.pressed.connect(_load_game)
 	settings_button.pressed.connect(_load_settings)
 	quit_button.pressed.connect(_close_game)
+	credits_button.pressed.connect(_show_credits)
 	
 	$".."._play_music("menu")
 
@@ -39,3 +41,9 @@ func _close_game():
 	if are_buttons_legal:
 		$".."._play_sound("click")
 		get_tree().quit()
+
+func _show_credits():
+	if are_buttons_legal:
+		are_buttons_legal = false
+		$".."._play_sound("click")
+		DATA.root._fade_transition("menu/credits")

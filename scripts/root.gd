@@ -45,10 +45,10 @@ func _ready():
 	# Make sure that no config things have null value
 	_config_load_stuff()
 	#
-	#_change_scene("menu/main_menu")
+	_change_scene("menu/main_menu")
 	#_change_scene("top_down/neo_bossfight")
 	#_change_scene("platformer/final_bossfight")
-	_change_scene("top_down/mafia_bossfight")
+	#_change_scene("top_down/mafia_bossfight")
 	
 	_fix_music_volume()
 	
@@ -235,6 +235,10 @@ func _play_music(song: String):
 			m_path = "res://audio/Waterfront.ogg"
 			music_high = 1.0
 			loop = true
+		"credits":
+			m_path = "res://audio/Waterfront.ogg"
+			music_high = 1.0
+			loop = true
 	
 	print("playing song ", m_path, "   from input " + song)
 	
@@ -263,6 +267,8 @@ const HONEY_SPLATTER = preload("uid://boybap474n6d4")
 const JUMP = preload("uid://di8ok3cgnysya")
 const OH_HONEY = preload("uid://bvmxdr02cootr")
 const SHOOTER = preload("uid://cx70go7o2m3cv")
+const BUZZOFF = preload("uid://cppa0gw0blm74")
+const FLUNG_AWAY = preload("uid://bxqlbac83poq3")
 
 
 func _play_sound(sound: String):
@@ -296,6 +302,12 @@ func _play_sound(sound: String):
 		"shoot":
 			sound_stream = SHOOTER
 			volume_alter = 0.4
+		"buzz off":
+			sound_stream = BUZZOFF
+			volume_alter = 1.0
+		"fling away":
+			sound_stream = FLUNG_AWAY
+			volume_alter = 1.0
 	
 	var player: AudioStreamPlayer = AudioStreamPlayer.new()
 	player.stream = sound_stream

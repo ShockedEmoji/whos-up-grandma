@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxqlbac83poq3"
+path="res://.godot/imported/Flung Away.mp3-d5fcd74ee760a10c3e2eb3a3059a0880.mp3str"
+
+[deps]
+
+source_file="res://audio/Flung Away.mp3"
+dest_files=["res://.godot/imported/Flung Away.mp3-d5fcd74ee760a10c3e2eb3a3059a0880.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
