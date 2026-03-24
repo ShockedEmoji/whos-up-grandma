@@ -12,5 +12,5 @@ z_index = 4096
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=580433353]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(1.000061, 1.000061)
-scale = Vector2(42.114697, 7074.2236)
+scale = Vector2(1360.4033, 228514)
 texture = SubResource("GradientTexture1D_2kyxk")

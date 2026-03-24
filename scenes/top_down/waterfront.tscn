@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="14_ms64r"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="15_cc2l8"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0v5ou"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c7sxa"]
 texture = ExtResource("3_0sbdo")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -66,7 +66,7 @@ texture_region_size = Vector2i(400, 400)
 8:5/0 = 0
 9:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km1gf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxnp0"]
 texture = ExtResource("4_6pc3j")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -80,7 +80,7 @@ texture_region_size = Vector2i(400, 400)
 0:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pc3j"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lo0h3"]
 texture = ExtResource("3_61xi8")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -101,9 +101,9 @@ texture_region_size = Vector2i(400, 400)
 [sub_resource type="TileSet" id="TileSet_3dnpt"]
 tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 2
-sources/2 = SubResource("TileSetAtlasSource_0v5ou")
-sources/3 = SubResource("TileSetAtlasSource_km1gf")
-sources/4 = SubResource("TileSetAtlasSource_6pc3j")
+sources/2 = SubResource("TileSetAtlasSource_c7sxa")
+sources/3 = SubResource("TileSetAtlasSource_hxnp0")
+sources/4 = SubResource("TileSetAtlasSource_lo0h3")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_km1gf"]
 radius = 344.5809
@@ -136,7 +136,7 @@ tile_set = SubResource("TileSet_3dnpt")
 z_index = -2
 position = Vector2(-51, -249)
 scale = Vector2(0.25, 0.25)
-tile_map_data = PackedByteArray("AAAFAAMAAgAEAAEAAAACAAMAAgADAAEAAAAFAAEAAgACAAEAAAACAAEAAgABAAEAAAADAAMAAgABAAAAAAAEAAMAAgABAAAAAAADAAEAAgACAAAAAAAEAAEAAgACAAAAAAACAAIAAgABAAIAAAAFAAIAAgAAAAIAAAACAAAAAgAAAAEAAAADAAAAAgAAAAEAAAAEAAAAAgAAAAEAAAAFAAAAAgAAAAEAAAACAAQAAgAAAAEAAAADAAQAAgAAAAEAAAAEAAQAAgAAAAEAAAAFAAQAAgAAAAEAAAD//wIAAgAAAAEAAAD//wMAAgAAAAEAAAAAAAEAAgAAAAEAAAAAAAIAAgAAAAEAAAAAAAMAAgAAAAEAAAABAAEAAgAAAAEAAAABAAIAAgAAAAEAAAABAAMAAgAAAAEAAAAGAAEAAgAAAAEAAAAGAAIAAgAAAAEAAAAGAAMAAgAAAAEAAAAHAAEAAgABAAEAAAAHAAIAAgABAAIAAAD//wEAAgAAAAEAAAAGAAQAAgAAAAEAAAAHAAQAAgADAAEAAAAHAAMAAgABAAIAAAD+/wEAAgAAAAEAAAD+/wIAAgAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAAFAAMAAgAEAAEAAAACAAMAAgADAAEAAAAFAAEAAgACAAEAAAACAAEAAgABAAEAAAADAAMAAgABAAAAAAAEAAMAAgABAAAAAAADAAEAAgACAAAAAAAEAAEAAgACAAAAAAACAAIAAgABAAIAAAAFAAIAAgAAAAIAAAACAAAAAgAAAAEAAAADAAAAAgAAAAEAAAAEAAAAAgAAAAEAAAAFAAAAAgAAAAEAAAACAAQAAgAAAAEAAAADAAQAAgAAAAEAAAAEAAQAAgAAAAEAAAAFAAQAAgAAAAEAAAD//wIAAgAAAAEAAAD//wMAAgAAAAEAAAAAAAEAAgAAAAEAAAAAAAIAAgAAAAEAAAAAAAMAAgAAAAEAAAABAAEAAgAAAAEAAAABAAIAAgAAAAEAAAABAAMAAgAAAAEAAAAGAAEAAgAAAAEAAAAGAAIAAgAAAAEAAAAGAAMAAgAAAAEAAAAHAAEAAgABAAEAAAAHAAIAAgABAAIAAAD//wEAAgAAAAEAAAAGAAQAAgAAAAEAAAAHAAQAAgADAAEAAAAHAAMAAgABAAIAAAD+/wIAAgAAAAEAAAD+/wEAAgAAAAEAAAA=")
 tile_set = SubResource("TileSet_3dnpt")
 
 [node name="TileMapLayerWall" type="TileMapLayer" parent="." unique_id=498887593]

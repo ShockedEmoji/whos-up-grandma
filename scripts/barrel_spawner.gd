@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var spawn_spikes_instead: bool = false
 @export var barrel_interval: float = 5.0
 @export var barrel_speed: float = 500
 @export var barrel_life: float = 3.0
@@ -14,9 +15,14 @@ func _ready() -> void:
 	timer.start()
 
 const BARREL = preload("uid://dtr4xopj7h665")
+const FALLING_SPIKE = preload("uid://d2yb2vl3g3vpr")
 
 func _timer_timeout() -> void:
-	var inst = BARREL.instantiate()
+	var inst
+	
+	if spawn_spikes_instead:
+		inst = FALLING_SPIKE.instantiate()
+	else: inst = BARREL.instantiate()
 	
 	inst.lifetime = barrel_life
 	inst.where_to_send_player = player_send_back_position
