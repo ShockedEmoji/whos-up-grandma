@@ -10,6 +10,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player" && !DATA.bee_triggered:
 		DATA.player_frozen = true
 		DATA.bee_triggered = true
+		text_system.current_voice = "bee"
 		camera_2d.what_am_i_following = bee_camera_marker
 		
 		$"../../.."._play_music("bee buzz")
@@ -27,6 +28,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _ready():
 	if DATA.bee_just_killed:
+		text_system.current_voice = "bee"
 		print("that bee really died 💀💀💀")
 		DATA.bee_just_killed = false
 		DATA.player_frozen = true
@@ -35,7 +37,7 @@ func _ready():
 		print("that bee really died 💀💀💀 3")
 		await get_tree().process_frame
 		print("that bee really died 💀💀💀 4")
-		$"../.."._say_dialogue("bee death")
+		$"../..".text_system._say_dialogue("bee death")
 		print("that bee really died 💀💀💀 5")
 		animation_player.play("bee death last")
 		print("that bee really died 💀💀💀 6")

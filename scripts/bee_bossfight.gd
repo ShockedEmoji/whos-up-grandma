@@ -26,6 +26,7 @@ func _ready() -> void:
 	get_tree().paused = false
 	bee.hide()
 	bee.position = Vector2(9999, 9999)
+	text_system.current_voice = "bee"
 	await text_system._say_dialogue("bee fight intro")
 	
 	await small_bee.damaged

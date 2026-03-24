@@ -12,7 +12,7 @@ const GOOP = preload("uid://3071pwnomwdy")
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 8 # set it to like 5 or something
+var bullet_damage: int = 80 # set it to like 5 or something
 
 
 var touching_legal: bool = true
@@ -27,6 +27,7 @@ func _ready() -> void:
 	get_tree().paused = false
 	bee.hide()
 	bee.position = Vector2(9999, 9999)
+	text_system.current_voice = "bee"
 	await text_system._say_dialogue("final fight intro")
 	
 	$".."._play_music("bee_fight")
@@ -279,6 +280,7 @@ var npc_to_shut_up: AnimatedSprite2D = null
 signal dialogue_finished
 
 func _say_dialogue(dialogue: String, npc: AnimatedSprite2D) -> void:
+	text_system.current_voice = "bee"
 	text_system._say_dialogue(dialogue)
 	
 	npc_to_shut_up = npc

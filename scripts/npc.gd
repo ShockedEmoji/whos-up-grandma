@@ -30,4 +30,5 @@ func _input(_event: InputEvent) -> void:
 			DATA.player_frozen = true
 			print("dialogue!!")
 			self.play("talk")
+			$"../.."._set_voice("default")
 			$"../.."._say_dialogue(dialogue, self)

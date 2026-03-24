@@ -269,6 +269,7 @@ const OH_HONEY = preload("uid://bvmxdr02cootr")
 const SHOOTER = preload("uid://cx70go7o2m3cv")
 const BUZZOFF = preload("uid://cppa0gw0blm74")
 const FLUNG_AWAY = preload("uid://bxqlbac83poq3")
+const VOICE_BEEP = preload("uid://bl43qfhw2c6b2")
 
 
 func _play_sound(sound: String):
@@ -308,6 +309,9 @@ func _play_sound(sound: String):
 		"fling away":
 			sound_stream = FLUNG_AWAY
 			volume_alter = 1.0
+		"voice":
+			sound_stream = VOICE_BEEP
+			volume_alter = 0.6
 	
 	var player: AudioStreamPlayer = AudioStreamPlayer.new()
 	player.stream = sound_stream
