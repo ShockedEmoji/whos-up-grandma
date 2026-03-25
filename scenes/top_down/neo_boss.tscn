@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cdfi03bhhaug1" path="res://scripts/neo_boss.gd" id="1_hjmta"]
 [ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="1_sh1og"]
+[ext_resource type="Texture2D" uid="uid://cei28hyimwkkw" path="res://sprites/brendan/leg.png" id="2_7mfvl"]
+[ext_resource type="Texture2D" uid="uid://ce4cir17rjbaa" path="res://sprites/brendan/body.png" id="2_p822b"]
+[ext_resource type="Texture2D" uid="uid://dngb2gw8fe2f8" path="res://sprites/brendan/arm.png" id="2_rtmne"]
+[ext_resource type="Texture2D" uid="uid://bon7sygfwl8xg" path="res://sprites/brendan/head.png" id="3_0d4in"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n8lu0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_sh1og")
+"texture": ExtResource("3_0d4in")
 }],
 "loop": true,
 "name": &"idle",
@@ -51,7 +55,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm1:rotation")
+tracks/2/path = NodePath("arm1:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -63,7 +67,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm2:rotation")
+tracks/3/path = NodePath("arm2:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -127,7 +131,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm1:rotation")
+tracks/2/path = NodePath("arm1:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -139,7 +143,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm2:rotation")
+tracks/3/path = NodePath("arm2:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -191,7 +195,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm1:rotation")
+tracks/2/path = NodePath("arm1:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -203,7 +207,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm2:rotation")
+tracks/3/path = NodePath("arm2:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -267,7 +271,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm1:rotation")
+tracks/2/path = NodePath("arm1:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -279,7 +283,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm2:rotation")
+tracks/3/path = NodePath("arm2:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -331,7 +335,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm1:rotation")
+tracks/2/path = NodePath("arm1:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -343,7 +347,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm2:rotation")
+tracks/3/path = NodePath("arm2:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -396,7 +400,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm1:rotation")
+tracks/2/path = NodePath("arm1:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -408,7 +412,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm2:rotation")
+tracks/3/path = NodePath("arm2:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -460,7 +464,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm1:rotation")
+tracks/2/path = NodePath("arm1:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -472,7 +476,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm2:rotation")
+tracks/3/path = NodePath("arm2:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -508,69 +512,74 @@ _data = {
 [node name="boss" type="Node2D" unique_id=32667691]
 script = ExtResource("1_hjmta")
 
-[node name="body" type="Sprite2D" parent="." unique_id=768141468]
-scale = Vector2(1.032727, 1.0327271)
-texture = ExtResource("1_sh1og")
-region_enabled = true
-region_rect = Rect2(26, 0.5, 77, 127)
-
-[node name="leg1" type="Node2D" parent="body" unique_id=435999282]
-position = Vector2(8.6428585, 21.214285)
-
-[node name="sprite" type="Sprite2D" parent="body/leg1" unique_id=291890707]
-z_index = -1
-position = Vector2(0, 79.35713)
-scale = Vector2(1, 1.6800013)
-texture = ExtResource("1_sh1og")
-region_enabled = true
-region_rect = Rect2(37, 9.5, 31, 115)
-
-[node name="leg2" type="Node2D" parent="body" unique_id=906094253]
-z_index = -1
-position = Vector2(-5.5, 21.214285)
-
-[node name="sprite" type="Sprite2D" parent="body/leg2" unique_id=787420905]
-z_index = -1
-position = Vector2(0, 79.35713)
-scale = Vector2(1, 1.6800013)
-texture = ExtResource("1_sh1og")
-region_enabled = true
-region_rect = Rect2(37, 9.5, 31, 115)
-
-[node name="arm1" type="Node2D" parent="body" unique_id=383182901]
+[node name="arm1" type="Node2D" parent="." unique_id=383182901]
 z_index = 2
-position = Vector2(24.357143, -30.642855)
+position = Vector2(9.571416, -31.645708)
+scale = Vector2(1.032727, 1.0327272)
 
-[node name="sprite" type="Sprite2D" parent="body/arm1" unique_id=1583181869]
+[node name="sprite" type="Sprite2D" parent="arm1" unique_id=1583181869]
 z_index = -1
 position = Vector2(0, 79.35713)
-scale = Vector2(1, 1.6800013)
-texture = ExtResource("1_sh1og")
+scale = Vector2(0.22535172, 0.37859118)
+texture = ExtResource("2_rtmne")
 region_enabled = true
-region_rect = Rect2(37, 9.5, 31, 115)
+region_rect = Rect2(37, 9.5, 330.58942, 585.7311)
 
-[node name="arm2" type="Node2D" parent="body" unique_id=613377703]
+[node name="arm2" type="Node2D" parent="." unique_id=613377703]
 z_index = -2
-position = Vector2(-14.928572, -27.499994)
+position = Vector2(-30.999998, -28.399988)
+scale = Vector2(1.032727, 1.0327271)
 
-[node name="sprite" type="Sprite2D" parent="body/arm2" unique_id=1920698778]
+[node name="sprite" type="Sprite2D" parent="arm2" unique_id=1920698778]
 z_index = -1
 position = Vector2(0, 79.35713)
-scale = Vector2(1, 1.6800013)
-texture = ExtResource("1_sh1og")
+scale = Vector2(0.22535175, 0.37859124)
+texture = ExtResource("2_rtmne")
 region_enabled = true
-region_rect = Rect2(37, 9.5, 31, 115)
+region_rect = Rect2(37, 9.5, 330.589, 585.731)
+
+[node name="body" type="Sprite2D" parent="." unique_id=768141468]
+scale = Vector2(0.43272686, 0.43272692)
+texture = ExtResource("2_p822b")
+region_enabled = true
+region_rect = Rect2(75.2818, 86.615814, 309.84607, 473.53836)
 
 [node name="head" type="Node2D" parent="body" unique_id=1568895734]
 z_index = 1
-position = Vector2(0, -50.28571)
+position = Vector2(-36.01085, -120.009674)
+scale = Vector2(2.3865564, 2.3865561)
 
 [node name="sprite" type="AnimatedSprite2D" parent="body/head" unique_id=1958311474]
 z_index = -1
-position = Vector2(0, -41.642857)
-scale = Vector2(0.57700896, 0.8346021)
+position = Vector2(-2.90493, -54.291775)
+scale = Vector2(0.138, 0.138)
 sprite_frames = SubResource("SpriteFrames_n8lu0")
-animation = &"laugh"
+animation = &"idle"
+
+[node name="leg1" type="Node2D" parent="body" unique_id=435999282]
+position = Vector2(10.036007, 46.46683)
+scale = Vector2(2.3865561, 2.3865561)
+
+[node name="sprite" type="Sprite2D" parent="body/leg1" unique_id=291890707]
+z_index = -1
+position = Vector2(0, 93.92012)
+scale = Vector2(0.26408333, 0.44366032)
+texture = ExtResource("2_7mfvl")
+region_enabled = true
+region_rect = Rect2(37, 9.5, 320.8459, 581.8337)
+
+[node name="leg2" type="Node2D" parent="body" unique_id=906094253]
+z_index = -1
+position = Vector2(-60.084087, 46.46683)
+scale = Vector2(2.3865561, 2.3865561)
+
+[node name="sprite" type="Sprite2D" parent="body/leg2" unique_id=787420905]
+z_index = -1
+position = Vector2(0, 93.92012)
+scale = Vector2(0.26408333, 0.44366032)
+texture = ExtResource("2_7mfvl")
+region_enabled = true
+region_rect = Rect2(37, 9.5, 320.846, 581.834)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=50886512]
 libraries/ = SubResource("AnimationLibrary_hjmta")

@@ -677,7 +677,7 @@ scale = Vector2(1.25, 1.25)
 [node name="text_system" parent="text_system" unique_id=702931713 instance=ExtResource("7_r2af8")]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=2526362]
-modulate = Color(1, 0.19215687, 0.28627452, 1)
+modulate = Color(0.043137256, 0.78431374, 1, 1)
 z_index = 2
 offset_left = 74.0
 offset_top = 743.0
