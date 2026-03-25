@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://c64e46efoo7k1" path="res://sprites/wharf_tileset.png" id="4_6pc3j"]
 [ext_resource type="Texture2D" uid="uid://bju7ybaocwior" path="res://sprites/wharf_tileset_2.png" id="6_1nklx"]
 [ext_resource type="Texture2D" uid="uid://r1wvqxqegasb" path="res://sprites/wharf_props/waterfountain.png" id="7_0v5ou"]
+[ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="7_gsig4"]
+[ext_resource type="Texture2D" uid="uid://cv86a3hornoly" path="res://sprites/black_gradient.png" id="8_q0t0h"]
+[ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="9_c880v"]
 [ext_resource type="Texture2D" uid="uid://1sd3q1jnlxx1" path="res://sprites/wharf_props/town_house_shaping.png" id="10_c7sxa"]
 [ext_resource type="Texture2D" uid="uid://bj200vpru3b66" path="res://sprites/wharf_props/hanging_buoy.png" id="11_hxnp0"]
 [ext_resource type="Texture2D" uid="uid://ci1i0x3ye22gq" path="res://sprites/wharf_props/bobs_crate_2.png" id="12_tmyfw"]
@@ -149,6 +152,9 @@ sources/4 = SubResource("TileSetAtlasSource_6pc3j")
 sources/2 = SubResource("TileSetAtlasSource_0v5ou")
 sources/6 = SubResource("TileSetAtlasSource_e1a1u")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yccd"]
+size = Vector2(198, 420)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_km1gf"]
 radius = 344.5809
 
@@ -217,14 +223,14 @@ tile_set = SubResource("TileSet_3dnpt")
 z_index = -2
 position = Vector2(-51, -249)
 scale = Vector2(0.25, 0.25)
-tile_map_data = PackedByteArray("AAACAAEAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAADAAEAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAIAAgAAAAAAAAAEAAMAAgAAAAAAAAAFAAEAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAHAAEAAwAAAAEAAAAHAAIAAwAAAAEAAAAHAAMAAwAAAAEAAAAHAAQAAwAAAAEAAAAIAAIAAwACAAAAAAAJAAIAAwABAAAAAAAKAAIAAwAAAAAAAAALAAIAAwABAAAAAAAMAAIAAwACAAAAAAANAAIAAwACAAAAAAAOAAIAAwACAAAAAAAPAAIAAwABAAAAAAAQAAIAAwAAAAAAAAARAAIAAwABAAAAAAASAAIAAwACAAAAAAD+/wEAAgAAAAAAAAD//wEAAgAAAAAAAAAAAAEAAgAAAAAAAAABAAEAAgAAAAAAAAATAAIAAwADAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAEAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAADAAEAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAIAAgAAAAAAAAAEAAMAAgAAAAAAAAAFAAEAAgAAAAAAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAHAAEAAwAAAAEAAAAHAAIAAwAAAAEAAAAHAAMAAwAAAAEAAAAHAAQAAwAAAAEAAAAIAAIAAwACAAAAAAAJAAIAAwABAAAAAAAKAAIAAwAAAAAAAAALAAIAAwABAAAAAAAMAAIAAwACAAAAAAANAAIAAwACAAAAAAAOAAIAAwACAAAAAAAPAAIAAwABAAAAAAAQAAIAAwAAAAAAAAARAAIAAwABAAAAAAASAAIAAwACAAAAAAD+/wEAAgAAAAAAAAD//wEAAgAAAAAAAAAAAAEAAgAAAAAAAAABAAEAAgAAAAAAAAATAAIAAwADAAAAAAD6/wEAAgAAAAAAAAD7/wEAAgAAAAAAAAD8/wEAAgAAAAAAAAD9/wEAAgAAAAAAAAD4/wEAAgAAAAAAAAD5/wEAAgAAAAAAAADy/wEAAgAAAAAAAADz/wEAAgAAAAAAAAD0/wEAAgAAAAAAAAD1/wEAAgAAAAAAAAD2/wEAAgAAAAAAAAD3/wEAAgAAAAAAAADs/wEAAgAAAAAAAADt/wEAAgAAAAAAAADu/wEAAgAAAAAAAADv/wEAAgAAAAAAAADw/wEAAgAAAAAAAADx/wEAAgAAAAAAAAA=")
 tile_set = SubResource("TileSet_3dnpt")
 
 [node name="TileMapLayerGround2" type="TileMapLayer" parent="." unique_id=1911152618]
 z_index = -2
 position = Vector2(-51, -249)
 scale = Vector2(0.25, 0.25)
-tile_map_data = PackedByteArray("AAAFAAMAAgAEAAEAAAACAAMAAgADAAEAAAAFAAEAAgACAAEAAAACAAEAAgABAAEAAAADAAMAAgABAAAAAAAEAAMAAgABAAAAAAADAAEAAgACAAAAAAAEAAEAAgACAAAAAAACAAIAAgABAAIAAAAFAAIAAgAAAAIAAAACAAAAAgAAAAEAAAADAAAAAgAAAAEAAAAEAAAAAgAAAAEAAAAFAAAAAgAAAAEAAAACAAQAAgAAAAEAAAADAAQAAgAAAAEAAAAEAAQAAgAAAAEAAAAFAAQAAgAAAAEAAAD//wIAAgAAAAEAAAD//wMAAgAAAAEAAAAAAAEAAgAEAAEAAAAAAAIAAgAAAAEAAAAAAAMAAgAAAAEAAAABAAEAAgAAAAEAAAABAAIAAgAAAAEAAAABAAMAAgAAAAEAAAAGAAEAAgAAAAEAAAAGAAIAAgAAAAEAAAAGAAMAAgAAAAEAAAAHAAEAAgABAAEAAAAHAAIAAgABAAIAAAD//wEAAgABAAAAAAAGAAQAAgAAAAEAAAAHAAQAAgADAAEAAAAHAAMAAgABAAIAAAD+/wEAAgABAAAAAAD+/wIAAgAAAAEAAAAGAAUABgABAAMAAAAHAAUABgABAAMAAAA=")
+tile_map_data = PackedByteArray("AAAFAAMAAgAEAAEAAAACAAMAAgADAAEAAAAFAAEAAgACAAEAAAACAAEAAgABAAEAAAADAAMAAgABAAAAAAAEAAMAAgABAAAAAAADAAEAAgACAAAAAAAEAAEAAgACAAAAAAACAAIAAgABAAIAAAAFAAIAAgAAAAIAAAACAAAAAgAAAAEAAAADAAAAAgAAAAEAAAAEAAAAAgAAAAEAAAAFAAAAAgAAAAEAAAACAAQAAgAAAAEAAAADAAQAAgAAAAEAAAAEAAQAAgAAAAEAAAAFAAQAAgAAAAEAAAD//wIAAgAAAAEAAAD//wMAAgAAAAEAAAAAAAEAAgAEAAEAAAAAAAIAAgAAAAEAAAAAAAMAAgAAAAEAAAABAAEAAgAAAAEAAAABAAIAAgAAAAEAAAABAAMAAgAAAAEAAAAGAAEAAgAAAAEAAAAGAAIAAgAAAAEAAAAGAAMAAgAAAAEAAAAHAAEAAgABAAEAAAAHAAIAAgABAAIAAAD//wEAAgABAAAAAAAGAAQAAgAAAAEAAAAHAAQAAgADAAEAAAAHAAMAAgABAAIAAAD+/wEAAgABAAAAAAD+/wIAAgAAAAEAAAAGAAUABgABAAMAAAAHAAUABgABAAMAAAD9/wIAAgAAAAEAAAD8/wIAAgAAAAEAAAD7/wIAAgAAAAEAAAD6/wIAAgAAAAEAAAD5/wIAAgAAAAEAAAD4/wIAAgAAAAEAAAD9/wEAAgABAAAAAAD8/wEAAgABAAAAAAD7/wEAAgABAAAAAAD6/wEAAgABAAAAAAD4/wEAAgABAAAAAAD5/wEAAgABAAAAAADy/wEAAgABAAAAAADy/wIAAgAAAAEAAADz/wEAAgABAAAAAADz/wIAAgAAAAEAAAD0/wEAAgABAAAAAAD0/wIAAgAAAAEAAAD1/wEAAgABAAAAAAD1/wIAAgAAAAEAAAD2/wEAAgABAAAAAAD2/wIAAgAAAAEAAAD3/wEAAgABAAAAAAD3/wIAAgAAAAEAAADs/wEAAgABAAAAAADs/wIAAgAAAAEAAADt/wEAAgABAAAAAADt/wIAAgAAAAEAAADu/wEAAgABAAAAAADu/wIAAgAAAAEAAADv/wEAAgABAAAAAADv/wIAAgAAAAEAAADw/wEAAgABAAAAAADw/wIAAgAAAAEAAADx/wEAAgABAAAAAADx/wIAAgAAAAEAAAA=")
 tile_set = SubResource("TileSet_3dnpt")
 
 [node name="TileMapLayerWall" type="TileMapLayer" parent="." unique_id=498887593]
@@ -248,6 +254,31 @@ tile_set = SubResource("TileSet_3dnpt")
 
 [node name="everything else" type="Node2D" parent="." unique_id=1803871574]
 y_sort_enabled = true
+
+[node name="Stupidplaceholdertilemap" type="Sprite2D" parent="everything else" unique_id=136634610]
+modulate = Color(0, 0, 0, 1)
+z_index = 82
+position = Vector2(-2740, -89.99997)
+scale = Vector2(5.16, 2.8533335)
+texture = ExtResource("7_gsig4")
+
+[node name="BlackGradient" type="Sprite2D" parent="everything else" unique_id=497430617]
+z_index = 5
+position = Vector2(-1684, -77.00046)
+rotation = 4.712389
+scale = Vector2(1, 1.41)
+texture = ExtResource("8_q0t0h")
+
+[node name="area_transition2" parent="everything else" unique_id=1546945762 node_paths=PackedStringArray("camera_node") instance=ExtResource("9_c880v")]
+position = Vector2(-2099, -49.000458)
+new_area_scene_path = "top_down/tutorial"
+camera_node = NodePath("../../Camera2D")
+new_song = "tutorial"
+new_player_position = Vector2(5336, -3252)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition2" unique_id=2092948023]
+position = Vector2(36, -7)
+shape = SubResource("RectangleShape2D_1yccd")
 
 [node name="player" parent="everything else" unique_id=1233949163 instance=ExtResource("4_4rcdw")]
 z_as_relative = true
@@ -299,6 +330,7 @@ script = ExtResource("14_ms64r")
 what_am_i_following = NodePath("../everything else/player")
 
 [node name="text_system" parent="Camera2D" unique_id=702931713 instance=ExtResource("15_cc2l8")]
+z_index = 481
 position = Vector2(-576, -328)
 
 [node name="below_props" type="Node2D" parent="." unique_id=1745550125]
