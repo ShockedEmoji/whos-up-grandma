@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var play_button: Button = $play_button
-@onready var settings_button: Button = $settings_button
-@onready var quit_button: Button = $quit_button
+@onready var play_button: TextureButton = $play_button
+@onready var settings_button: TextureButton = $settings_button
+@onready var quit_button: TextureButton = $quit_button
 
 var are_buttons_legal: bool = true
 

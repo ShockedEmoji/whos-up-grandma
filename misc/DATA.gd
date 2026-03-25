@@ -46,6 +46,16 @@ var save_file = "user://save_data.spinglespongle"
 	#else:
 		#printerr("CAN'T FIND THE DATA FILE AAAAAHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH (this is where it should be: " + str(save_file) + ")")
 
+func _reset_data():
+	bee_triggered = false
+	bee_just_killed = false
+	
+	plinth_interacted = false
+	final_bee_triggered = false
+	final_bee_just_killed = false
+	
+	mafia_killed = false
+
 func _load_save_file():
 	var save_file_real = FileAccess.open(save_file, FileAccess.READ)
 	

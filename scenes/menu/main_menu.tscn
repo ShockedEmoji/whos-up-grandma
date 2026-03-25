@@ -1,37 +1,203 @@
 [gd_scene format=3 uid="uid://iek0j3vv22g4"]
 
 [ext_resource type="Script" uid="uid://bkyhxw4xq07no" path="res://scripts/main_menu.gd" id="1_nl8w3"]
-[ext_resource type="FontFile" uid="uid://mepoccxco4xp" path="res://misc/Lexend-Regular.ttf" id="2_3rkf3"]
+[ext_resource type="Texture2D" uid="uid://5t2khklppsfr" path="res://sprites/menubuttons/playdefault.png" id="2_isoef"]
 [ext_resource type="Texture2D" uid="uid://ce0hffxf5gmqn" path="res://sprites/Title.png" id="3_247la"]
+[ext_resource type="Texture2D" uid="uid://c7lbecx4eyi0c" path="res://sprites/menubuttons/playclick.png" id="3_qgo02"]
+[ext_resource type="Texture2D" uid="uid://ds5vmicvhnpn7" path="res://sprites/stupid/maid.jpg" id="4_hj162"]
+[ext_resource type="Texture2D" uid="uid://k77ys4ugtjuu" path="res://sprites/menubuttons/playselect.png" id="4_vovv2"]
+[ext_resource type="Texture2D" uid="uid://c6mcra3i73a2r" path="res://sprites/menubuttons/settingsdefault.png" id="5_vovv2"]
+[ext_resource type="Texture2D" uid="uid://bsw830ibavweb" path="res://sprites/menubuttons/settingsclick.png" id="6_1k4da"]
+[ext_resource type="Texture2D" uid="uid://bqx2yyatlvhrr" path="res://sprites/menubuttons/settingsselect.png" id="7_bbqo6"]
+[ext_resource type="Texture2D" uid="uid://bx3wgro4pgopc" path="res://sprites/menubuttons/quitdefault.png" id="8_d4hu8"]
+[ext_resource type="Texture2D" uid="uid://dj7egegn52yd5" path="res://sprites/menubuttons/quitclick.png" id="9_p1nwe"]
+[ext_resource type="Texture2D" uid="uid://xnjqykr644q8" path="res://sprites/menubuttons/quitselect.png" id="10_prbor"]
+
+[sub_resource type="Animation" id="Animation_d4hu8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(585, 261)]
+}
+
+[sub_resource type="Animation" id="Animation_p1nwe"]
+resource_name = "bob"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.9666667, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(585, 244), Vector2(585, 232), Vector2(585, 244)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_prbor"]
+_data = {
+&"RESET": SubResource("Animation_d4hu8"),
+&"bob": SubResource("Animation_p1nwe")
+}
+
+[sub_resource type="Animation" id="Animation_1fws4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-48, -64)]
+}
+
+[sub_resource type="Animation" id="Animation_dgm8d"]
+resource_name = "move_and_loop"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -623), Vector2(-675, -945)]
+}
+
+[sub_resource type="Animation" id="Animation_e2ufc"]
+resource_name = "move_and_loop_2"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-326, -780), Vector2(0, -623)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_isoef"]
+_data = {
+&"RESET": SubResource("Animation_1fws4"),
+&"move_and_loop": SubResource("Animation_dgm8d"),
+&"move_and_loop_2": SubResource("Animation_e2ufc")
+}
 
 [node name="main_menu" type="Node2D" unique_id=433124902]
 script = ExtResource("1_nl8w3")
 
-[node name="play_button" type="Button" parent="." unique_id=1512089043]
-offset_left = 28.0
-offset_top = 469.0
-offset_right = 334.0
-offset_bottom = 624.0
-theme_override_fonts/font = ExtResource("2_3rkf3")
-text = "PLAYY"
+[node name="play_button" type="TextureButton" parent="." unique_id=2080813127]
+offset_left = 21.0
+offset_top = 476.00003
+offset_right = 792.87524
+offset_bottom = 833.8126
+scale = Vector2(0.4799998, 0.4799998)
+texture_normal = ExtResource("2_isoef")
+texture_pressed = ExtResource("3_qgo02")
+texture_hover = ExtResource("4_vovv2")
+ignore_texture_size = true
 
-[node name="settings_button" type="Button" parent="." unique_id=917033272]
-offset_left = 360.0
-offset_top = 525.0
-offset_right = 624.0
-offset_bottom = 619.0
-theme_override_fonts/font = ExtResource("2_3rkf3")
-text = "SETTINGS!!"
+[node name="settings_button" type="TextureButton" parent="." unique_id=328161104]
+offset_left = 465.00003
+offset_top = 482.0
+offset_right = 1236.153
+offset_bottom = 851.2303
+scale = Vector2(0.445, 0.445)
+texture_normal = ExtResource("5_vovv2")
+texture_pressed = ExtResource("6_1k4da")
+texture_hover = ExtResource("7_bbqo6")
+ignore_texture_size = true
 
-[node name="quit_button" type="Button" parent="." unique_id=1297479044]
-offset_left = 911.0
-offset_top = 576.0
-offset_right = 1130.0
-offset_bottom = 619.0
-theme_override_fonts/font = ExtResource("2_3rkf3")
-text = "NAUUU QUIT"
+[node name="quit_button" type="TextureButton" parent="." unique_id=221637896]
+offset_left = 863.00006
+offset_top = 511.0
+offset_right = 1602.2793
+offset_bottom = 928.85315
+scale = Vector2(0.35153714, 0.35153714)
+texture_normal = ExtResource("8_d4hu8")
+texture_pressed = ExtResource("9_p1nwe")
+texture_hover = ExtResource("10_prbor")
+ignore_texture_size = true
 
 [node name="Title" type="Sprite2D" parent="." unique_id=1159595086]
-position = Vector2(585, 254)
+z_index = -1
+position = Vector2(585, 261)
 scale = Vector2(0.40000027, 0.40000027)
 texture = ExtResource("3_247la")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Title" unique_id=1388747018]
+libraries/ = SubResource("AnimationLibrary_prbor")
+autoplay = &"bob"
+
+[node name="cool_background" type="Control" parent="." unique_id=1178995573]
+z_index = -6
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_top = -15.0
+offset_right = 1154.0
+offset_bottom = 672.0
+mouse_filter = 2
+
+[node name="Edwardkissaer" type="Sprite2D" parent="cool_background" unique_id=917448131]
+modulate = Color(0.07930017, 0.13470164, 0.3629184, 1)
+position = Vector2(221.00012, 463)
+scale = Vector2(2.524313, 1.0313869)
+texture = ExtResource("4_hj162")
+offset = Vector2(135.08624, -126.286224)
+
+[node name="TextureRect" type="TextureRect" parent="cool_background" unique_id=1546872294]
+modulate = Color(0.16078432, 0.03529412, 0.7058824, 0.3019608)
+layout_mode = 0
+offset_left = -48.0
+offset_top = -64.0
+offset_right = 10432.0
+offset_bottom = 6936.0
+scale = Vector2(0.25, 0.25)
+mouse_filter = 2
+texture = ExtResource("3_247la")
+stretch_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cool_background/TextureRect" unique_id=1733476453]
+libraries/ = SubResource("AnimationLibrary_isoef")
+autoplay = &"move_and_loop"
+
+[node name="TextureRect2" type="TextureRect" parent="cool_background" unique_id=15915506]
+modulate = Color(1, 1, 0.87058824, 0.12156863)
+layout_mode = 0
+offset_left = -48.0
+offset_top = -64.0
+offset_right = 22440.93
+offset_bottom = 15008.453
+scale = Vector2(0.121081814, 0.121081814)
+mouse_filter = 2
+texture = ExtResource("3_247la")
+stretch_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cool_background/TextureRect2" unique_id=564457717]
+libraries/ = SubResource("AnimationLibrary_isoef")
+autoplay = &"move_and_loop_2"

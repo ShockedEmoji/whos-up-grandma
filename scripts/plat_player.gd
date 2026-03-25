@@ -9,6 +9,7 @@ var gravity = 1500
 @onready var coyote: Timer = $coyote
 @onready var variable_jump: Timer = $variable_jump
 @onready var shoot: Timer = $shoot
+@onready var input_buffer: Timer = $input_buffer
 
 var touched_floor_recently: bool = true
 const BULLET = preload("uid://cxi0ncap5jkgi")
@@ -24,11 +25,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		coyote.start(0.0)
 	
+	if Input.is_action_just_pressed("confirm"):
+		input_buffer.start()
+	
+	if Input.is_action_just_released("confirm"):
+		input_buffer.stop()
+	
 	# Handle jump.
-	if Input.is_action_just_pressed("confirm") and coyote.time_left > 0:
+	if input_buffer.time_left > 0 and coyote.time_left > 0:
 		variable_jump.start(0.0)
 		DATA.root._play_sound("jump")
 		coyote.stop()
+		input_buffer.stop()
 	
 	if Input.is_action_just_released("confirm"):
 		if variable_jump.time_left > 0: velocity.y = -150

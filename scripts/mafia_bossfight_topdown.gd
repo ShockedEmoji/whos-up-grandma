@@ -8,7 +8,7 @@ extends Node2D
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 9 # set it to like 5 or something
+var bullet_damage: int = 10 # set it to like 5 or something
 
 
 var touching_legal: bool = true
@@ -102,7 +102,7 @@ func _new_attack():
 			else:
 				sprite_2d.play("idle")
 				
-				if attacks_since_last_jump >= 3: 
+				if attacks_since_last_jump >= 2: 
 					boss_state = BOSS_STATES.JUMPING
 					attacks_since_last_jump = 0
 				else: 
@@ -179,7 +179,7 @@ func _new_attack():
 					
 					self.add_child(inst)
 				
-				await get_tree().create_timer(0.2).timeout
+				await get_tree().create_timer(0.4).timeout
 			
 			await get_tree().create_timer(1.0).timeout
 			
@@ -194,7 +194,7 @@ func _new_attack():
 				var inst = WATER_DROP.instantiate()
 				inst.start_position = boss.position
 				inst.move_direction = (player.position - boss.position).normalized()
-				inst.speed = 600
+				inst.speed = 300
 				
 				inst.scale = Vector2.ONE * 0.5
 				

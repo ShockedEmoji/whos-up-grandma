@@ -20,18 +20,17 @@ z_index = 1
 script = ExtResource("1_vk3ua")
 
 [node name="box" type="Node2D" parent="." unique_id=1400723878]
-visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="box" unique_id=982123491]
-position = Vector2(588, 509)
-scale = Vector2(3.6466668, 1.5584418)
+position = Vector2(574, 537)
+scale = Vector2(0.74, 0.74)
 sprite_frames = SubResource("SpriteFrames_enyge")
 
 [node name="Label" type="Label" parent="box" unique_id=737820401]
-offset_left = 119.0
-offset_top = 447.0
-offset_right = 1021.0
-offset_bottom = 589.0
+offset_left = 79.0
+offset_top = 462.0
+offset_right = 1061.0
+offset_bottom = 604.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_enyge")
 theme_override_font_sizes/font_size = 25

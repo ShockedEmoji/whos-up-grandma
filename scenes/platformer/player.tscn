@@ -28,3 +28,7 @@ one_shot = true
 [node name="shoot" type="Timer" parent="." unique_id=1598548504]
 wait_time = 0.15
 one_shot = true
+
+[node name="input_buffer" type="Timer" parent="." unique_id=2012925713]
+wait_time = 0.2
+one_shot = true

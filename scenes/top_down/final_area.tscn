@@ -14,7 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://duv8e1b6huw2g" path="res://scenes/top_down/barrel_spawner.tscn" id="12_pbn8u"]
 [ext_resource type="Script" uid="uid://bxuwwpoluolgh" path="res://scripts/plinth_2.gd" id="13_pse0f"]
 [ext_resource type="Texture2D" uid="uid://bpiym8ntyf1ts" path="res://sprites/beebee.png" id="14_c58yc"]
+[ext_resource type="Texture2D" uid="uid://dukthc5ul4tpj" path="res://sprites/tutorial_props/branch_3.png" id="15_i3mg1"]
+[ext_resource type="Texture2D" uid="uid://cl1j88vuknyb6" path="res://sprites/tutorial_props/branch_4.png" id="16_77s42"]
+[ext_resource type="Texture2D" uid="uid://cxms1kxdccqjv" path="res://sprites/tutorial_props/branch_2.png" id="17_jtmvj"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="18_2pmna"]
+[ext_resource type="Texture2D" uid="uid://xtv0ntyxnaj2" path="res://sprites/tutorial_props/branch.png" id="18_bi12o"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="19_iof47"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43pdy"]
@@ -879,6 +883,232 @@ libraries/ = SubResource("AnimationLibrary_i3mg1")
 
 [node name="camera_marker" type="Marker2D" parent="everything else" unique_id=1566241691]
 position = Vector2(14469, 1209)
+
+[node name="trees and such" type="Node2D" parent="." unique_id=816941442]
+z_index = 3
+
+[node name="Branch3" type="Sprite2D" parent="trees and such" unique_id=537741705]
+position = Vector2(1206.0001, 765)
+scale = Vector2(1.2292393, 1.2292393)
+texture = ExtResource("15_i3mg1")
+
+[node name="Branch4" type="Sprite2D" parent="trees and such" unique_id=1705818225]
+position = Vector2(2487, 658.00006)
+rotation = -2.4088576
+scale = Vector2(1.4459655, 1.4459655)
+texture = ExtResource("16_77s42")
+
+[node name="Branch2" type="Sprite2D" parent="trees and such" unique_id=271379583]
+position = Vector2(3721, 875)
+rotation = -0.59843165
+scale = Vector2(1.88, 1.88)
+texture = ExtResource("17_jtmvj")
+
+[node name="Branch5" type="Sprite2D" parent="trees and such" unique_id=1401179669]
+position = Vector2(2841, 1589)
+rotation = 0.49896616
+scale = Vector2(1.72, 1.72)
+texture = ExtResource("16_77s42")
+
+[node name="Branch" type="Sprite2D" parent="trees and such" unique_id=1678106582]
+position = Vector2(4870, 1169)
+rotation = -0.26268953
+scale = Vector2(1.56, 1.56)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch6" type="Sprite2D" parent="trees and such" unique_id=840523267]
+position = Vector2(4481, 221.00012)
+rotation = -1.8773202
+scale = Vector2(1.7999952, 1.7999952)
+texture = ExtResource("16_77s42")
+
+[node name="Branch7" type="Sprite2D" parent="trees and such" unique_id=1797980364]
+position = Vector2(2699.0002, -401)
+scale = Vector2(1.3999976, 1.3999976)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch8" type="Sprite2D" parent="trees and such" unique_id=1782349768]
+position = Vector2(393, 1307)
+rotation = 0.9655293
+scale = Vector2(1.9537512, 1.9537512)
+texture = ExtResource("15_i3mg1")
+
+[node name="Branch9" type="Sprite2D" parent="trees and such" unique_id=2084881852]
+position = Vector2(5261.9995, -296.00024)
+rotation = 0.6407916
+scale = Vector2(1.56, 1.56)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch10" type="Sprite2D" parent="trees and such" unique_id=2112410193]
+position = Vector2(4109, -517.9999)
+rotation = -0.3395257
+scale = Vector2(1.6800001, 1.6800001)
+texture = ExtResource("17_jtmvj")
+
+[node name="Branch11" type="Sprite2D" parent="trees and such" unique_id=1288700526]
+position = Vector2(2288, -867)
+rotation = 2.3657372
+scale = Vector2(2.24, 2.24)
+texture = ExtResource("16_77s42")
+
+[node name="Branch12" type="Sprite2D" parent="trees and such" unique_id=2117699619]
+position = Vector2(5880, 1633.0001)
+rotation = -0.9868035
+scale = Vector2(0.84999025, 0.84999025)
+texture = ExtResource("15_i3mg1")
+
+[node name="Branch13" type="Sprite2D" parent="trees and such" unique_id=888800380]
+position = Vector2(3725, 2218)
+rotation = 0.7411192
+scale = Vector2(1.5599952, 1.5599952)
+texture = ExtResource("17_jtmvj")
+
+[node name="Branch14" type="Sprite2D" parent="trees and such" unique_id=1910292110]
+position = Vector2(4702, 2040.9998)
+rotation = -0.20484011
+scale = Vector2(1.28, 1.28)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch15" type="Sprite2D" parent="trees and such" unique_id=375609330]
+position = Vector2(5691.0005, -291)
+rotation = 1.2438204
+scale = Vector2(1.56, 1.56)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch16" type="Sprite2D" parent="trees and such" unique_id=1533892211]
+position = Vector2(2919, 893.0001)
+rotation = -1.6412108
+scale = Vector2(1.56, 1.56)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch17" type="Sprite2D" parent="trees and such" unique_id=1381872786]
+position = Vector2(3625, 52.99992)
+rotation = -3.245953
+scale = Vector2(1.7999952, 1.7999952)
+texture = ExtResource("16_77s42")
+
+[node name="Branch18" type="Sprite2D" parent="trees and such" unique_id=1877950265]
+position = Vector2(2157, 2041.0001)
+rotation = -4.5406
+scale = Vector2(1.7999952, 1.7999952)
+texture = ExtResource("16_77s42")
+
+[node name="Branch19" type="Sprite2D" parent="trees and such" unique_id=1057763726]
+position = Vector2(7323.0005, 399)
+rotation = -0.3869804
+scale = Vector2(1.7999952, 1.7999952)
+texture = ExtResource("16_77s42")
+
+[node name="Branch20" type="Sprite2D" parent="trees and such" unique_id=1325848391]
+position = Vector2(9412.001, 378.99982)
+rotation = -1.8745162
+scale = Vector2(1.88, 1.88)
+texture = ExtResource("17_jtmvj")
+
+[node name="Branch21" type="Sprite2D" parent="trees and such" unique_id=1474492978]
+position = Vector2(10546, 574.0005)
+rotation = 0.8069528
+scale = Vector2(1.88, 1.88)
+texture = ExtResource("17_jtmvj")
+
+[node name="Branch22" type="Sprite2D" parent="trees and such" unique_id=409850908]
+position = Vector2(10212.001, 495)
+rotation = 0.19807431
+scale = Vector2(1.4400048, 1.4400048)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch23" type="Sprite2D" parent="trees and such" unique_id=1625624532]
+position = Vector2(11701.999, 500.99966)
+rotation = -2.8004405
+scale = Vector2(1.4400048, 1.4400048)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch24" type="Sprite2D" parent="trees and such" unique_id=98574796]
+position = Vector2(8610, 512.99994)
+rotation = 3.188982
+scale = Vector2(2.24, 2.24)
+texture = ExtResource("16_77s42")
+
+[node name="Branch25" type="Sprite2D" parent="trees and such" unique_id=502990392]
+position = Vector2(5538, -965.00006)
+rotation = 2.3657372
+scale = Vector2(2.24, 2.24)
+texture = ExtResource("16_77s42")
+
+[node name="Branch26" type="Sprite2D" parent="trees and such" unique_id=1361153480]
+position = Vector2(4482, 960)
+rotation = 1.0337816
+scale = Vector2(2.24, 2.24)
+texture = ExtResource("16_77s42")
+
+[node name="Branch27" type="Sprite2D" parent="trees and such" unique_id=1110685966]
+position = Vector2(5601, 807)
+rotation = 2.3657372
+scale = Vector2(2.24, 2.24)
+texture = ExtResource("16_77s42")
+
+[node name="Branch28" type="Sprite2D" parent="trees and such" unique_id=357961815]
+position = Vector2(5664, 2211)
+rotation = -0.6066878
+scale = Vector2(2.24, 2.24)
+texture = ExtResource("16_77s42")
+
+[node name="Branch29" type="Sprite2D" parent="trees and such" unique_id=229139169]
+position = Vector2(3273, -1012)
+rotation = 0.2748648
+texture = ExtResource("15_i3mg1")
+
+[node name="Branch30" type="Sprite2D" parent="trees and such" unique_id=641899011]
+position = Vector2(6086.0005, -477.99994)
+rotation = -1.1327957
+texture = ExtResource("15_i3mg1")
+
+[node name="Branch31" type="Sprite2D" parent="trees and such" unique_id=638741989]
+position = Vector2(9702, -176)
+texture = ExtResource("15_i3mg1")
+
+[node name="Branch32" type="Sprite2D" parent="trees and such" unique_id=256907894]
+position = Vector2(12332, 431)
+rotation = 2.6186032
+texture = ExtResource("16_77s42")
+
+[node name="Branch33" type="Sprite2D" parent="trees and such" unique_id=1006542464]
+position = Vector2(12650, 559)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch34" type="Sprite2D" parent="trees and such" unique_id=778572965]
+position = Vector2(13485, 616)
+texture = ExtResource("17_jtmvj")
+
+[node name="Branch35" type="Sprite2D" parent="trees and such" unique_id=2046256870]
+position = Vector2(14450.999, 394)
+rotation = -0.98994786
+texture = ExtResource("16_77s42")
+
+[node name="Branch36" type="Sprite2D" parent="trees and such" unique_id=644925009]
+position = Vector2(14449.999, 1204.0005)
+rotation = 0.80057305
+scale = Vector2(1.334209, 1.334209)
+texture = ExtResource("18_bi12o")
+
+[node name="Branch37" type="Sprite2D" parent="trees and such" unique_id=729465138]
+position = Vector2(14467.001, 1576)
+rotation = -1.6731375
+texture = ExtResource("16_77s42")
+
+[node name="Branch38" type="Sprite2D" parent="trees and such" unique_id=198210845]
+position = Vector2(14625, 2199)
+texture = ExtResource("15_i3mg1")
+
+[node name="Branch39" type="Sprite2D" parent="trees and such" unique_id=590616225]
+position = Vector2(14174, 1919.9995)
+rotation = 2.4543848
+texture = ExtResource("17_jtmvj")
+
+[node name="Branch40" type="Sprite2D" parent="trees and such" unique_id=1282252792]
+position = Vector2(6094, 399)
+rotation = 1.7617004
+texture = ExtResource("17_jtmvj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)

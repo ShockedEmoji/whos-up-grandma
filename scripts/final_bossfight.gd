@@ -72,7 +72,7 @@ var sprite_anim_thingy_before: String = ""
 func _new_attack():
 	match boss_state:
 		BOSS_STATES.IDLE:
-			
+			sprite_2d.play(sprite_anim_thingy_before + "idle")
 			if texture_progress_bar.value <= 0:
 				boss_state = BOSS_STATES.DEAD
 			else:
@@ -152,6 +152,7 @@ func _new_attack():
 			_new_attack()
 		BOSS_STATES.FLOWER:
 			bee_anim_player.play("flower")
+			sprite_2d.play(sprite_anim_thingy_before + "idle")
 			await get_tree().create_timer(1.25).timeout
 			if !enraged:
 				for i in range(30):
@@ -170,13 +171,15 @@ func _new_attack():
 			
 			_new_attack()
 		BOSS_STATES.LAUNCH:
-			
+			sprite_2d.play(sprite_anim_thingy_before + "idle")
 			var direction_to_player: Vector2 = (player.position - bee.position).normalized()
 			
 			tween = create_tween()
 			
 			tween.tween_property(bee, "rotation", 3 * TAU + direction_to_player.angle(), 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 			await tween.finished
+			
+			sprite_2d.play(sprite_anim_thingy_before + "pain")
 			
 			var bounces: int = 0
 			
@@ -219,6 +222,8 @@ func _new_attack():
 			_new_attack()
 		BOSS_STATES.BULLET_SPIRAL:
 			bee_anim_player.play("bullet spiral")
+			
+			sprite_2d.play(sprite_anim_thingy_before + "idle")
 			
 			await get_tree().create_timer(2.0).timeout
 			sprite_2d.play(sprite_anim_thingy_before + "pain")
