@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://dwphwued70s6h" path="res://sprites/wharf_props/rope_barrier_across.png" id="26_61xi8"]
 [ext_resource type="Texture2D" uid="uid://by5pkeyx8cska" path="res://sprites/wharf_props/buoy.png" id="28_dd67m"]
 [ext_resource type="Texture2D" uid="uid://3pkuedy3hbgh" path="res://sprites/wharf_props/dead_coral_tree.png" id="29_e1a1u"]
+[ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="30_e1a1u"]
+[ext_resource type="Texture2D" uid="uid://blqwrs3wk4f1e" path="res://sprites/npc_spritesheet_2.png" id="31_dd67m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0v5ou"]
 texture = ExtResource("3_0sbdo")
@@ -153,6 +155,47 @@ radius = 344.5809
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tmyfw"]
 size = Vector2(167, 204)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5x2f"]
+atlas = ExtResource("31_dd67m")
+region = Rect2(0, 1200, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dq4c"]
+atlas = ExtResource("31_dd67m")
+region = Rect2(400, 1200, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsig4"]
+atlas = ExtResource("31_dd67m")
+region = Rect2(800, 1200, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0t0h"]
+atlas = ExtResource("31_dd67m")
+region = Rect2(1200, 1200, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c880v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5x2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dq4c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsig4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0t0h")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
 [node name="tutorial" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_j7hsf")
 
@@ -239,6 +282,14 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/RubbishBin/StaticBody2D" unique_id=407068848]
 position = Vector2(-8, 86)
 shape = SubResource("RectangleShape2D_tmyfw")
+
+[node name="npc" parent="everything else" unique_id=1135864980 instance=ExtResource("30_e1a1u")]
+position = Vector2(594, -23)
+sprite_frames = SubResource("SpriteFrames_c880v")
+animation = &"talk"
+frame = 1
+frame_progress = 0.026100053
+dialogue = "skibidi toilet"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
