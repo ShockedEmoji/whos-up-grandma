@@ -46,6 +46,7 @@ func _ready():
 	_config_load_stuff()
 	#
 	#_change_scene("menu/main_menu")
+	_change_scene("top_down/final_area")
 	#_change_scene("top_down/neo_bossfight")
 	#_change_scene("platformer/final_bossfight")
 	_change_scene("top_down/mafia_bossfight")

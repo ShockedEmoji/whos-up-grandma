@@ -165,6 +165,70 @@ xco;zuhiycvsdbggbjn awdkljndashkuczxhkasdjnlaskdngihhoasidhjj
 Hi my name is Brendan woww you just killed me owwww
 waaaaa
 
-}recipe
+}recipe again
 hey here's the recipe incase you forgot
 - 1 green Herb|- 1 bundle shredded bracken leaves|- 1 buttercuppy|- 1 pepperoni spaggetti
+
+}maze info
+Heya
+Welcome to the Big Maze (tm)
+This is a large maze with various things inside of it
+Oh, and an exit, of course, which leads to a small bowl of pepperoni spagghetti
+OK in you go!!
+{waaahh I don't want to`maze cry
+{OK yippee!!`maze yay
+
+}maze cry
+Gah I'm sorry but there's no other way to get the pepperoni spagghetti
+Goodbye!
+
+}maze yay
+Yay ok have fun!!
+
+}maze 1
+Ack help meee I'm lost ;(
+
+}maze 2
+Hello, it is I again
+{Hello mr. bee`hi wasp fake
+{Hello wasp`hi wasp real
+
+}hi wasp fake
+What no I am still not a bee
+I am an ambiguously gendered wasp
+Go away
+
+}hi wasp real
+Greetings, human
+I seem to have found myself stuck inside this... maze of sorts
+I would offer for you to guide me out... but that would take too long to code
+Have fun walking to wherever you are going!
+
+}maze 3
+blurble burble
+{act cool`water cool
+{act stupid`water stupid
+
+}water cool
+You acted cool...
+But the water was cooler
+
+}water stupid
+You acted stupid
+...
+
+}maze 4
+A-A-A-A-A-A-A-A-A-A
+E-N-D-I-N-S-I-G-H-T
+A-L-M-O-S-T-.-.-.-.
+
+}maze end
+Heya
+Welcome to the end of the Big Maze (tm)
+This is the end of a large maze with various things inside of it
+Oh, and an entrance, of course, which leads to various other places
+OK have fun walking in whichever direction you choose to!!
+
+}pepperoni spagghetti
+A plinth labelled 'pepperoni spagghetti'
+It's empty

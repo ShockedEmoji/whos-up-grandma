@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	if lifetime > 0:
 		self.position += speed * delta * barrel_direction
 		lifetime -= delta
+	else: self.queue_free()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
