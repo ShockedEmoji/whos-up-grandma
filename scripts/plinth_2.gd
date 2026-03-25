@@ -39,4 +39,9 @@ func _ready():
 		print("that bee really died 💀💀💀 3")
 		await get_tree().process_frame
 		print("that bee really died 💀💀💀 4")
-		$"../..".text_system._say_dialogue("final bee death")
+		text_system._say_dialogue("final bee death")
+		
+		await $"../..".dialogue_finished
+		
+		
+		DATA.root._fade_transition("menu/credits")

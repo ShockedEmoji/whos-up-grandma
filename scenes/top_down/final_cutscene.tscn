@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cwkp80sy4mljg"]
+
+[ext_resource type="Script" uid="uid://3ne4lfy4vxom" path="res://scripts/final_cutscene.gd" id="1_2dn7e"]
+[ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="1_r2oo0"]
+
+[node name="final_cutscene" type="Node2D" unique_id=2146843448]
+script = ExtResource("1_2dn7e")
+
+[node name="Stupidplaceholdertilemap" type="Sprite2D" parent="." unique_id=1429870100]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(340, 318)
+scale = Vector2(115.4, 115.4)
+texture = ExtResource("1_r2oo0")
+
+[node name="to be continued" type="Label" parent="." unique_id=741624305]
+offset_left = 98.0
+offset_top = 59.0
+offset_right = 1041.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 105
+text = "TO BE CONTINUED"
+horizontal_alignment = 1
+
+[node name="in" type="Label" parent="." unique_id=238494730]
+offset_left = 98.0
+offset_top = 202.0
+offset_right = 1041.0
+offset_bottom = 346.0
+theme_override_font_sizes/font_size = 57
+text = "in"
+horizontal_alignment = 1
+
+[node name="title drop" type="Label" parent="." unique_id=1877445606]
+offset_left = 15.0
+offset_top = 336.0
+offset_right = 1124.0
+offset_bottom = 693.0
+theme_override_font_sizes/font_size = 91
+text = "WHAT'S UP GRANDMA 3:
+RETURN TO GRANDMA"
+horizontal_alignment = 1

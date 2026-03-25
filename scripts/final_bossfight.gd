@@ -271,7 +271,7 @@ func _new_attack():
 			
 			DATA.post_transition_player_pos = Vector2(14470.0, 1572)
 			DATA.final_bee_just_killed = true
-			$".."._play_music("final area")
+			$".."._stop_music()
 			$".."._fade_transition("top_down/final_area", 0.2, 0, 3, $Camera2D)
 
 var npc_to_shut_up: AnimatedSprite2D = null

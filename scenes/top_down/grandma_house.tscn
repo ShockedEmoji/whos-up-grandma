@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="6_mtajo"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="7_77yx0"]
 [ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="8_6n4y5"]
+[ext_resource type="PackedScene" uid="uid://b4hxcqovkqnex" path="res://scenes/misc/text_flash.tscn" id="10_nxpgj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlk2m"]
 texture = ExtResource("2_6n4y5")
@@ -230,3 +231,7 @@ what_am_i_following = NodePath("../everything else/player")
 
 [node name="text_system" parent="Camera2D" unique_id=702931713 instance=ExtResource("7_77yx0")]
 position = Vector2(-576, -328)
+
+[node name="text flash" parent="Camera2D" unique_id=179546999 instance=ExtResource("10_nxpgj")]
+position = Vector2(-640, -360)
+text_to_display = "Arrow keys to move|press 'z' to interact!"

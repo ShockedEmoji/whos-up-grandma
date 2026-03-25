@@ -102,7 +102,7 @@ Too bad some bee stung him!
 
 }bee fight intro
 Hhahahaa..... There is no way you shall escape my pollination of doom now!! Prepare to DIEE!!!!!!
-┗(｀O′) ┛
+Press 'Z' to jump and 'X' to shoot if you dare!!
 
 }bee ouch
 GYAAAHHHHHHH OUCHIE
@@ -165,9 +165,6 @@ here... take this 'pepperoni spagghetti....
 while Andrew may not 'bee' alive... perhaps he can live on in spirit, through you and your grandma...
 *bleeeuuuurhhhjjjhhhghghgghhhh*
 << you got the PEPPERONI SPAGGHETTI >>
-oh by the way I got my henchmen and henchwomen to kidnap your grandma when you were distraced
-HAHAAAA YOU WILL NEVER SEE HER AGAIN
-* to be continued in What's Up Grandma 3 : Return to grandma *
 
 }final fight intro
 One last battle...
@@ -180,6 +177,7 @@ Whassis... Ya want summa mine bracken leafers??
 I ain't giving 'ese out fer free, kid...
 'm actually rather insulted...
 Y'know what... DIE!!
+(Also, press X to shoot if you want)
 
 }mafia defeat
 G-gah... What is this?

@@ -506,8 +506,6 @@ dialogue = "maze 2"
 [node name="npc3" parent="everything else" unique_id=1621856765 instance=ExtResource("8_fkfjb")]
 position = Vector2(1838, 764)
 sprite_frames = SubResource("SpriteFrames_yee0j")
-animation = &"talk"
-frame_progress = 0.24162175
 dialogue = "maze info"
 
 [node name="npc4" parent="everything else" unique_id=1128646929 instance=ExtResource("8_fkfjb")]

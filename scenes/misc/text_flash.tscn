@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b4hxcqovkqnex"]
+
+[ext_resource type="Script" uid="uid://cbg3yymrt0y8d" path="res://scripts/text_flash.gd" id="1_3fi1y"]
+[ext_resource type="FontFile" uid="uid://mepoccxco4xp" path="res://misc/Lexend-Regular.ttf" id="2_eh6f0"]
+
+[node name="text flash" type="Node2D" unique_id=179546999]
+script = ExtResource("1_3fi1y")
+
+[node name="Label" type="Label" parent="." unique_id=889811284]
+offset_right = 1281.3884
+offset_bottom = 774.0
+theme_override_fonts/font = ExtResource("2_eh6f0")
+theme_override_font_sizes/font_size = 51
+text = "Arrow keys to move
+press 'z' to interact!"
+horizontal_alignment = 1

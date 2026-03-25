@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://csr0kv0vih00r"]
 
 [ext_resource type="Script" uid="uid://cujcan1sgqgoe" path="res://scripts/credits.gd" id="1_0bpdh"]
+[ext_resource type="FontFile" uid="uid://mepoccxco4xp" path="res://misc/Lexend-Regular.ttf" id="2_ff4am"]
+[ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="3_0l22u"]
 
 [sub_resource type="Animation" id="Animation_0bpdh"]
 length = 0.001
@@ -30,7 +32,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 20),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 718), Vector2(0, -629)]
+"values": [Vector2(0, 718), Vector2(0, -557)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0ctdu"]
@@ -42,6 +44,12 @@ _data = {
 [node name="credits" type="Node2D" unique_id=1026595019]
 script = ExtResource("1_0bpdh")
 
+[node name="Stupidplaceholdertilemap" type="Sprite2D" parent="." unique_id=1454589645]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(672.9999, 307.99997)
+scale = Vector2(5.8, 5.8)
+texture = ExtResource("3_0l22u")
+
 [node name="scroll" type="Node2D" parent="." unique_id=1515170874]
 position = Vector2(0, 718)
 
@@ -49,8 +57,9 @@ position = Vector2(0, 718)
 offset_left = 2.0
 offset_right = 1149.0
 offset_bottom = 635.0
+theme_override_fonts/font = ExtResource("2_ff4am")
 theme_override_font_sizes/font_size = 34
-text = "Name of the game
+text = "What's up grandma 2: OLD BUT GOLD
 
 Made for the 2026 WHS game jam
 
@@ -61,8 +70,29 @@ Music and sound effects
 Len Suzaki
 
 Code
-Thomas Olav Griffith-Jones"
+Thomas Olav Griffith-Jones
+
+
+
+
+TO BE CONTINUED
+
+IN
+
+WHAT'S UP GRANDMA 3:
+RETURN TO GRANDMA"
 horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1140241748]
 libraries/ = SubResource("AnimationLibrary_0ctdu")
+
+[node name="Label_2" type="Label" parent="." unique_id=3198738]
+offset_left = 158.0
+offset_right = 993.0
+offset_bottom = 635.0
+theme_override_fonts/font = ExtResource("2_ff4am")
+theme_override_font_sizes/font_size = 34
+text = " "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
