@@ -4,5 +4,10 @@
 
 [node name="barrel_spawner" type="Node2D" unique_id=1649187504]
 script = ExtResource("1_jjju3")
+barrel_interval = null
+barrel_speed = null
+barrel_life = null
+player_send_back_position = null
+barrel_direction = null
 
 [node name="Timer" type="Timer" parent="." unique_id=601973857]

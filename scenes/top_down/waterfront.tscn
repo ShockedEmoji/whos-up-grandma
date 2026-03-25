@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://by5pkeyx8cska" path="res://sprites/wharf_props/buoy.png" id="28_dd67m"]
 [ext_resource type="Texture2D" uid="uid://3pkuedy3hbgh" path="res://sprites/wharf_props/dead_coral_tree.png" id="29_e1a1u"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c7sxa"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0v5ou"]
 texture = ExtResource("3_0sbdo")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -84,7 +84,7 @@ texture_region_size = Vector2i(400, 400)
 8:5/0 = 0
 9:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxnp0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km1gf"]
 texture = ExtResource("4_6pc3j")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -98,7 +98,7 @@ texture_region_size = Vector2i(400, 400)
 0:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lo0h3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pc3j"]
 texture = ExtResource("3_61xi8")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0

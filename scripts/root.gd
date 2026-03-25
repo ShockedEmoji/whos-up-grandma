@@ -49,7 +49,7 @@ func _ready():
 	_change_scene("top_down/final_area")
 	#_change_scene("top_down/neo_bossfight")
 	#_change_scene("platformer/final_bossfight")
-	_change_scene("top_down/mafia_bossfight")
+	#_change_scene("top_down/mafia_bossfight")
 	
 	_fix_music_volume()
 	
@@ -240,6 +240,10 @@ func _play_music(song: String):
 			m_path = "res://audio/Waterfront.ogg"
 			music_high = 1.0
 			loop = true
+		"final area":
+			m_path = "res://audio/Waterfront.ogg"
+			music_high = 1.0
+			loop = true
 	
 	print("playing song ", m_path, "   from input " + song)
 	
@@ -283,7 +287,6 @@ func _play_sound(sound: String):
 			sound_stream = SELECTING
 			volume_alter = 1.8
 		"bee voice":
-			print("bee noise")
 			sound_stream = BEE_VOICE
 			volume_alter = 1.0
 		"click":

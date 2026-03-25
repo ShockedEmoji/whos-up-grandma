@@ -35,8 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://ihowxrbqdy1t" path="res://sprites/tutorial_props/dirt_patch_3.png" id="25_6l674"]
 [ext_resource type="Texture2D" uid="uid://cxms1kxdccqjv" path="res://sprites/tutorial_props/branch_2.png" id="25_7hhwr"]
 [ext_resource type="Texture2D" uid="uid://cv86a3hornoly" path="res://sprites/black_gradient.png" id="28_15qaw"]
-[ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="29_a6k4k"]
 [ext_resource type="Texture2D" uid="uid://ryeti167i5et" path="res://sprites/tutorial_props/bike_wheel.png" id="28_p5tcy"]
+[ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="29_a6k4k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43pdy"]
 texture = ExtResource("2_7ejar")

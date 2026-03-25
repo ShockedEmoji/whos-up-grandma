@@ -138,10 +138,42 @@ oh by the way take this green herb that I coincidentally have
 yippee ok goodbye
 *dies*
 
+}final bee intro
+*sniffle sniffle*
+My poor Andrew... His life cut short, so soon...
+YOU DID IT! EVERYTHING IS YOUR FAULT!
+YOU TOOK MY ANDREW AWAY FROM ME!
+I heard the rumours of a child wandering the edge, collecting ingredients for some kind of 'youth dust'...
+BUT WHY DID YOU HAVE TO MURDER MY POOR ANDREW?
+THE ANDREW I KNEW WOULD HAVE HAPPILY GIVEN YOU THE INGREDIENTS|FOR FREE!
+T-the Andrew I knew...
+*weaaaaauuuhhhh*
+*sniffle*
+*waaaaaaaaaaauuuuhhhhhhhhhhhhhhhhhhhhhhhhhhhh*
+*sniffle sniffle*
+WHY DID YOU KILL MY ANDREW
+We were going to live a nice, long, happy life together...
+but now, it is just me...
+I heard you were searching for some kind of 'pepperoni spagghetti'?
+You're not getting it.
+If you want it, you'll have to take it from my corpse.
+
+}final bee death
+gyahhh.... you have bested me...
+*bleurghhh*
+here... take this 'pepperoni spagghetti....
+while Andrew may not 'bee' alive... perhaps he can live on in spirit, through you and your grandma...
+*bleeeuuuurhhhjjjhhhghghgghhhh*
+<< you got the PEPPERONI SPAGGHETTI >>
+oh by the way I got my henchmen and henchwomen to kidnap your grandma when you were distraced
+HAHAAAA YOU WILL NEVER SEE HER AGAIN
+* to be continued in What's Up Grandma 3 : Return to grandma *
+
 }final fight intro
-Ooooooooh bet you didn't think I would still be here
-and this time... I will NOT BE DEFEATED!!!
-You will NEVER GET THE INGREDIENT REQUIRED TO SAVE YOUR GRANDMA!!!!!! HAHAHAHAHAHAHAHAHAHAHAHAHAHA
+One last battle...
+And this, will be the time when you shall finally perish for your sins...
+*waaahhhhhh* ....|Andrew....
+DIE!!!!!!!!!!
 
 }mafia fight intro
 Whassis... Ya want summa mine bracken leafers??
