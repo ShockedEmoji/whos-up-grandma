@@ -707,6 +707,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("19_6l674")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="everything else/CarTire" unique_id=1826944658]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/CarTire/StaticBody2D" unique_id=714114001]
 position = Vector2(-2, -14)
