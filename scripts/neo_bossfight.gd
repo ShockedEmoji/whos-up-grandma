@@ -26,6 +26,15 @@ func _reduce_health():
 
 func _ready() -> void:
 	get_tree().paused = false
+	
+	DATA.root._stop_music()
+	
+	await text_system._say_dialogue("neo fight intro")
+	
+	DATA.root._play_music("brendan fight")
+	
+	touching_legal = true
+	
 	_new_attack()
 
 var tween: Tween

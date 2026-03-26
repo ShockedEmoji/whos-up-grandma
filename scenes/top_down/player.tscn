@@ -99,3 +99,6 @@ shape = SubResource("RectangleShape2D_sg10y")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=649164376]
 sprite_frames = SubResource("SpriteFrames_sg10y")
 animation = &"down"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1757033277]
+current = true

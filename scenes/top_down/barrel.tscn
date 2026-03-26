@@ -23,5 +23,6 @@ shape = SubResource("RectangleShape2D_fn1gq")
 position = Vector2(23, 0)
 stream = ExtResource("3_0vnry")
 autoplay = true
+max_distance = 500.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -50,7 +50,8 @@ func _ready():
 	#_change_scene("top_down/grandma_house")
 	#_change_scene("top_down/school")
 	#_change_scene("top_down/final_area")
-	#_change_scene("top_down/neo_bossfight")
+	#_change_scene("top_down/waterfront")
+	_change_scene("top_down/neo_bossfight")
 	#_change_scene("platformer/final_bossfight")
 	_change_scene("top_down/mafia_bossfight")
 	
@@ -255,6 +256,10 @@ func _play_music(song: String):
 			m_path = "res://audio/Revenge of the Killer A.ogg"
 			music_high = 1.0
 			loop = false
+		"brendan fight":
+			m_path = "res://audio/Bigshot Brendan.ogg"
+			music_high = 1.0
+			loop = true
 	
 	print("playing song ", m_path, "   from input " + song)
 	
