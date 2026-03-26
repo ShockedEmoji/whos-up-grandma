@@ -183,7 +183,7 @@ size = Vector2(167, 204)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0t0h"]
 size = Vector2(207.31604, 261.71063)
 
-[node name="tutorial" type="Node2D" unique_id=1000960487]
+[node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_j7hsf")
 
 [node name="Black" type="Sprite2D" parent="." unique_id=489202517]

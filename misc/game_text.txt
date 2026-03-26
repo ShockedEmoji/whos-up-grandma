@@ -103,6 +103,7 @@ Too bad some bee stung him!
 }bee fight intro
 Hhahahaa..... There is no way you shall escape my pollination of doom now!! Prepare to DIEE!!!!!!
 Press 'Z' to jump and 'X' to shoot if you dare!!
+Sorry, did I say 'X' was for shooting?|That's actually the yell insult button...|Please don't hurt my feelings!!
 
 }bee ouch
 GYAAAHHHHHHH OUCHIE
@@ -180,7 +181,7 @@ Whassis... Ya want summa mine bracken leafers??
 I ain't giving 'ese out fer free, kid...
 'm actually rather insulted...
 Y'know what... DIE!!
-(Also, press X to shoot if you want)
+(Also, press X to yell insults if you want)
 
 }mafia defeat
 G-gah... What is this?
