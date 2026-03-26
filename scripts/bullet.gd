@@ -9,6 +9,9 @@ var direction: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	self.position = start_position
 	self.rotation = direction.angle()
+	
+	animated_sprite_2d.play(str(randi_range(1, 10)))
+	animated_sprite_2d.modulate = Color.from_hsv(randf(), 1.0, 1.0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
