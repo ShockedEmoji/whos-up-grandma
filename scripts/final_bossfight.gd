@@ -12,7 +12,7 @@ const GOOP = preload("uid://3071pwnomwdy")
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 80 # set it to like 5 or something
+var bullet_damage: int = 8 # set it to like 5 or something
 
 
 var touching_legal: bool = true
@@ -30,7 +30,7 @@ func _ready() -> void:
 	text_system.current_voice = "bee"
 	await text_system._say_dialogue("final fight intro")
 	
-	$".."._play_music("bee_fight")
+	$".."._play_music("final fight")
 	
 	bee.show()
 	
@@ -67,12 +67,11 @@ var arena_top_right: Vector2 = Vector2(1050, 59)
 var tween: Tween
 var enraged: bool = false
 
-var sprite_anim_thingy_before: String = ""
 
 func _new_attack():
 	match boss_state:
 		BOSS_STATES.IDLE:
-			sprite_2d.play(sprite_anim_thingy_before + "idle")
+			sprite_2d.play("idle")
 			if texture_progress_bar.value <= 0:
 				boss_state = BOSS_STATES.DEAD
 			else:
@@ -82,7 +81,6 @@ func _new_attack():
 				
 				if texture_progress_bar.value <= 500 && !enraged:
 					enraged = true
-					sprite_anim_thingy_before = "p_"
 				
 				if !enraged:
 					boss_state = randi_range(1, 5) as BOSS_STATES
@@ -94,14 +92,14 @@ func _new_attack():
 			_new_attack()
 			
 		BOSS_STATES.SPITTING:
-			sprite_2d.play(sprite_anim_thingy_before + "pain")
+			sprite_2d.play("pain")
 			
 			if !enraged:
 				bee_anim_player.play("easy spit")
 				
 				await get_tree().create_timer(0.8).timeout
 				for i in range(4):
-					sprite_2d.play(sprite_anim_thingy_before + "shoot")
+					sprite_2d.play("shoot")
 					var inst = GOOP.instantiate()
 					inst.start_position = bee.position + Vector2(-30, 5)
 					inst.scale = Vector2.ONE * 0.5
@@ -113,14 +111,14 @@ func _new_attack():
 				
 				await get_tree().create_timer(0.8).timeout
 				for i in range(4):
-					sprite_2d.play(sprite_anim_thingy_before + "shoot")
+					sprite_2d.play("shoot")
 					var inst = GOOP.instantiate()
 					inst.start_position = bee.position + Vector2(-30, 5)
 					inst.scale = Vector2.ONE * 0.5
 					self.add_child(inst)
 					DATA.root._play_sound("splurge")
 					await get_tree().create_timer(1.4 / 4.0).timeout
-			sprite_2d.play(sprite_anim_thingy_before + "idle")
+			sprite_2d.play("idle")
 			
 			await bee_anim_player.animation_finished
 			
@@ -129,7 +127,7 @@ func _new_attack():
 			_new_attack()
 		BOSS_STATES.NEEDLE:
 			bee_anim_player.play("stinger")
-			sprite_2d.play(sprite_anim_thingy_before + "pain")
+			sprite_2d.play("pain")
 			await get_tree().create_timer(1.0).timeout
 			for i in range(25):
 				var inst = STINGER.instantiate()
@@ -152,7 +150,7 @@ func _new_attack():
 			_new_attack()
 		BOSS_STATES.FLOWER:
 			bee_anim_player.play("flower")
-			sprite_2d.play(sprite_anim_thingy_before + "idle")
+			sprite_2d.play("idle")
 			await get_tree().create_timer(1.25).timeout
 			if !enraged:
 				for i in range(30):
@@ -171,7 +169,7 @@ func _new_attack():
 			
 			_new_attack()
 		BOSS_STATES.LAUNCH:
-			sprite_2d.play(sprite_anim_thingy_before + "idle")
+			sprite_2d.play("idle")
 			var direction_to_player: Vector2 = (player.position - bee.position).normalized()
 			
 			tween = create_tween()
@@ -179,7 +177,7 @@ func _new_attack():
 			tween.tween_property(bee, "rotation", 3 * TAU + direction_to_player.angle(), 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 			await tween.finished
 			
-			sprite_2d.play(sprite_anim_thingy_before + "pain")
+			sprite_2d.play("pain")
 			
 			var bounces: int = 0
 			
@@ -223,10 +221,10 @@ func _new_attack():
 		BOSS_STATES.BULLET_SPIRAL:
 			bee_anim_player.play("bullet spiral")
 			
-			sprite_2d.play(sprite_anim_thingy_before + "idle")
+			sprite_2d.play("idle")
 			
 			await get_tree().create_timer(2.0).timeout
-			sprite_2d.play(sprite_anim_thingy_before + "pain")
+			sprite_2d.play("pain")
 			if !enraged:
 				for i in range(5):
 					DATA.root._play_sound("splurge")
@@ -269,7 +267,7 @@ func _new_attack():
 			
 			bee_anim_player.stop()
 			bee_anim_player.play("death")
-			sprite_2d.play(sprite_anim_thingy_before + "pain")
+			sprite_2d.play("pain")
 			await get_tree().create_timer(4.0).timeout
 			DATA.root._play_sound("oh honey")
 			await bee_anim_player.animation_finished

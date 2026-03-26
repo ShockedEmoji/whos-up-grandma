@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bjlcbfet4lly8" path="res://sprites/wharf_props/hooked_rope.png" id="15_61xi8"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="15_cc2l8"]
 [ext_resource type="Texture2D" uid="uid://bju3l0t4m0na3" path="res://sprites/wharf_props/lifering.png" id="16_4rcdw"]
+[ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="16_q0t0h"]
 [ext_resource type="Texture2D" uid="uid://cwpm3126pmr3u" path="res://sprites/wharf_props/fish_crate.png" id="17_1nklx"]
 [ext_resource type="Texture2D" uid="uid://c0u8lquhptjs5" path="res://sprites/wharf_props/dead_fish.png" id="18_e1a1u"]
 [ext_resource type="Texture2D" uid="uid://bxii7sn33ym3r" path="res://sprites/wharf_props/pot_plant.png" id="19_dd67m"]
@@ -202,6 +203,47 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_e63eq"]
+atlas = ExtResource("16_q0t0h")
+region = Rect2(1200, 400, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cn0q"]
+atlas = ExtResource("16_q0t0h")
+region = Rect2(1600, 400, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5axp"]
+atlas = ExtResource("16_q0t0h")
+region = Rect2(0, 800, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4psk"]
+atlas = ExtResource("16_q0t0h")
+region = Rect2(400, 800, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yccd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e63eq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cn0q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5axp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4psk")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
 [node name="tutorial" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_j7hsf")
 
@@ -321,6 +363,12 @@ animation = &"talk"
 frame = 1
 frame_progress = 0.026100053
 dialogue = "skibidi toilet"
+
+[node name="npc2" parent="everything else" unique_id=2097690484 instance=ExtResource("30_e1a1u")]
+position = Vector2(-81, 86)
+sprite_frames = SubResource("SpriteFrames_1yccd")
+animation = &"talk"
+dialogue = "wasp quiz"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)

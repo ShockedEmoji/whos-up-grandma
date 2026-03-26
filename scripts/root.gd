@@ -45,10 +45,11 @@ func _ready():
 	# Make sure that no config things have null value
 	_config_load_stuff()
 	
-	#_change_scene("menu/main_menu")
+	_change_scene("menu/main_menu")
 	#_change_scene("menu/credits")
+	#_change_scene("top_down/waterfront")
 	#_change_scene("top_down/final_area")
-	_change_scene("top_down/neo_bossfight")
+	#_change_scene("top_down/neo_bossfight")
 	#_change_scene("platformer/final_bossfight")
 	#_change_scene("top_down/mafia_bossfight")
 	
@@ -242,9 +243,17 @@ func _play_music(song: String):
 			music_high = 1.0
 			loop = true
 		"final area":
-			m_path = "res://audio/Waterfront.ogg"
+			m_path = "res://audio/Dark maze.ogg"
 			music_high = 1.0
 			loop = true
+		"final fight":
+			m_path = "res://audio/Revenge of the Killer A.ogg"
+			music_high = 1.0
+			loop = true
+		"intro":
+			m_path = "res://audio/Revenge of the Killer A.ogg"
+			music_high = 1.0
+			loop = false
 	
 	print("playing song ", m_path, "   from input " + song)
 	
@@ -276,6 +285,7 @@ const SHOOTER = preload("uid://cx70go7o2m3cv")
 const BUZZOFF = preload("uid://cppa0gw0blm74")
 const FLUNG_AWAY = preload("uid://bxqlbac83poq3")
 const VOICE_BEEP = preload("uid://bl43qfhw2c6b2")
+const SCARY_BOOM = preload("uid://bwnkk33mg4exx")
 
 
 func _play_sound(sound: String):
@@ -284,7 +294,7 @@ func _play_sound(sound: String):
 	var volume_alter: float = 1.0
 	
 	match sound:
-		"select": 
+		"select":
 			sound_stream = SELECTING
 			volume_alter = 1.8
 		"bee voice":
@@ -317,6 +327,9 @@ func _play_sound(sound: String):
 		"voice":
 			sound_stream = VOICE_BEEP
 			volume_alter = 0.6
+		"boom":
+			sound_stream = SCARY_BOOM
+			volume_alter = 1.3
 	
 	var player: AudioStreamPlayer = AudioStreamPlayer.new()
 	player.stream = sound_stream

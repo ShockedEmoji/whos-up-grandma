@@ -11,17 +11,17 @@ func _ready() -> void:
 	
 	label_2.text = "You may have the medicine required to save your grandma..."
 	
-	DATA.root._play_sound("click")
+	DATA.root._play_sound("boom")
 	
 	await get_tree().create_timer(4.0).timeout
 	
 	label_2.text = "But will she ever recieve it?"
 	
-	DATA.root._play_sound("click")
+	DATA.root._play_sound("boom")
 	
 	await get_tree().create_timer(4.0).timeout
 	
-	DATA.root._play_sound("click")
+	DATA.root._play_sound("boom")
 	
 	label_2.text = ""
 	

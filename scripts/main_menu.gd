@@ -18,9 +18,10 @@ func _load_game():
 		$".."._play_sound("click")
 		
 		are_buttons_legal = false
-		$".."._play_music("grandma_house")
-		$".."._fade_transition("top_down/grandma_house", 0.1, 0.1, 0.1)
-		DATA.post_transition_player_pos = Vector2(354.0, 286.0)
+		
+		$".."._play_music("intro")
+		
+		DATA.root._fade_transition("menu/intro", 0.1, 0.1, 1.0)
 
 
 var settings_path = preload("res://scenes/menu/settings.tscn")

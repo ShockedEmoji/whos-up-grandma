@@ -1,0 +1,564 @@
+[gd_scene format=3 uid="uid://cvndfje7ooinj"]
+
+[ext_resource type="Texture2D" uid="uid://cmpj7bo762nsp" path="res://sprites/slideshow/Paint Layer 1 Merged.PNG" id="1_bl511"]
+[ext_resource type="Script" uid="uid://cag2vw4v2j6l6" path="res://scripts/intro.gd" id="1_tw1b7"]
+[ext_resource type="Texture2D" uid="uid://bs850fb3sw7nt" path="res://sprites/slideshow/Background.PNG" id="2_4mtn2"]
+[ext_resource type="Texture2D" uid="uid://bjffp0unrq4r" path="res://sprites/slideshow/Copy of Vector Layer 1.PNG" id="3_tw1b7"]
+[ext_resource type="Texture2D" uid="uid://dxxwtbg5k1dxd" path="res://sprites/slideshow/Group 5.PNG" id="4_vly7t"]
+[ext_resource type="Texture2D" uid="uid://dj43tddush8h2" path="res://sprites/slideshow/Group 11.PNG" id="5_jdmq0"]
+[ext_resource type="Texture2D" uid="uid://l88bh3oebey6" path="res://sprites/slideshow/Paint Layer 2.PNG" id="6_2dh6h"]
+[ext_resource type="Texture2D" uid="uid://cyqqsrrw5wloe" path="res://sprites/slideshow/Paint Layer 6 Merged.PNG" id="7_8ubk7"]
+[ext_resource type="Texture2D" uid="uid://c48267ibx4ev3" path="res://sprites/slideshow/Paint Layer 6.PNG" id="8_tuc3j"]
+[ext_resource type="Texture2D" uid="uid://bqm5w6mj1tae6" path="res://sprites/slideshow/Paint Layer 7.PNG" id="9_vm1gc"]
+[ext_resource type="Texture2D" uid="uid://dgh6fsddkgs57" path="res://sprites/slideshow/Paint Layer 8.PNG" id="10_u251a"]
+[ext_resource type="Texture2D" uid="uid://d17bpw61rgd46" path="res://sprites/slideshow/Paint Layer 14.PNG" id="11_0anet"]
+[ext_resource type="Texture2D" uid="uid://beckjtsdnujfk" path="res://sprites/slideshow/Paint Layer 15.PNG" id="12_teswl"]
+[ext_resource type="Texture2D" uid="uid://cnd76biqqljas" path="res://sprites/slideshow/Paint Layer 16.PNG" id="13_yqurq"]
+[ext_resource type="Texture2D" uid="uid://bn1rrch7lnnq8" path="res://sprites/slideshow/Vector Layer 1.PNG" id="14_0mcyy"]
+
+[sub_resource type="Animation" id="Animation_tw1b7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(351, 214)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PaintLayer2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(368, 218.99998)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Group5:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PaintLayer6Merged:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PaintLayer6:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PaintLayer7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-96, 226)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PaintLayer7:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PaintLayer6:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PaintLayer8:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(347, 211)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PaintLayer8:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("VectorLayer1:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CopyOfVectorLayer1:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(379, 555)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CopyOfVectorLayer1:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Group11:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.04000002, 0.04000002)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Group11:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("PaintLayer14:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, 869)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PaintLayer15:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PaintLayer16:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(371, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_4mtn2"]
+resource_name = "intro"
+length = 63.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5666667, 3.5666666, 11.8, 11.928838),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PaintLayer2:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5, 4.72),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(368, 218.99998), Vector2(368, -239.00008)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Group5:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6, 7.0666666, 11.837829, 11.966666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PaintLayer6Merged:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(10.233334, 11.033334, 13.027828, 13.797829),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PaintLayer6:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(-0.26666668, 11.759551, 11.966666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PaintLayer7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(15.272652, 16.200497),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-96, 226), Vector2(360, 187)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PaintLayer7:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(18.340496, 18.430496),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PaintLayer6:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 11.7, 13.266666, 18.340496, 19.733334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PaintLayer8:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(19.8, 37.766666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(347, 211), Vector2(289, 211)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PaintLayer8:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(19.763357, 21.78097, 37.5, 38.004402),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("VectorLayer1:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(23.188358, 23.944681, 28.340193, 29.204884),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CopyOfVectorLayer1:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(29.825163, 33.023937),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(379, 555), Vector2(379, 246)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CopyOfVectorLayer1:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(37.131218, 37.63562),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Group11:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(39.07677, 44.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.93, 0.93), Vector2(1.705, 1.705)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Group11:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(39.07677, 41.033333, 43.7, 44.166668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("PaintLayer14:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(44.69726, 48.58837, 52.47948, 53.272114),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(376, 869), Vector2(376, 226), Vector2(376, 226), Vector2(376, -886)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PaintLayer15:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(53.1, 53.833332, 56.366665, 56.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PaintLayer16:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(56.466667, 57.433334, 63.033333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(371, 648), Vector2(371, 202), Vector2(371, 202)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tw1b7"]
+_data = {
+&"RESET": SubResource("Animation_tw1b7"),
+&"intro": SubResource("Animation_4mtn2")
+}
+
+[node name="intro" type="Node2D" unique_id=1207184689]
+z_index = -1
+script = ExtResource("1_tw1b7")
+
+[node name="PaintLayer1Merged" type="Sprite2D" parent="." unique_id=824265930]
+position = Vector2(373, 226)
+texture = ExtResource("1_bl511")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=833502937]
+position = Vector2(374, 223)
+zoom = Vector2(1.56, 1.56)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1095696773]
+position = Vector2(351, 214)
+texture = ExtResource("2_4mtn2")
+
+[node name="CopyOfVectorLayer1" type="Sprite2D" parent="." unique_id=1498326331]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+position = Vector2(379, 555)
+texture = ExtResource("3_tw1b7")
+
+[node name="Group5" type="Sprite2D" parent="." unique_id=2090604735]
+position = Vector2(338, 216)
+texture = ExtResource("4_vly7t")
+
+[node name="Group11" type="Sprite2D" parent="." unique_id=1016921843]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(375, 223)
+scale = Vector2(0.04000002, 0.04000002)
+texture = ExtResource("5_jdmq0")
+
+[node name="PaintLayer2" type="Sprite2D" parent="." unique_id=1180266817]
+position = Vector2(368, 218.99998)
+scale = Vector2(0.8800012, 0.8800012)
+texture = ExtResource("6_2dh6h")
+
+[node name="PaintLayer6Merged" type="Sprite2D" parent="." unique_id=1976424066]
+z_index = 1
+position = Vector2(386, 239)
+scale = Vector2(1.0399988, 1.0399988)
+texture = ExtResource("7_8ubk7")
+
+[node name="PaintLayer6" type="Sprite2D" parent="." unique_id=2071944618]
+position = Vector2(372, 218)
+texture = ExtResource("8_tuc3j")
+
+[node name="PaintLayer7" type="Sprite2D" parent="." unique_id=977786958]
+position = Vector2(-96, 226)
+texture = ExtResource("9_vm1gc")
+
+[node name="PaintLayer8" type="Sprite2D" parent="." unique_id=1725689621]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(347, 211)
+texture = ExtResource("10_u251a")
+
+[node name="PaintLayer14" type="Sprite2D" parent="." unique_id=1682777445]
+position = Vector2(376, 869)
+rotation = 6.2831855
+texture = ExtResource("11_0anet")
+
+[node name="PaintLayer15" type="Sprite2D" parent="." unique_id=2032688610]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(382, 218)
+texture = ExtResource("12_teswl")
+
+[node name="PaintLayer16" type="Sprite2D" parent="." unique_id=1226739248]
+position = Vector2(371, 648)
+texture = ExtResource("13_yqurq")
+
+[node name="VectorLayer1" type="Sprite2D" parent="." unique_id=893756058]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(384, 221)
+texture = ExtResource("14_0mcyy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1585787539]
+libraries/ = SubResource("AnimationLibrary_tw1b7")

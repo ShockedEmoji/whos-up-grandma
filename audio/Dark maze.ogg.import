@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://coaqlyuirte5k"
+path="res://.godot/imported/Dark maze.ogg-590acb24b65885bcac44a009ff99b07e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Dark maze.ogg"
+dest_files=["res://.godot/imported/Dark maze.ogg-590acb24b65885bcac44a009ff99b07e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

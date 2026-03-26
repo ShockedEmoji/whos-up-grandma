@@ -195,8 +195,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x356q"]
-radius = 38.0
-height = 258.0
+radius = 43.0
+height = 416.0
 
 [node name="neo_bossfight" type="Node2D" unique_id=1102831101]
 script = ExtResource("1_1k65e")
@@ -249,6 +249,7 @@ stream = ExtResource("5_g1wnd")
 libraries/ = SubResource("AnimationLibrary_mvgx0")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1085628802]
+modulate = Color(0.4117647, 1, 1, 1)
 z_index = 2
 offset_left = 112.0
 offset_top = 732.0
@@ -274,7 +275,7 @@ position = Vector2(1231, 354)
 big_daddy = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss/hazard" unique_id=1181036210]
-position = Vector2(0, 21)
+position = Vector2(-12, 34)
 shape = SubResource("CapsuleShape2D_x356q")
 
 [node name="player" parent="." unique_id=1233949163 instance=ExtResource("11_oh1o4")]

@@ -326,6 +326,25 @@ size = Vector2(152, 160)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t680i"]
 size = Vector2(308, 244)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_p5tcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_algh5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_y2jc6")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
 [node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_fw3hl")
 
@@ -750,6 +769,11 @@ texture = ExtResource("16_y2jc6")
 position = Vector2(4368, -654)
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("17_7vavp")
+
+[node name="npc9" parent="everything else" unique_id=309175587 instance=ExtResource("5_3dnpt")]
+position = Vector2(2770, 473)
+sprite_frames = SubResource("SpriteFrames_p5tcy")
+dialogue = "salasplant real"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
