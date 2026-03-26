@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ymdy00hk1dac"
+path="res://.godot/imported/Bigshot Brendan.ogg-0094e31722e68d7d03f1d8ef8e96272f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Bigshot Brendan.ogg"
+dest_files=["res://.godot/imported/Bigshot Brendan.ogg-0094e31722e68d7d03f1d8ef8e96272f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
