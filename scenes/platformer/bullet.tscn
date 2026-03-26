@@ -153,7 +153,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpsy7"]
-size = Vector2(90, 34)
+size = Vector2(78, 28)
 
 [node name="bullet" type="Area2D" unique_id=360160473]
 script = ExtResource("1_rwpsn")

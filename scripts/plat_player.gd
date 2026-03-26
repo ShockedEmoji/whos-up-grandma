@@ -14,8 +14,11 @@ var gravity = 1500
 var touched_floor_recently: bool = true
 const BULLET = preload("uid://cxi0ncap5jkgi")
 const DAMAGE_PARTICLES = preload("uid://da3flgkgmdqof")
+@onready var sprite: AnimatedSprite2D = $Sprite2D
 
 var last_x: int = 1
+
+var next_anim: String = "idle"
 
 func _physics_process(delta: float) -> void:
 	
@@ -79,6 +82,19 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x += x_velocity_add * 80
 	x_velocity_add = move_toward(x_velocity_add, 0, 1)
+	
+	if velocity.x > 0: sprite.flip_h = false
+	if velocity.x < 0: sprite.flip_h = true
+	
+	if is_on_floor():
+		if velocity.x == 0: next_anim = "idle"
+		else: next_anim = "walk"
+	else:
+		if velocity.y < -200: next_anim = "jump"
+		elif velocity.y > 200: next_anim = "fall"
+		else: next_anim = "air"
+	
+	sprite.play(next_anim)
 	
 	move_and_slide()
 
