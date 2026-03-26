@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfq53d8pw8sov"
-path="res://.godot/imported/wharf_tileset_2.png-6fc533c5d8ce2cfcee8df48e10ace12b.ctex"
+uid="uid://ba30bpw2b6ar4"
+path="res://.godot/imported/fish_crate_2.png-2086e8b1832a289967cf61ef44686f9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/wharf_tileset_2.png"
-dest_files=["res://.godot/imported/wharf_tileset_2.png-6fc533c5d8ce2cfcee8df48e10ace12b.ctex"]
+source_file="res://sprites/wharf_props/fish_crate_2.png"
+dest_files=["res://.godot/imported/fish_crate_2.png-2086e8b1832a289967cf61ef44686f9d.ctex"]
 
 [params]
 

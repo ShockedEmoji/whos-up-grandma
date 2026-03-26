@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfq53d8pw8sov"
-path="res://.godot/imported/wharf_tileset_2.png-6fc533c5d8ce2cfcee8df48e10ace12b.ctex"
+uid="uid://dyud3i0co0y4v"
+path="res://.godot/imported/dead_fish_3.png-bcc758c02f27236134d8ce929cacc2bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/wharf_tileset_2.png"
-dest_files=["res://.godot/imported/wharf_tileset_2.png-6fc533c5d8ce2cfcee8df48e10ace12b.ctex"]
+source_file="res://sprites/wharf_props/dead_fish_3.png"
+dest_files=["res://.godot/imported/dead_fish_3.png-bcc758c02f27236134d8ce929cacc2bb.ctex"]
 
 [params]
 
