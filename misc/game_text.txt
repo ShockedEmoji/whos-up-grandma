@@ -321,3 +321,29 @@ please remember that...
 
 }wasp quiz right
 Hello, human!
+
+}key 1
+Hi!  I am a fish
+hey you want this key I have
+ok here you go yay
+< YOU GOT A KEY >
+
+}locked door 1
+The door is locked...
+Perhaps there is a fish somewhere with the key..?
+
+}unlocked door 1
+Ka-chink!
+You unlocked the door!
+
+}school wasp
+Hey it's me the wasp again yay!!
+{Wasp? I thought you were a bee`bee ragebait
+{Hello ambiguously-gendered wasp!`hi wasp real school
+
+}bee ragebait
+Gahhhh noooooo I am a wasp you EVIL EVIL
+EVILL RAGEBAITERR
+
+}hi wasp real school
+Helloo

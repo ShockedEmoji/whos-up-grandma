@@ -103,3 +103,6 @@ animation = &"down"
 [node name="shoot" type="Timer" parent="." unique_id=1669800557]
 wait_time = 0.15
 one_shot = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=721587579]
+current = true

@@ -4,9 +4,12 @@ extends CharacterBody2D
 const SPEED = 450.0 # 300
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_listener_2d: AudioListener2D = $AudioListener2D
 
 func _ready():
 	DATA.player_frozen = false
+	
+	audio_listener_2d.make_current()
 
 var last_x: float = 1
 var last_y: float = 1

@@ -12,7 +12,7 @@ const GOOP = preload("uid://3071pwnomwdy")
 @onready var health: AnimatedSprite2D = $health
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 8 # set it to like 5 or something
+var bullet_damage: int = 80 # set it to like 5 or something
 
 
 var touching_legal: bool = true
@@ -81,6 +81,7 @@ func _new_attack():
 				
 				if texture_progress_bar.value <= 500 && !enraged:
 					enraged = true
+					bee.modulate = "ff255f"
 				
 				if !enraged:
 					boss_state = randi_range(1, 5) as BOSS_STATES

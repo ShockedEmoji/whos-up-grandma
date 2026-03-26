@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://d1gtsxrfmu2a3"]
+
+[ext_resource type="Script" uid="uid://da4uvl4js4356" path="res://scripts/door.gd" id="1_t74r1"]
+[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="2_c6173"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t74r1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c6173")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c6173")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t74r1"]
+size = Vector2(266, 326)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6173"]
+size = Vector2(398, 468)
+
+[node name="door" type="Node2D" unique_id=736313575]
+script = ExtResource("1_t74r1")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1698370873]
+scale = Vector2(2.09375, 2.625)
+sprite_frames = SubResource("SpriteFrames_t74r1")
+animation = &"closed"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1676577167]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1228782932]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_t74r1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2132224665]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2059827124]
+shape = SubResource("RectangleShape2D_c6173")

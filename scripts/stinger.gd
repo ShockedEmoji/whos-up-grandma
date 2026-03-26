@@ -7,7 +7,14 @@ var speed: float = 600
 
 @export var move_direction: Vector2 = Vector2.LEFT
 
+
 func _ready() -> void:
+	
+	if slow_at_start:
+		var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+		audio_stream_player_2d.volume_linear = DATA.master_volume * DATA.sound_volume
+		print(DATA.master_volume * DATA.sound_volume)
+	
 	self.position = start_position
 	if slow_at_start: 
 		var real_speed = speed

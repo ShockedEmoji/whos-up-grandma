@@ -3,7 +3,11 @@
 [ext_resource type="Script" uid="uid://cmotqks6hcydn" path="res://scripts/game.gd" id="1_uor2p"]
 [ext_resource type="Texture2D" uid="uid://c60dra31y8xc5" path="res://sprites/stupid/edwardkissaer.png" id="2_p4gxv"]
 [ext_resource type="Texture2D" uid="uid://cend41sphinm7" path="res://sprites/grass_tileset.png" id="3_a2de3"]
+[ext_resource type="PackedScene" uid="uid://d1gtsxrfmu2a3" path="res://scenes/top_down/door.tscn" id="5_yfiuj"]
+[ext_resource type="PackedScene" uid="uid://dfmomiw8cxqn2" path="res://scenes/top_down/key.tscn" id="6_d5glq"]
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="7_ohtfh"]
+[ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="8_0gdwh"]
+[ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="9_kh7ls"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="22_pitba"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="23_vyb6s"]
 
@@ -42,13 +46,54 @@ tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 2
 sources/1 = SubResource("TileSetAtlasSource_43pdy")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_e63eq"]
+atlas = ExtResource("9_kh7ls")
+region = Rect2(1200, 400, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cn0q"]
+atlas = ExtResource("9_kh7ls")
+region = Rect2(1600, 400, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5axp"]
+atlas = ExtResource("9_kh7ls")
+region = Rect2(0, 800, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4psk"]
+atlas = ExtResource("9_kh7ls")
+region = Rect2(400, 800, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uuomv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e63eq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cn0q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5axp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4psk")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
 [node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_uor2p")
 
 [node name="Black" type="Sprite2D" parent="." unique_id=489202517]
 modulate = Color(0, 0, 0, 1)
 z_index = -300
-position = Vector2(2269.5, -1131)
+position = Vector2(2434.9998, -1459)
 scale = Vector2(18.200848, 12.875913)
 texture = ExtResource("2_p4gxv")
 
@@ -68,6 +113,22 @@ tile_set = SubResource("TileSet_3dnpt")
 y_sort_enabled = true
 
 [node name="player" parent="everything else" unique_id=1233949163 instance=ExtResource("7_ohtfh")]
+
+[node name="door" parent="everything else" unique_id=736313575 instance=ExtResource("5_yfiuj")]
+position = Vector2(-6, -300)
+locked_dialogue = "locked door 1"
+open_dialogue = "unlocked door 1"
+
+[node name="key" parent="everything else" unique_id=1135864980 node_paths=PackedStringArray("door_to_open") instance=ExtResource("6_d5glq")]
+position = Vector2(650, -212.99998)
+dialogue = "key 1"
+door_to_open = NodePath("../door")
+
+[node name="npc2" parent="everything else" unique_id=504357653 instance=ExtResource("8_0gdwh")]
+position = Vector2(935, 248)
+sprite_frames = SubResource("SpriteFrames_uuomv")
+animation = &"talk"
+dialogue = "school wasp"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
