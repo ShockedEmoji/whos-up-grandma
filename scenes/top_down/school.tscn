@@ -1,50 +1,89 @@
-[gd_scene format=3 uid="uid://ca6ff4d1ywv77"]
+[gd_scene format=4 uid="uid://ca6ff4d1ywv77"]
 
 [ext_resource type="Script" uid="uid://cmotqks6hcydn" path="res://scripts/game.gd" id="1_uor2p"]
 [ext_resource type="Texture2D" uid="uid://c60dra31y8xc5" path="res://sprites/stupid/edwardkissaer.png" id="2_p4gxv"]
-[ext_resource type="Texture2D" uid="uid://cend41sphinm7" path="res://sprites/grass_tileset.png" id="3_a2de3"]
+[ext_resource type="Texture2D" uid="uid://cfv6h01l5xfer" path="res://sprites/highschool_tileset.png" id="3_uuomv"]
 [ext_resource type="PackedScene" uid="uid://d1gtsxrfmu2a3" path="res://scenes/top_down/door.tscn" id="5_yfiuj"]
 [ext_resource type="PackedScene" uid="uid://dfmomiw8cxqn2" path="res://scenes/top_down/key.tscn" id="6_d5glq"]
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="7_ohtfh"]
 [ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="8_0gdwh"]
 [ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="9_kh7ls"]
+[ext_resource type="Texture2D" uid="uid://gwl5pacmmxd8" path="res://sprites/highschool_props/shoe_storage.png" id="9_nijqe"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="22_pitba"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="23_vyb6s"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43pdy"]
-texture = ExtResource("3_a2de3")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nijqe"]
+texture = ExtResource("3_uuomv")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-200, -200, 200, -200, 200, 200, -200, 200)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-200, -200, 200, -200, 200, 200, -200, 200)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-200, -200, -124, -200, -124, 200, -200, 200)
-1:1/0 = 0
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(200, 124, -200, 124, -200, 200, 124, 200, 200, 200)
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-200, -200, -124, -200, -124, 124, 200, 124, 200, 200, -124, 200, -200, 200)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(200, -200, 124, -200, 124, 200, 200, 200)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(200, -200, 124, -200, 124, 124, -200, 124, -200, 200, 124, 200, 200, 200)
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-200, -200, 200, -200, 200, 200, -200, 200)
+2:0/0 = 0
 3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(200, 124, 140, 140, 124, 200, 200, 200)
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(200, -200, 124, -200, 124, 128, 200, 200)
 4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-200, 124, -140, 140, -124, 200, -200, 200)
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
 4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-200, -200, -124, -200, -124, 128, -200, 200)
+5:1/0 = 0
+6:1/0 = 0
 3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3dnpt"]
 tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 2
-sources/1 = SubResource("TileSetAtlasSource_43pdy")
+sources/0 = SubResource("TileSetAtlasSource_nijqe")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e63eq"]
 atlas = ExtResource("9_kh7ls")
@@ -87,6 +126,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tufo"]
+size = Vector2(107.41193, 1105.9503)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60gg2"]
+size = Vector2(114.19995, 1111.9458)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83ysk"]
+size = Vector2(109.69214, 1107.438)
+
 [node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_uor2p")
 
@@ -101,9 +149,17 @@ texture = ExtResource("2_p4gxv")
 z_index = -2
 position = Vector2(-29, -37)
 scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAD//wAAAAADAAcAAAD//wEAAAADAAcAAAD//wIAAAADAAcAAAAAAAAAAAADAAcAAAAAAAEAAAADAAcAAAAAAAIAAAADAAcAAAABAAAAAAADAAcAAAABAAEAAAADAAcAAAABAAIAAAADAAcAAAACAAAAAAADAAcAAAACAAEAAAADAAcAAAACAAIAAAADAAcAAAADAAAAAAADAAcAAAADAAEAAAADAAcAAAADAAIAAAADAAcAAAAEAAAAAAADAAcAAAAEAAEAAAADAAcAAAAEAAIAAAADAAcAAAD//wMAAAADAAcAAAAAAAMAAAADAAcAAAABAAMAAAADAAcAAAACAAMAAAADAAcAAAADAAMAAAADAAcAAAAEAAMAAAADAAcAAAA=")
 tile_set = SubResource("TileSet_3dnpt")
 
 [node name="TileMapLayerWall" type="TileMapLayer" parent="." unique_id=498887593]
+z_index = -1
+position = Vector2(-29, -37)
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAABAP7/AAAFAAYAAAABAP//AAAFAAcAAAACAP7/AAAGAAYAAAACAP//AAAGAAcAAAAAAP7/AAAGAAUAAAAAAP//AAAGAAUAAAD///7/AAAGAAUAAAD/////AAAGAAUAAAADAP7/AAAGAAUAAAADAP//AAAGAAUAAAAEAP7/AAAGAAUAAAAEAP//AAAGAAUAAAAAAP3/AAABAAMAAAABAP3/AAABAAMAAAACAP3/AAABAAMAAAADAP3/AAABAAMAAAD///3/AAAAAAMAAAAEAP3/AAACAAMAAAA=")
+tile_set = SubResource("TileSet_3dnpt")
+
+[node name="TileMapLayerWall2" type="TileMapLayer" parent="." unique_id=1651926052]
 z_index = -1
 position = Vector2(-29, -37)
 scale = Vector2(0.25, 0.25)
@@ -115,7 +171,8 @@ y_sort_enabled = true
 [node name="player" parent="everything else" unique_id=1233949163 instance=ExtResource("7_ohtfh")]
 
 [node name="door" parent="everything else" unique_id=736313575 instance=ExtResource("5_yfiuj")]
-position = Vector2(-6, -300)
+visible = false
+position = Vector2(172.475, -242.525)
 locked_dialogue = "locked door 1"
 open_dialogue = "unlocked door 1"
 
@@ -130,6 +187,66 @@ sprite_frames = SubResource("SpriteFrames_uuomv")
 animation = &"talk"
 dialogue = "school wasp"
 
+[node name="ShoeStorage5" type="Sprite2D" parent="everything else" unique_id=746739944]
+position = Vector2(-28.37912, 73.60065)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="ShoeStorage6" type="Sprite2D" parent="everything else" unique_id=1773346482]
+position = Vector2(86.62088, 73.60065)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="ShoeStorage7" type="Sprite2D" parent="everything else" unique_id=708052481]
+position = Vector2(257.12088, 73.60065)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="ShoeStorage8" type="Sprite2D" parent="everything else" unique_id=1657580157]
+position = Vector2(373.12088, 73.60065)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="ShoeStorage" type="Sprite2D" parent="everything else" unique_id=1268215809]
+position = Vector2(-28.37912, 153.99133)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="ShoeStorage2" type="Sprite2D" parent="everything else" unique_id=273985104]
+position = Vector2(86.62088, 153.99133)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="ShoeStorage3" type="Sprite2D" parent="everything else" unique_id=1800952833]
+position = Vector2(257.12088, 153.99133)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="ShoeStorage4" type="Sprite2D" parent="everything else" unique_id=829725853]
+position = Vector2(373.12088, 153.99133)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_nijqe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1869771818]
+position = Vector2(-28.37912, 73.60065)
+scale = Vector2(0.25, 0.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=899647096]
+position = Vector2(-0.496521, 159.72964)
+shape = SubResource("RectangleShape2D_2tufo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=613074947]
+position = Vector2(457.16785, 156.8417)
+shape = SubResource("RectangleShape2D_60gg2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2118958183]
+position = Vector2(1147.6261, 159.09555)
+shape = SubResource("RectangleShape2D_83ysk")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1748286548]
+position = Vector2(1608.9332, 162.10086)
+shape = SubResource("RectangleShape2D_83ysk")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
 zoom = Vector2(0.9, 0.9)
@@ -138,11 +255,13 @@ script = ExtResource("22_pitba")
 what_am_i_following = NodePath("../everything else/player")
 
 [node name="text_system" parent="Camera2D" unique_id=702931713 instance=ExtResource("23_vyb6s")]
+visible = false
 z_index = 5
 position = Vector2(-576, -328)
 
 [node name="props" type="Node2D" parent="." unique_id=1878516110]
 z_index = -1
+position = Vector2(0, 47.916016)
 scale = Vector2(0.25, 0.25)
 
 [node name="aboveprops" type="Node2D" parent="." unique_id=245509154]
