@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfq53d8pw8sov"
-path="res://.godot/imported/wharf_tileset_2.png-6fc533c5d8ce2cfcee8df48e10ace12b.ctex"
+uid="uid://bwx48d47bfty8"
+path="res://.godot/imported/sewer_grate.png-bdd211bc6a8268ecd21270149c33d128.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/wharf_tileset_2.png"
-dest_files=["res://.godot/imported/wharf_tileset_2.png-6fc533c5d8ce2cfcee8df48e10ace12b.ctex"]
+source_file="res://sprites/wharf_props/sewer_grate.png"
+dest_files=["res://.godot/imported/sewer_grate.png-bdd211bc6a8268ecd21270149c33d128.ctex"]
 
 [params]
 

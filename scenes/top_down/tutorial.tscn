@@ -1112,14 +1112,6 @@ texture = ExtResource("13_2un3y")
 position = Vector2(308, 2640)
 texture = ExtResource("12_17ryx")
 
-[node name="Daisies73" type="Sprite2D" parent="props" unique_id=2030334237]
-position = Vector2(540, 2112)
-texture = ExtResource("11_5stby")
-
-[node name="Daisies77" type="Sprite2D" parent="props" unique_id=828497910]
-position = Vector2(724, 2096)
-texture = ExtResource("11_5stby")
-
 [node name="Daisies79" type="Sprite2D" parent="props" unique_id=468435150]
 position = Vector2(252, 76)
 texture = ExtResource("11_5stby")

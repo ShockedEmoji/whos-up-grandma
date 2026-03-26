@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cend41sphinm7" path="res://sprites/grass_tileset.png" id="3_61xi8"]
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="4_4rcdw"]
 [ext_resource type="Texture2D" uid="uid://c64e46efoo7k1" path="res://sprites/wharf_tileset.png" id="4_6pc3j"]
-[ext_resource type="Texture2D" uid="uid://bju7ybaocwior" path="res://sprites/wharf_tileset_2.png" id="6_1nklx"]
+[ext_resource type="Texture2D" uid="uid://dfq53d8pw8sov" path="res://sprites/wharf_tileset_2.png" id="6_1nklx"]
 [ext_resource type="Texture2D" uid="uid://r1wvqxqegasb" path="res://sprites/wharf_props/waterfountain.png" id="7_0v5ou"]
 [ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="7_gsig4"]
 [ext_resource type="Texture2D" uid="uid://cv86a3hornoly" path="res://sprites/black_gradient.png" id="8_q0t0h"]
@@ -16,9 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://ci1i0x3ye22gq" path="res://sprites/wharf_props/bobs_crate_2.png" id="12_tmyfw"]
 [ext_resource type="Texture2D" uid="uid://8phcabcriu0a" path="res://sprites/wharf_props/support_pillar.png" id="12_wbi83"]
 [ext_resource type="Texture2D" uid="uid://doun3cud4c556" path="res://sprites/wharf_props/bobs_crate.png" id="13_j7hsf"]
+[ext_resource type="Texture2D" uid="uid://csnt00l37ntie" path="res://sprites/wharf_props/buoy_sack.png" id="14_dd67m"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="14_ms64r"]
 [ext_resource type="Texture2D" uid="uid://bhrroyrmbcni3" path="res://sprites/wharf_props/hooks.png" id="14_wbi83"]
 [ext_resource type="Texture2D" uid="uid://bjlcbfet4lly8" path="res://sprites/wharf_props/hooked_rope.png" id="15_61xi8"]
+[ext_resource type="Texture2D" uid="uid://ddpn6spaggo0x" path="res://sprites/wharf_props/hanging_buoy_3.png" id="15_c880v"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="15_cc2l8"]
 [ext_resource type="Texture2D" uid="uid://bju3l0t4m0na3" path="res://sprites/wharf_props/lifering.png" id="16_4rcdw"]
 [ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="16_q0t0h"]
@@ -36,7 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="30_e1a1u"]
 [ext_resource type="Texture2D" uid="uid://blqwrs3wk4f1e" path="res://sprites/npc_spritesheet_2.png" id="31_dd67m"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0v5ou"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms64r"]
 texture = ExtResource("3_0sbdo")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -90,7 +92,7 @@ texture_region_size = Vector2i(400, 400)
 8:5/0 = 0
 9:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km1gf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cc2l8"]
 texture = ExtResource("4_6pc3j")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -104,7 +106,7 @@ texture_region_size = Vector2i(400, 400)
 0:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pc3j"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkoei"]
 texture = ExtResource("3_61xi8")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -122,7 +124,7 @@ texture_region_size = Vector2i(400, 400)
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1a1u"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfp7y"]
 texture = ExtResource("6_1nklx")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -141,17 +143,35 @@ texture_region_size = Vector2i(400, 400)
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3dnpt"]
 tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 2
-sources/3 = SubResource("TileSetAtlasSource_km1gf")
-sources/4 = SubResource("TileSetAtlasSource_6pc3j")
-sources/2 = SubResource("TileSetAtlasSource_0v5ou")
-sources/6 = SubResource("TileSetAtlasSource_e1a1u")
+sources/3 = SubResource("TileSetAtlasSource_cc2l8")
+sources/4 = SubResource("TileSetAtlasSource_wkoei")
+sources/2 = SubResource("TileSetAtlasSource_ms64r")
+sources/6 = SubResource("TileSetAtlasSource_bfp7y")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yccd"]
 size = Vector2(198, 420)
@@ -393,6 +413,14 @@ texture = ExtResource("12_wbi83")
 z_index = -1
 scale = Vector2(0.25, 0.25)
 
+[node name="HangingBuoy3" type="Sprite2D" parent="props" unique_id=1323993985]
+position = Vector2(660.07965, -1234.67)
+texture = ExtResource("15_c880v")
+
+[node name="BuoySack" type="Sprite2D" parent="props" unique_id=1220331773]
+position = Vector2(732.18695, -1460.0057)
+texture = ExtResource("14_dd67m")
+
 [node name="TownHouseShaping" type="Sprite2D" parent="props" unique_id=1741772122]
 position = Vector2(1572, -1364)
 texture = ExtResource("10_c7sxa")
@@ -445,11 +473,6 @@ texture = ExtResource("20_q5x2f")
 position = Vector2(2148, 872)
 texture = ExtResource("18_e1a1u")
 
-[node name="FishCrate2" type="Sprite2D" parent="props" unique_id=363408980]
-position = Vector2(1896, -780)
-texture = ExtResource("17_1nklx")
-flip_h = true
-
 [node name="CoralDecoration3" type="Sprite2D" parent="props" unique_id=1174596378]
 position = Vector2(444, -1172)
 texture = ExtResource("22_gsig4")
@@ -495,6 +518,31 @@ position = Vector2(5351.967, -1615.683)
 texture = ExtResource("29_e1a1u")
 flip_h = true
 
+[node name="Window" type="Sprite2D" parent="props" unique_id=1300660328]
+position = Vector2(1149.8801, -1943.1116)
+texture = ExtResource("30_q5x2f")
+
+[node name="SewerGrate" type="Sprite2D" parent="props" unique_id=1877900252]
+position = Vector2(-206.36365, 202.36359)
+texture = ExtResource("31_q0t0h")
+
+[node name="DeadFish4" type="Sprite2D" parent="props" unique_id=1954685012]
+position = Vector2(1745.166, -688.5586)
+texture = ExtResource("32_c880v")
+
+[node name="DeadFish5" type="Sprite2D" parent="props" unique_id=1012252375]
+position = Vector2(2426, 750)
+texture = ExtResource("33_1yccd")
+
+[node name="FishCrate2" type="Sprite2D" parent="props" unique_id=1589574300]
+position = Vector2(1932.5259, -775.4003)
+texture = ExtResource("17_1nklx")
+flip_h = true
+
+[node name="DeadCoralTree4" type="Sprite2D" parent="props" unique_id=297082336]
+position = Vector2(2484.683, 1992.384)
+texture = ExtResource("29_e1a1u")
+
 [node name="aboveprops" type="Node2D" parent="." unique_id=245509154]
 z_index = 1
 scale = Vector2(0.25, 0.25)
@@ -534,6 +582,30 @@ texture = ExtResource("26_61xi8")
 [node name="RopeBarrierAcross5" type="Sprite2D" parent="aboveprops" unique_id=1900461626]
 position = Vector2(6727.0317, 209.89372)
 texture = ExtResource("26_61xi8")
+
+[node name="SupportPillar7" type="Sprite2D" parent="aboveprops" unique_id=491809015]
+position = Vector2(7680.2017, 389.39203)
+texture = ExtResource("12_wbi83")
+
+[node name="SupportPillar8" type="Sprite2D" parent="aboveprops" unique_id=1209139177]
+position = Vector2(7129.168, 370.75806)
+texture = ExtResource("12_wbi83")
+
+[node name="FishCrate" type="Sprite2D" parent="aboveprops" unique_id=787304629]
+position = Vector2(8834.039, 426.73334)
+texture = ExtResource("17_1nklx")
+
+[node name="DeadFish" type="Sprite2D" parent="aboveprops" unique_id=72145881]
+position = Vector2(8653.675, 491.86182)
+texture = ExtResource("18_e1a1u")
+
+[node name="DeadCoralTree" type="Sprite2D" parent="aboveprops" unique_id=1822489826]
+position = Vector2(6557.333, -1615.4828)
+texture = ExtResource("29_e1a1u")
+
+[node name="DeadCoralTree2" type="Sprite2D" parent="aboveprops" unique_id=701125820]
+position = Vector2(10216.02, -509.6682)
+texture = ExtResource("29_e1a1u")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=579874541]
 collision_layer = 2
