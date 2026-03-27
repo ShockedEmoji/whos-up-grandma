@@ -197,6 +197,12 @@ size = Vector2(207.31604, 261.71063)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4mevt"]
 load_path = "res://.godot/imported/support_pillar.png-620f5be59cccf03c0077cc2f95273d34.ctex"
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg78"]
+size = Vector2(203.69556, 210.61792)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqsti"]
+size = Vector2(299.99994, 207.27283)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfp7y"]
 load_path = "res://.godot/imported/mist.png-0328367dd78c5c39eee115d7424bfba6.ctex"
 
@@ -217,7 +223,7 @@ curve = SubResource("Curve_pcs5j")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pcs5j"]
 particle_flag_disable_z = true
 emission_shape_offset = Vector3(17.025, 0, 0)
-emission_shape_scale = Vector3(350, 450, 1)
+emission_shape_scale = Vector3(4000, 4000, 1)
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 gravity = Vector3(0, 0, 0)
@@ -387,6 +393,58 @@ scale = Vector2(0.25, 0.25)
 [node name="SupportPillar" type="Sprite2D" parent="below_props" unique_id=692940143]
 position = Vector2(3144, -200)
 texture = SubResource("CompressedTexture2D_4mevt")
+
+[node name="SupportPillar2" type="Sprite2D" parent="below_props" unique_id=153056912]
+position = Vector2(13107.659, -16882.975)
+texture = ExtResource("12_wbi83")
+
+[node name="RopeBarrierAcross" type="Sprite2D" parent="below_props" unique_id=184528441]
+position = Vector2(13502.346, -17124.9)
+texture = ExtResource("26_61xi8")
+
+[node name="SupportPillar3" type="Sprite2D" parent="below_props" unique_id=1568376992]
+position = Vector2(13906.229, -16882.975)
+texture = ExtResource("12_wbi83")
+
+[node name="RopeBarrierAcross2" type="Sprite2D" parent="below_props" unique_id=1852674186]
+position = Vector2(14300.915, -17124.9)
+texture = ExtResource("26_61xi8")
+
+[node name="SupportPillar4" type="Sprite2D" parent="below_props" unique_id=268250130]
+position = Vector2(14704.153, -16882.975)
+texture = ExtResource("12_wbi83")
+
+[node name="RopeBarrierAcross3" type="Sprite2D" parent="below_props" unique_id=639624112]
+position = Vector2(15098.84, -17124.9)
+texture = ExtResource("26_61xi8")
+
+[node name="SupportPillar5" type="Sprite2D" parent="below_props" unique_id=825717100]
+position = Vector2(15501.803, -16882.975)
+texture = ExtResource("12_wbi83")
+
+[node name="RopeBarrierAcross4" type="Sprite2D" parent="below_props" unique_id=721673799]
+position = Vector2(15896.489, -17124.9)
+texture = ExtResource("26_61xi8")
+
+[node name="SupportPillar6" type="Sprite2D" parent="below_props" unique_id=130359263]
+position = Vector2(16299.25, -16882.975)
+texture = ExtResource("12_wbi83")
+
+[node name="RopeBarrierAcross5" type="Sprite2D" parent="below_props" unique_id=1534357490]
+position = Vector2(16693.938, -17124.9)
+texture = ExtResource("26_61xi8")
+
+[node name="SupportPillar7" type="Sprite2D" parent="below_props" unique_id=294628632]
+position = Vector2(17095.992, -16882.975)
+texture = ExtResource("12_wbi83")
+
+[node name="SupportPillar8" type="Sprite2D" parent="below_props" unique_id=652923140]
+position = Vector2(17894.148, -16882.975)
+texture = ExtResource("12_wbi83")
+
+[node name="RopeBarrierAcross6" type="Sprite2D" parent="below_props" unique_id=485278884]
+position = Vector2(17490.678, -17124.9)
+texture = ExtResource("26_61xi8")
 
 [node name="props" type="Node2D" parent="." unique_id=1878516110]
 z_index = -1
@@ -582,6 +640,10 @@ texture = ExtResource("39_pcs5j")
 [node name="DeadFish8" type="Sprite2D" parent="props" unique_id=291142901]
 position = Vector2(12536.729, -2326.7275)
 texture = ExtResource("32_c880v")
+
+[node name="Paddle" type="Sprite2D" parent="props" unique_id=802737323]
+position = Vector2(5656.154, -7281.519)
+texture = ExtResource("48_nf7ag")
 
 [node name="aboveprops" type="Node2D" parent="." unique_id=245509154]
 z_index = 1
@@ -787,10 +849,6 @@ texture = ExtResource("23_q0t0h")
 position = Vector2(6737.674, -5674.7524)
 texture = ExtResource("11_hxnp0")
 
-[node name="Paddle" type="Sprite2D" parent="aboveprops" unique_id=802737323]
-position = Vector2(5656.154, -7281.519)
-texture = ExtResource("48_nf7ag")
-
 [node name="DeadCoralTree17" type="Sprite2D" parent="aboveprops" unique_id=1795294678]
 position = Vector2(9728.8, -1431.3079)
 texture = ExtResource("43_hqsti")
@@ -848,18 +906,122 @@ texture = ExtResource("19_dd67m")
 position = Vector2(11736.59, -1984.2078)
 texture = ExtResource("11_hxnp0")
 
+[node name="DeadCoralTree24" type="Sprite2D" parent="aboveprops" unique_id=1219461345]
+position = Vector2(12125.016, -1470.0304)
+texture = ExtResource("43_hqsti")
+
+[node name="DeadCoralTree25" type="Sprite2D" parent="aboveprops" unique_id=651384406]
+position = Vector2(12290.06, -1339.5924)
+texture = ExtResource("47_umfiy")
+
+[node name="DeadCoralTree26" type="Sprite2D" parent="aboveprops" unique_id=1358619447]
+position = Vector2(11936.014, -1057.4204)
+texture = ExtResource("43_hqsti")
+
+[node name="DeadCoralTree27" type="Sprite2D" parent="aboveprops" unique_id=854787243]
+position = Vector2(13370.292, -1080.7244)
+texture = ExtResource("45_rmda0")
+
+[node name="DeadCoralTree28" type="Sprite2D" parent="aboveprops" unique_id=977921607]
+position = Vector2(12951.56, -1467.247)
+texture = ExtResource("43_hqsti")
+
+[node name="DeadCoralTree29" type="Sprite2D" parent="aboveprops" unique_id=1877857299]
+position = Vector2(13938.169, -1594.8282)
+texture = ExtResource("47_umfiy")
+
+[node name="DeadCoralTree30" type="Sprite2D" parent="aboveprops" unique_id=625815207]
+position = Vector2(14603.399, -1803.9995)
+texture = ExtResource("46_7r6ns")
+
+[node name="DeadCoralTree31" type="Sprite2D" parent="aboveprops" unique_id=1648130984]
+position = Vector2(13869.765, -1012.7031)
+texture = ExtResource("47_umfiy")
+
+[node name="DeadCoralTree32" type="Sprite2D" parent="aboveprops" unique_id=1028340421]
+position = Vector2(12669.355, -588.27246)
+texture = ExtResource("43_hqsti")
+
+[node name="Buoy4" type="Sprite2D" parent="aboveprops" unique_id=1283550871]
+position = Vector2(12203.564, -644.8915)
+texture = ExtResource("28_dd67m")
+
+[node name="Buoy5" type="Sprite2D" parent="aboveprops" unique_id=173928644]
+position = Vector2(11699.52, -3621.3071)
+texture = ExtResource("28_dd67m")
+
+[node name="DeadCoralTree33" type="Sprite2D" parent="aboveprops" unique_id=2033872348]
+position = Vector2(11710.148, -3493.755)
+texture = ExtResource("47_umfiy")
+
+[node name="DeadCoralTree34" type="Sprite2D" parent="aboveprops" unique_id=585441880]
+position = Vector2(7618.8267, -5170.2)
+texture = ExtResource("44_7owl7")
+
+[node name="DeadCoralTree35" type="Sprite2D" parent="aboveprops" unique_id=1434942832]
+position = Vector2(8394.364, -5805.819)
+texture = ExtResource("45_rmda0")
+
+[node name="DeadCoralTree36" type="Sprite2D" parent="aboveprops" unique_id=1167514062]
+position = Vector2(8425.273, -5253.091)
+texture = ExtResource("46_7r6ns")
+
+[node name="DeadCoralTree37" type="Sprite2D" parent="aboveprops" unique_id=616442897]
+position = Vector2(7104.795, -6912.116)
+texture = ExtResource("29_e1a1u")
+
+[node name="DeadCoralTree38" type="Sprite2D" parent="aboveprops" unique_id=2067358239]
+position = Vector2(6687.2046, -6788.2427)
+texture = ExtResource("43_hqsti")
+
+[node name="DeadCoralTree39" type="Sprite2D" parent="aboveprops" unique_id=545103952]
+position = Vector2(7314.691, -8004.2427)
+texture = ExtResource("45_rmda0")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=579874541]
 collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=257414486]
 build_mode = 1
-polygon = PackedVector2Array(146, -153, -1098, -146, -1108, 52, -147, 50, -143, 147, 151, 145, 156, 245, 749, 248, 749, 44, 1951, 46, 1955, 250, 2043, 250, 2047, 48, 2548, 46, 2548, -47, 2044, -46, 2047, -255, 2350, -254, 2346, -345, 2050, -346, 2049, -554, 3050, -557, 3053, -450, 3148, -451, 3147, -555, 3447, -554, 3450, -646, 3148, -646, 3148, -750, 3450, -752, 3447, -844, 3148, -845, 3148, -1154, 3447, -1156, 3447, -1243, 3147, -1245, 3145, -1352, 3450, -1352, 3451, -1443, 3147, -1447, 3148, -1548, 3050, -1548, 3049, -1145, 2845, -1144, 2848, -1948, 2750, -1951, 2750, -1147, 2645, -1145, 2648, -1945, 2551, -1945, 2552, -1147, 2450, -1147, 2447, -1948, 2352, -1949, 2352, -1145, 1248, -1145, 1248, -1754, 1648, -1752, 1649, -2855, 2951, -2855, 2949, -2944, 1548, -2944, 1550, -1847, 1148, -1847, 1150, -1049, 3050, -1053, 3050, -646, 2048, -647, 2046, -777, 1949, -829, 1950, -45, 748, -47, 749, -150, 550, -150, 549, -197, 504, -168, 477, -164, 447, -222, 380, -229, 377, -194, 345, -190, 288, -194, 284, -179, 215, -168, 192, -113, 216, -100, 217, -77, 195, -72, 187, -88, 192, -104, 157, -122)
+polygon = PackedVector2Array(146, -153, -1098, -146, -1108, 52, -147, 50, -143, 147, 151, 145, 156, 245, 749, 248, 749, 44, 1951, 46, 1955, 250, 2043, 250, 2047, 48, 2480.7678, 45.10109, 2484.8037, -44.932495, 2044, -46, 2047, -255, 2259.7195, -254.4934, 2307.22, -344.83743, 2050, -346, 2049, -554, 3050, -557, 3053, -450, 3148, -451, 3147, -555, 3447, -554, 3450, -646, 3148, -646, 3148, -750, 3450, -752, 3447, -844, 3148, -845, 3148, -1154, 3447, -1156, 3447, -1243, 3147, -1245, 3145, -1352, 3450, -1352, 3451, -1443, 3147, -1447, 3148, -1548, 3050, -1548, 3049, -1145, 2845, -1144, 2848, -1948, 2750, -1951, 2750, -1147, 2645, -1145, 2648, -1945, 2551, -1945, 2552, -1147, 2450, -1147, 2447, -1948, 2352, -1949, 2352, -1145, 1248, -1145, 1248, -1754, 1648, -1752, 1649, -2855, 2951, -2855, 2949, -2944, 2947.2544, -3152.6765, 3048.3718, -3151.9756, 3047.6707, -3245.9075, 2949.5984, -3248.1846, 2950, -3452.5, 3249, -3451.5, 3248.242, -4154.95, 3449.9697, -4156.828, 3452.5994, -3849.1648, 3547.6406, -3849.916, 3546.8894, -4153.4473, 3750.871, -4153.823, 3750.871, -3849.5405, 3845.5369, -3848.4136, 3848.1665, -4151.5693, 4052.1484, -4152.3203, 4052.061, -3846.4158, 4146.915, -3846.251, 4148.042, -4153.163, 4651.159, -4152.881, 4649.9927, -4244.6475, 3151.0413, -4244.1772, 3151.868, -3544.5903, 2945.2563, -3544.177, 2945.8652, -3749.1555, 2850.9263, -3751.2046, 2850.2437, -3546.3005, 2648.413, -3546.642, 2644.6565, -3746.4233, 2550.4006, -3748.4724, 2551.0835, -3545.2756, 2347.204, -3543.9097, 2345.388, -3740.1584, 2247.8674, -3741.8113, 2248.6936, -3545.531, 2044.5614, -3543.8782, 2043.3217, -3763.2996, 1949.1068, -3764.5393, 1949.1068, -3546.3574, 1646.6279, -3545.1182, 1641.6692, -3964.1265, 1549.5205, -3967.8455, 1549.7441, -3545.1787, 1449.4218, -3547.2314, 1449.1652, -3454.6064, 1550.5139, -3456.4026, 1548, -2944, 1449.0404, -2944.997, 1449.5662, -2852.9924, 1548.4055, -2853.1677, 1550, -1847, 1148, -1847, 1150, -1049, 3050, -1053, 3050, -646, 2048, -647, 2046, -777, 1949, -829, 1950, -45, 748, -47, 749, -150, 550, -150, 549, -197, 504, -168, 477, -164, 447, -222, 380, -229, 377, -194, 345, -190, 288, -194, 284, -179, 215, -168, 192, -113, 216, -100, 217, -77, 195, -72, 187, -88, 192, -104, 157, -122)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2008977319]
+position = Vector2(2148.316, -3348.5122)
+shape = SubResource("RectangleShape2D_rxg78")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=894958468]
+position = Vector2(2449.816, -3348.5122)
+shape = SubResource("RectangleShape2D_rxg78")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1706875327]
+position = Vector2(2749.3289, -3348.5122)
+shape = SubResource("RectangleShape2D_rxg78")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1137497778]
+position = Vector2(2148.316, -3049.1038)
+shape = SubResource("RectangleShape2D_rxg78")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=474542447]
+position = Vector2(2449.9207, -3049.1038)
+shape = SubResource("RectangleShape2D_rxg78")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1115754227]
+position = Vector2(2746.401, -3047.6396)
+shape = SubResource("RectangleShape2D_rxg78")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=658103188]
+position = Vector2(1800.3181, -3351.182)
+shape = SubResource("RectangleShape2D_hqsti")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1664153947]
+position = Vector2(1800.3181, -3049.8918)
+shape = SubResource("RectangleShape2D_hqsti")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1468523917]
-visible = false
+modulate = Color(1, 1, 1, 0.09019608)
 z_index = 144
-position = Vector2(1330.2408, -660.8681)
-amount = 50
+position = Vector2(1951.941, -2232.2502)
+amount = 3000
 texture = SubResource("CompressedTexture2D_bfp7y")
 lifetime = 10.0
 preprocess = 30.0
