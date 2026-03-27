@@ -222,7 +222,7 @@ dialogue = "key 1"
 door_to_open = NodePath("../door")
 
 [node name="npc2" parent="everything else" unique_id=504357653 instance=ExtResource("8_0gdwh")]
-position = Vector2(935, 248)
+position = Vector2(1366, -58)
 sprite_frames = SubResource("SpriteFrames_uuomv")
 animation = &"talk"
 dialogue = "school wasp"
