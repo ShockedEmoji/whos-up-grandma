@@ -16,7 +16,7 @@ func _process(_delta: float) -> void:
 func _fade_away():
 	var tween: Tween = create_tween()
 	
-	self.z_index = 2
+	self.z_index = 3
 	
 	tween.tween_property(self, "modulate:a", 0, 1.0)
 
