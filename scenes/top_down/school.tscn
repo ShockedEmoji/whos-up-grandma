@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cmotqks6hcydn" path="res://scripts/game.gd" id="1_uor2p"]
 [ext_resource type="Texture2D" uid="uid://c60dra31y8xc5" path="res://sprites/stupid/edwardkissaer.png" id="2_p4gxv"]
 [ext_resource type="Texture2D" uid="uid://cfv6h01l5xfer" path="res://sprites/highschool_tileset.png" id="3_uuomv"]
+[ext_resource type="Script" uid="uid://its1f8lh1v44" path="res://scripts/wall_dissapear.gd" id="4_7hxw8"]
 [ext_resource type="PackedScene" uid="uid://d1gtsxrfmu2a3" path="res://scenes/top_down/door.tscn" id="5_yfiuj"]
 [ext_resource type="PackedScene" uid="uid://dfmomiw8cxqn2" path="res://scenes/top_down/key.tscn" id="6_d5glq"]
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="7_ohtfh"]
@@ -187,12 +188,15 @@ scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AAD//wIAAAADAAYAAAAAAAIAAAADAAYAAAABAAIAAAADAAYAAAACAAIAAAADAAYAAAADAAIAAAADAAYAAAAEAAIAAAADAAYAAAD//wMAAAABAAYAAAAAAAMAAAABAAYAAAABAAMAAAABAAYAAAACAAMAAAABAAYAAAADAAMAAAABAAYAAAAEAAMAAAABAAYAAAD//wQAAAABAAgAAAAAAAQAAAABAAgAAAABAAQAAAABAAgAAAACAAQAAAABAAgAAAADAAQAAAABAAgAAAAEAAQAAAABAAgAAAD+/wMAAAABAAYAAAD9/wMAAAABAAYAAAD8/wMAAAABAAYAAAD9/wQAAAABAAgAAAD8/wQAAAABAAgAAAD+/wQAAAABAAgAAAD7/wMAAAABAAYAAAD6/wMAAAABAAYAAAD5/wMAAAABAAYAAAD7/wQAAAABAAgAAAD6/wQAAAABAAgAAAD5/wQAAAABAAgAAAAFAAMAAAABAAYAAAAGAAMAAAABAAYAAAAHAAMAAAABAAYAAAAIAAMAAAABAAYAAAAJAAMAAAABAAYAAAAFAAQAAAABAAgAAAAGAAQAAAABAAgAAAAHAAQAAAABAAgAAAAIAAQAAAABAAgAAAAJAAQAAAABAAgAAAAKAAQAAAABAAgAAAAKAAMAAAABAAYAAAALAAMAAAABAAYAAAAMAAMAAAABAAYAAAANAAMAAAABAAYAAAAOAAMAAAABAAYAAAALAAQAAAABAAgAAAAMAAQAAAABAAgAAAAOAAQAAAABAAgAAAANAAQAAAABAAgAAAAGAAEAAAAFAAAAAAAGAAIAAAAFAAEAAAAHAAEAAAAGAAAAAAAHAAIAAAAGAAEAAAAFAAEAAAAFAAUAAAAFAAIAAAAFAAUAAAAIAAEAAAAGAAUAAAAIAAIAAAAGAAUAAAAPAAMAAAACAAYAAAAPAAQAAAACAAgAAAA=")
 tile_set = SubResource("TileSet_3dnpt")
 
-[node name="TileMapLayerGround3" type="TileMapLayer" parent="." unique_id=587467977]
+[node name="TileMapLayerGround3" type="TileMapLayer" parent="." unique_id=587467977 node_paths=PackedStringArray("player")]
 z_index = -2
 position = Vector2(-29, -37)
 scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AAAJAAEAAAAGAAUAAAAJAAIAAAAGAAUAAAAKAAEAAAAGAAUAAAAKAAIAAAAGAAUAAAALAAEAAAAGAAUAAAALAAIAAAAGAAUAAAAMAAEAAAAGAAUAAAAMAAIAAAAGAAUAAAANAAEAAAADAAQAAAANAAIAAAADAAUAAAAOAAEAAAAEAAQAAAAOAAIAAAAEAAUAAAA=")
 tile_set = SubResource("TileSet_3dnpt")
+script = ExtResource("4_7hxw8")
+y_position_to_dissapear = 219.0
+player = NodePath("../everything else/player")
 
 [node name="NoticeBoard2" type="Sprite2D" parent="TileMapLayerGround3" unique_id=1714690373]
 position = Vector2(4865.112, 820.7009)
@@ -222,7 +226,6 @@ y_sort_enabled = true
 polygon = PackedVector2Array(-130.44513, 261.97678, -439.71136, 263.3395, -440.00104, 304.9063, -603.3485, 308.50818, -618.3847, 263.5924, -729.55493, 264.39255, -728.7497, 461.68002, 471.0805, 460.8747, 469.47003, 485.83765, -758.54395, 493.8902, -753.71246, 235.40332, -129.6399, -72.20407, 510.53802, -77.03549, 505.70648, 261.97693, 467.85956, 262.78217, 470.27533, -39.188477, -129.63974, -34.356964)
 
 [node name="door" parent="everything else" unique_id=736313575 instance=ExtResource("5_yfiuj")]
-visible = false
 position = Vector2(172.475, -242.525)
 locked_dialogue = "locked door 1"
 open_dialogue = "unlocked door 1"
@@ -323,7 +326,6 @@ script = ExtResource("22_pitba")
 what_am_i_following = NodePath("../everything else/player")
 
 [node name="text_system" parent="Camera2D" unique_id=702931713 instance=ExtResource("23_vyb6s")]
-visible = false
 z_index = 5
 position = Vector2(-576, -328)
 
