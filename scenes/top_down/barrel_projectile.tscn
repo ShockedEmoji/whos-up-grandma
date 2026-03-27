@@ -42,7 +42,8 @@ slow_at_start = true
 shape = SubResource("CircleShape2D_iv410")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=458537592]
-scale = Vector2(0.734375, 0.734375)
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_f1ku3")
 autoplay = "default"
 frame = 1
