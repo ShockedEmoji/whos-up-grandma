@@ -117,3 +117,10 @@ func _take_damage():
 	await inst.finished
 	
 	inst.queue_free()
+
+func _die():
+	self.z_index = 999
+	
+	sprite.play("die")
+	
+	sprite.flip_h = false

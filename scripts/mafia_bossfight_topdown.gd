@@ -153,6 +153,8 @@ func _new_attack():
 					
 					self.add_child(inst)
 				
+				DATA.root._play_sound("splash")
+				
 				await get_tree().create_timer(0.5).timeout
 			
 			await get_tree().create_timer(1.0).timeout
@@ -179,6 +181,8 @@ func _new_attack():
 					
 					self.add_child(inst)
 				
+				DATA.root._play_sound("splash")
+				
 				await get_tree().create_timer(0.4).timeout
 			
 			await get_tree().create_timer(1.0).timeout
@@ -199,6 +203,8 @@ func _new_attack():
 				inst.scale = Vector2.ONE * 0.5
 				
 				self.add_child(inst)
+				
+				DATA.root._play_sound("splash")
 				
 				await get_tree().create_timer(0.3).timeout
 			

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="1_b8ghv"]
 [ext_resource type="Script" uid="uid://dwvcwd7fh2kp2" path="res://scripts/barrel.gd" id="1_fn1gq"]
 [ext_resource type="AudioStream" uid="uid://cycvkww1yk155" path="res://audio/barrel.mp3" id="3_0vnry"]
+[ext_resource type="AudioStream" uid="uid://bfs061037gif" path="res://audio/splash.mp3" id="4_e2d8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fn1gq"]
 size = Vector2(84, 84)
@@ -22,6 +23,12 @@ shape = SubResource("RectangleShape2D_fn1gq")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1041762098]
 position = Vector2(23, 0)
 stream = ExtResource("3_0vnry")
+autoplay = true
+max_distance = 500.0
+
+[node name="spash" type="AudioStreamPlayer2D" parent="." unique_id=806229396]
+position = Vector2(23, 0)
+stream = ExtResource("4_e2d8n")
 autoplay = true
 max_distance = 500.0
 

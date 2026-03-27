@@ -40,6 +40,7 @@ func _ready() -> void:
 
 func _death():
 	$".."._stop_music()
+	player._die()
 	get_tree().paused = true
 	await camera_2d._death()
 	$".."._play_music("bee buzz")

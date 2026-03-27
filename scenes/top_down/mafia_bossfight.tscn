@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dc4bkukhnahwm" path="res://sprites/stupidplaceholdernpcs.png" id="4_j57d5"]
 [ext_resource type="Texture2D" uid="uid://cend41sphinm7" path="res://sprites/grass_tileset.png" id="4_wq4nb"]
 [ext_resource type="Script" uid="uid://bw3dap77t5fbv" path="res://scripts/death_camera_2d.gd" id="5_j57d5"]
-[ext_resource type="Texture2D" uid="uid://bju7ybaocwior" path="res://sprites/wharf_tileset_2.png" id="5_ms2kx"]
+[ext_resource type="Texture2D" uid="uid://dfq53d8pw8sov" path="res://sprites/wharf_tileset_2.png" id="5_ms2kx"]
 [ext_resource type="AudioStream" uid="uid://wqfe2vqjmhk7" path="res://audio/Edge of Life.ogg" id="6_vvdnt"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="7_r2af8"]
 [ext_resource type="Texture2D" uid="uid://bb6y52oep7ql8" path="res://sprites/progressbars/1.PNG" id="8_h0sgl"]
