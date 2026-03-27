@@ -47,7 +47,7 @@ func _ready():
 	
 	#_change_scene("menu/main_menu")
 	#_change_scene("menu/credits")
-	_change_scene("top_down/grandma_house")
+	#_change_scene("top_down/grandma_house")
 	#_change_scene("top_down/school")
 	#_change_scene("top_down/final_area")
 	#_change_scene("top_down/waterfront")
