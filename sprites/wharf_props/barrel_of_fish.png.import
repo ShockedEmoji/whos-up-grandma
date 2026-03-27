@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3wai8mjf8tuk"
-path="res://.godot/imported/support_pillar.png-620f5be59cccf03c0077cc2f95273d34.ctex"
+uid="uid://dc7hqopomr02e"
+path="res://.godot/imported/barrel_of_fish.png-f2efff3dbe942c9fda14d4015504d68c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/wharf_props/support_pillar.png"
-dest_files=["res://.godot/imported/support_pillar.png-620f5be59cccf03c0077cc2f95273d34.ctex"]
+source_file="res://sprites/wharf_props/barrel_of_fish.png"
+dest_files=["res://.godot/imported/barrel_of_fish.png-f2efff3dbe942c9fda14d4015504d68c.ctex"]
 
 [params]
 
