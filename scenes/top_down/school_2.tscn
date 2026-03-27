@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cmotqks6hcydn" path="res://scripts/game.gd" id="1_xehe7"]
 [ext_resource type="Texture2D" uid="uid://c60dra31y8xc5" path="res://sprites/stupid/edwardkissaer.png" id="2_42bwl"]
 [ext_resource type="Texture2D" uid="uid://cfv6h01l5xfer" path="res://sprites/highschool_tileset.png" id="3_o4mts"]
+[ext_resource type="Script" uid="uid://its1f8lh1v44" path="res://scripts/wall_dissapear.gd" id="4_1tmk3"]
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="4_k4oe5"]
 [ext_resource type="PackedScene" uid="uid://d1gtsxrfmu2a3" path="res://scenes/top_down/door.tscn" id="5_xjlc8"]
 [ext_resource type="PackedScene" uid="uid://dfmomiw8cxqn2" path="res://scenes/top_down/key.tscn" id="6_og4c0"]
@@ -12,6 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="10_55725"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="10_ohqsr"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="11_y7atx"]
+[ext_resource type="Texture2D" uid="uid://cehy5d0dqmbl" path="res://sprites/highschool_props/desk.png" id="12_ke6tm"]
+[ext_resource type="Texture2D" uid="uid://btsyq75rka3im" path="res://sprites/highschool_props/chair.png" id="13_tqr12"]
+[ext_resource type="Texture2D" uid="uid://84ay3uuc7rvc" path="res://sprites/highschool_props/chair_2.png" id="14_brb8f"]
+[ext_resource type="Texture2D" uid="uid://cpeksh24y22pd" path="res://sprites/highschool_props/box.png" id="17_qqh2o"]
+[ext_resource type="Texture2D" uid="uid://dvrcp7kcbxb81" path="res://sprites/highschool_props/cup.png" id="18_4blpd"]
+[ext_resource type="Texture2D" uid="uid://bnrtcgouaq3u2" path="res://sprites/highschool_props/pencils.png" id="19_f443k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mjh5"]
 texture = ExtResource("3_o4mts")
@@ -159,6 +166,79 @@ tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_55725")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46f6a"]
+texture = ExtResource("3_o4mts")
+texture_region_size = Vector2i(400, 400)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mxo42"]
+tile_size = Vector2i(400, 400)
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_46f6a")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_55725"]
 atlas = ExtResource("7_dv25n")
 region = Rect2(0, 0, 273, 263)
@@ -230,6 +310,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i47x5"]
 size = Vector2(104, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fg32p"]
+size = Vector2(363.71393, 299.85913)
+
 [node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_xehe7")
 
@@ -251,8 +334,18 @@ tile_set = SubResource("TileSet_dv25n")
 z_index = -1
 position = Vector2(-29, -37)
 scale = Vector2(0.25, 0.25)
-tile_map_data = PackedByteArray("AAD8/wEAAAAAAAAAAAD8/wIAAAAAAAEAAAD9/wEAAAABAAAAAAD9/wIAAAABAAEAAAD+/wEAAAACAAAAAAD+/wIAAAACAAEAAAD7/wEAAAAGAAUAAAD7/wIAAAAGAAUAAAD6/wEAAAAGAAUAAAD6/wIAAAAGAAUAAAD5/wEAAAAEAAYAAAD5/wIAAAAEAAcAAAAFAAEAAAAGAAUAAAAFAAIAAAAGAAUAAAAGAAEAAAAFAAAAAAAGAAIAAAAFAAEAAAAHAAEAAAAGAAAAAAAHAAIAAAAGAAEAAAAIAAEAAAAGAAUAAAAIAAIAAAAGAAUAAAD//wEAAAAGAAUAAAD//wIAAAAGAAUAAAAEAAEAAAAGAAUAAAAEAAIAAAAGAAUAAAABAAEAAAAFAAYAAAABAAIAAAAFAAcAAAACAAEAAAAGAAYAAAACAAIAAAAGAAcAAAAAAAEAAAAGAAUAAAAAAAIAAAAGAAUAAAADAAEAAAAGAAUAAAADAAIAAAAGAAUAAAAJAAEAAAAGAAUAAAAJAAIAAAAGAAUAAAAKAAEAAAAGAAUAAAAKAAIAAAAGAAUAAAALAAEAAAAGAAUAAAAMAAEAAAADAAQAAAANAAEAAAAEAAQAAAANAAIAAAAEAAUAAAAAAPz/AAAFAAUAAAABAPz/AAAGAAUAAAACAPz/AAAGAAUAAAADAPz/AAAGAAUAAAAEAPz/AAAHAAUAAAAAAP3/AAAFAAUAAAABAP3/AAAGAAUAAAACAP3/AAAGAAUAAAADAP3/AAAGAAUAAAAEAP3/AAAHAAUAAAAPAAEAAAAHAAUAAAAPAAIAAAAHAAUAAAAOAAEAAAAGAAUAAAAOAAIAAAAGAAUAAAALAAIAAAAGAAUAAAAMAAIAAAADAAUAAAALAP3/AAAFAAUAAAAMAP3/AAAGAAUAAAANAP3/AAAGAAUAAAAOAP3/AAAGAAUAAAAPAP3/AAAHAAUAAAAMAPz/AAAGAAUAAAANAPz/AAAGAAUAAAAOAPz/AAAGAAUAAAALAPz/AAAFAAUAAAAPAPz/AAAHAAUAAAA=")
+tile_map_data = PackedByteArray("AAD8/wEAAAAAAAAAAAD8/wIAAAAAAAEAAAD9/wEAAAABAAAAAAD9/wIAAAABAAEAAAD+/wEAAAACAAAAAAD+/wIAAAACAAEAAAD7/wEAAAAGAAUAAAD7/wIAAAAGAAUAAAD6/wEAAAAGAAUAAAD6/wIAAAAGAAUAAAD5/wEAAAAEAAYAAAD5/wIAAAAEAAcAAAAFAAEAAAAGAAUAAAAFAAIAAAAGAAUAAAAGAAEAAAAFAAAAAAAGAAIAAAAFAAEAAAAHAAEAAAAGAAAAAAAHAAIAAAAGAAEAAAAIAAEAAAAGAAUAAAAIAAIAAAAGAAUAAAD//wEAAAAGAAUAAAD//wIAAAAGAAUAAAAJAAEAAAAGAAUAAAAJAAIAAAAGAAUAAAAKAAEAAAAGAAUAAAAKAAIAAAAGAAUAAAAAAPz/AAAFAAUAAAABAPz/AAAGAAUAAAACAPz/AAAGAAUAAAADAPz/AAAGAAUAAAAEAPz/AAAHAAUAAAAAAP3/AAAFAAUAAAABAP3/AAAGAAUAAAACAP3/AAAGAAUAAAADAP3/AAAGAAUAAAAEAP3/AAAHAAUAAAALAP3/AAAFAAUAAAAMAP3/AAAGAAUAAAANAP3/AAAGAAUAAAAOAP3/AAAGAAUAAAAPAP3/AAAHAAUAAAAMAPz/AAAGAAUAAAANAPz/AAAGAAUAAAAOAPz/AAAGAAUAAAALAPz/AAAFAAUAAAAPAPz/AAAHAAUAAAA=")
 tile_set = SubResource("TileSet_i47x5")
+
+[node name="TileMapLayerGround3" type="TileMapLayer" parent="." unique_id=424502126 node_paths=PackedStringArray("player")]
+z_index = 2
+position = Vector2(-29, -37)
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAAMAAEAAAADAAQAAAAMAAIAAAADAAUAAAANAAEAAAAEAAQAAAANAAIAAAAEAAUAAAALAAEAAAAGAAUAAAALAAIAAAAGAAUAAAAOAAEAAAAGAAUAAAAOAAIAAAAGAAUAAAAPAAEAAAAHAAUAAAAPAAIAAAAHAAUAAAAAAAEAAAAGAAUAAAAAAAIAAAAGAAUAAAADAAEAAAAGAAUAAAADAAIAAAAGAAUAAAAEAAIAAAAGAAUAAAAEAAEAAAAGAAUAAAABAAEAAAADAAQAAAABAAIAAAADAAUAAAACAAEAAAAEAAQAAAACAAIAAAAEAAUAAAA=")
+tile_set = SubResource("TileSet_mxo42")
+script = ExtResource("4_1tmk3")
+y_position_to_dissapear = 228.0
+player = NodePath("../everything else/player")
 
 [node name="TileMapLayerWall2" type="TileMapLayer" parent="." unique_id=1464679902]
 z_index = -1
@@ -299,6 +392,97 @@ new_player_position = Vector2(-357, 215)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition" unique_id=1978468112]
 shape = SubResource("RectangleShape2D_i47x5")
 
+[node name="Desk" type="Sprite2D" parent="everything else" unique_id=989782381]
+position = Vector2(74.93671, 120.26875)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_ke6tm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Desk" unique_id=1271666898]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Desk/StaticBody2D" unique_id=196610201]
+position = Vector2(0, 64.77948)
+shape = SubResource("RectangleShape2D_fg32p")
+
+[node name="Desk2" type="Sprite2D" parent="everything else" unique_id=2095675670]
+position = Vector2(221.31085, 120.26875)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_ke6tm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Desk2" unique_id=1759249488]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Desk2/StaticBody2D" unique_id=1124220555]
+position = Vector2(0, 64.77948)
+shape = SubResource("RectangleShape2D_fg32p")
+
+[node name="Desk3" type="Sprite2D" parent="everything else" unique_id=1319439547]
+position = Vector2(372.45737, 120.26875)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_ke6tm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Desk3" unique_id=972697718]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Desk3/StaticBody2D" unique_id=1989452904]
+position = Vector2(0, 64.77948)
+shape = SubResource("RectangleShape2D_fg32p")
+
+[node name="Desk4" type="Sprite2D" parent="everything else" unique_id=649970964]
+position = Vector2(74.93671, -44.69075)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_ke6tm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Desk4" unique_id=559701603]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Desk4/StaticBody2D" unique_id=1841176723]
+position = Vector2(0, 64.77948)
+shape = SubResource("RectangleShape2D_fg32p")
+
+[node name="Desk5" type="Sprite2D" parent="everything else" unique_id=1898941323]
+position = Vector2(221.31085, -44.69075)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_ke6tm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Desk5" unique_id=629534627]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Desk5/StaticBody2D" unique_id=1795711430]
+position = Vector2(0, 64.77948)
+shape = SubResource("RectangleShape2D_fg32p")
+
+[node name="Desk6" type="Sprite2D" parent="everything else" unique_id=1086180308]
+position = Vector2(372.45737, -44.69075)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_ke6tm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="everything else/Desk6" unique_id=353707]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/Desk6/StaticBody2D" unique_id=2098836187]
+position = Vector2(0, 64.77948)
+shape = SubResource("RectangleShape2D_fg32p")
+
+[node name="Chair" type="Sprite2D" parent="everything else" unique_id=1719052182]
+position = Vector2(73.272736, 159.72723)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_tqr12")
+
+[node name="Chair2" type="Sprite2D" parent="everything else" unique_id=1141379052]
+position = Vector2(222.36366, 159.72723)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_tqr12")
+
+[node name="Chair3" type="Sprite2D" parent="everything else" unique_id=949011247]
+position = Vector2(371.45453, 159.72714)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("14_brb8f")
+
+[node name="Chair4" type="Sprite2D" parent="everything else" unique_id=640222457]
+position = Vector2(223.69244, 2.005066)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_tqr12")
+
+[node name="Chair5" type="Sprite2D" parent="everything else" unique_id=2059281202]
+position = Vector2(362.22488, -1.8720093)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_tqr12")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
 zoom = Vector2(0.9, 0.9)
@@ -318,3 +502,15 @@ scale = Vector2(0.25, 0.25)
 [node name="aboveprops" type="Node2D" parent="." unique_id=245509154]
 z_index = 1
 scale = Vector2(0.25, 0.25)
+
+[node name="Box" type="Sprite2D" parent="aboveprops" unique_id=2142217563]
+position = Vector2(1558.9662, 405.1145)
+texture = ExtResource("17_qqh2o")
+
+[node name="Cup" type="Sprite2D" parent="aboveprops" unique_id=486228242]
+position = Vector2(1357.2661, 323.27695)
+texture = ExtResource("18_4blpd")
+
+[node name="Pencils" type="Sprite2D" parent="aboveprops" unique_id=280067617]
+position = Vector2(959.87646, -285.22586)
+texture = ExtResource("19_f443k")

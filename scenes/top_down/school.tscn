@@ -528,3 +528,18 @@ tangential_accel_min = -50.0
 tangential_accel_max = 50.0
 scale_amount_min = 0.04
 scale_amount_max = 0.2
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="dustparticles" unique_id=578470909]
+position = Vector2(924.7633, 299.05127)
+texture = ExtResource("30_uhait")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
