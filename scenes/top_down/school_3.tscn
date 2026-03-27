@@ -8,11 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dfmomiw8cxqn2" path="res://scenes/top_down/key.tscn" id="6_y55sv"]
 [ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="7_xr3ra"]
 [ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="8_otohe"]
-[ext_resource type="Texture2D" uid="uid://gwl5pacmmxd8" path="res://sprites/highschool_props/shoe_storage.png" id="9_fgof0"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="10_w8chn"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="11_t1wmd"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nijqe"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3lpr"]
 texture = ExtResource("3_moa3q")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -80,10 +79,83 @@ texture_region_size = Vector2i(400, 400)
 5:8/0 = 0
 6:8/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_3dnpt"]
+[sub_resource type="TileSet" id="TileSet_8ib2i"]
 tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 2
-sources/0 = SubResource("TileSetAtlasSource_nijqe")
+sources/0 = SubResource("TileSetAtlasSource_x3lpr")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qilny"]
+texture = ExtResource("3_moa3q")
+texture_region_size = Vector2i(400, 400)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_moa3q"]
+tile_size = Vector2i(400, 400)
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_qilny")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e63eq"]
 atlas = ExtResource("8_otohe")
@@ -126,17 +198,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tufo"]
-size = Vector2(107.41193, 1105.9503)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60gg2"]
-size = Vector2(114.19995, 1111.9458)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_83ysk"]
-size = Vector2(109.69214, 1107.438)
-
 [node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_8ib2i")
+
+[node name="TileMapLayerGround2" type="TileMapLayer" parent="." unique_id=529808972]
+z_index = -2
+position = Vector2(-29, -37)
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAD//wMAAAACAAYAAAD//wQAAAACAAgAAAD+/wMAAAABAAYAAAD9/wMAAAABAAYAAAD8/wMAAAABAAYAAAD9/wQAAAABAAgAAAD8/wQAAAABAAgAAAD+/wQAAAABAAgAAAD7/wMAAAABAAYAAAD6/wMAAAABAAYAAAD5/wMAAAABAAYAAAD7/wQAAAABAAgAAAD6/wQAAAABAAgAAAD5/wQAAAABAAgAAAD3/wQAAAAAAAgAAAD4/wQAAAABAAgAAAD3/wMAAAAAAAcAAAD4//3/AAACAAcAAAD4//7/AAACAAcAAAD4////AAACAAcAAAD4/wAAAAACAAcAAAD4/wEAAAACAAcAAAD4/wIAAAACAAcAAAD3//3/AAAAAAcAAAD3//7/AAAAAAcAAAD3////AAAAAAcAAAD3/wAAAAAAAAcAAAD3/wEAAAAAAAcAAAD3/wIAAAAAAAcAAAD3//n/AAAAAAcAAAD3//r/AAAAAAcAAAD3//v/AAAAAAcAAAD3//z/AAAAAAcAAAD4//n/AAACAAcAAAD4//r/AAACAAcAAAD4//v/AAACAAcAAAD4//z/AAACAAcAAAD4/wMAAAABAAcAAAD4//P/AAACAAcAAAD4//T/AAACAAcAAAD4//X/AAACAAcAAAD4//b/AAACAAcAAAD4//f/AAACAAcAAAD4//j/AAACAAcAAAD3//P/AAAAAAcAAAD3//T/AAAAAAcAAAD3//X/AAAAAAcAAAD3//b/AAAAAAcAAAD3//f/AAAAAAcAAAD3//j/AAAAAAcAAAD4//L/AAACAAcAAAD4//D/AAACAAYAAAD4//H/AAACAAcAAAD3//D/AAAAAAYAAAD3//H/AAAAAAcAAAD3//L/AAAAAAcAAAD5//n/AAABAAUAAAD5//r/AAABAAUAAAD5//v/AAABAAUAAAD5//z/AAABAAUAAAD5//3/AAABAAUAAAD5//7/AAABAAUAAAD6//n/AAABAAUAAAD6//r/AAABAAUAAAD6//v/AAABAAUAAAD6//z/AAABAAUAAAD6//3/AAABAAUAAAD6//7/AAABAAUAAAD7//n/AAABAAUAAAD7//r/AAABAAUAAAD7//v/AAABAAUAAAD7//z/AAABAAUAAAD7//3/AAABAAUAAAD7//7/AAABAAUAAAD8//n/AAABAAUAAAD8//r/AAABAAUAAAD8//v/AAABAAUAAAD8//z/AAABAAUAAAD8//3/AAABAAUAAAD8//7/AAABAAUAAAD9//n/AAABAAUAAAD9//r/AAABAAUAAAD9//v/AAABAAUAAAD9//z/AAABAAUAAAD9//3/AAABAAUAAAD9//7/AAABAAUAAAD5//H/AAABAAUAAAD5//L/AAABAAUAAAD5//P/AAABAAUAAAD5//T/AAABAAUAAAD5//X/AAABAAUAAAD6//H/AAABAAUAAAD6//L/AAABAAUAAAD6//P/AAABAAUAAAD6//T/AAABAAUAAAD6//X/AAABAAUAAAD7//H/AAABAAUAAAD7//L/AAABAAUAAAD7//P/AAABAAUAAAD7//T/AAABAAUAAAD7//X/AAABAAUAAAD8//H/AAABAAUAAAD8//L/AAABAAUAAAD8//P/AAABAAUAAAD8//T/AAABAAUAAAD8//X/AAABAAUAAAD9//H/AAABAAUAAAD9//L/AAABAAUAAAD9//P/AAABAAUAAAD9//T/AAABAAUAAAD9//X/AAABAAUAAAD5//D/AAABAAUAAAD6//D/AAABAAUAAAD7//D/AAABAAUAAAD8//D/AAABAAUAAAD9//D/AAABAAUAAAA=")
+tile_set = SubResource("TileSet_8ib2i")
+
+[node name="TileMapLayerWall" type="TileMapLayer" parent="." unique_id=428978134]
+z_index = -1
+position = Vector2(-29, -37)
+scale = Vector2(0.25, 0.25)
+tile_map_data = PackedByteArray("AAD8/wEAAAAAAAAAAAD8/wIAAAAAAAEAAAD9/wEAAAABAAAAAAD9/wIAAAABAAEAAAD+/wEAAAACAAAAAAD+/wIAAAACAAEAAAD7/wEAAAAGAAUAAAD7/wIAAAAGAAUAAAD6/wEAAAAGAAUAAAD6/wIAAAAGAAUAAAD5/wEAAAAEAAYAAAD5/wIAAAAEAAcAAAD//wEAAAAGAAUAAAD//wIAAAAGAAUAAAA=")
+tile_set = SubResource("TileSet_moa3q")
 
 [node name="Black" type="Sprite2D" parent="." unique_id=489202517]
 modulate = Color(0, 0, 0, 1)
@@ -144,26 +221,6 @@ z_index = -300
 position = Vector2(2434.9998, -1459)
 scale = Vector2(18.200848, 12.875913)
 texture = ExtResource("2_qilny")
-
-[node name="TileMapLayerGround" type="TileMapLayer" parent="." unique_id=1217575540]
-z_index = -2
-position = Vector2(-29, -37)
-scale = Vector2(0.25, 0.25)
-tile_map_data = PackedByteArray("AAD//wAAAAADAAcAAAD//wEAAAADAAcAAAD//wIAAAADAAcAAAAAAAAAAAADAAcAAAAAAAEAAAADAAcAAAAAAAIAAAADAAcAAAABAAAAAAADAAcAAAABAAEAAAADAAcAAAABAAIAAAADAAcAAAACAAAAAAADAAcAAAACAAEAAAADAAcAAAACAAIAAAADAAcAAAADAAAAAAADAAcAAAADAAEAAAADAAcAAAADAAIAAAADAAcAAAAEAAAAAAADAAcAAAAEAAEAAAADAAcAAAAEAAIAAAADAAcAAAD//wMAAAADAAcAAAAAAAMAAAADAAcAAAABAAMAAAADAAcAAAACAAMAAAADAAcAAAADAAMAAAADAAcAAAAEAAMAAAADAAcAAAA=")
-tile_set = SubResource("TileSet_3dnpt")
-
-[node name="TileMapLayerWall" type="TileMapLayer" parent="." unique_id=498887593]
-z_index = -1
-position = Vector2(-29, -37)
-scale = Vector2(0.25, 0.25)
-tile_map_data = PackedByteArray("AAABAP7/AAAFAAYAAAABAP//AAAFAAcAAAACAP7/AAAGAAYAAAACAP//AAAGAAcAAAAAAP7/AAAGAAUAAAAAAP//AAAGAAUAAAD///7/AAAGAAUAAAD/////AAAGAAUAAAADAP7/AAAGAAUAAAADAP//AAAGAAUAAAAEAP7/AAAGAAUAAAAEAP//AAAGAAUAAAAAAP3/AAABAAMAAAABAP3/AAABAAMAAAACAP3/AAABAAMAAAADAP3/AAABAAMAAAD///3/AAAAAAMAAAAEAP3/AAACAAMAAAA=")
-tile_set = SubResource("TileSet_3dnpt")
-
-[node name="TileMapLayerWall2" type="TileMapLayer" parent="." unique_id=1651926052]
-z_index = -1
-position = Vector2(-29, -37)
-scale = Vector2(0.25, 0.25)
-tile_set = SubResource("TileSet_3dnpt")
 
 [node name="everything else" type="Node2D" parent="." unique_id=1803871574]
 y_sort_enabled = true
@@ -186,66 +243,6 @@ position = Vector2(935, 248)
 sprite_frames = SubResource("SpriteFrames_uuomv")
 animation = &"talk"
 dialogue = "school wasp"
-
-[node name="ShoeStorage5" type="Sprite2D" parent="everything else" unique_id=746739944]
-position = Vector2(-28.37912, 73.60065)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="ShoeStorage6" type="Sprite2D" parent="everything else" unique_id=1773346482]
-position = Vector2(86.62088, 73.60065)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="ShoeStorage7" type="Sprite2D" parent="everything else" unique_id=708052481]
-position = Vector2(257.12088, 73.60065)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="ShoeStorage8" type="Sprite2D" parent="everything else" unique_id=1657580157]
-position = Vector2(373.12088, 73.60065)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="ShoeStorage" type="Sprite2D" parent="everything else" unique_id=1268215809]
-position = Vector2(-28.37912, 153.99133)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="ShoeStorage2" type="Sprite2D" parent="everything else" unique_id=273985104]
-position = Vector2(86.62088, 153.99133)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="ShoeStorage3" type="Sprite2D" parent="everything else" unique_id=1800952833]
-position = Vector2(257.12088, 153.99133)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="ShoeStorage4" type="Sprite2D" parent="everything else" unique_id=829725853]
-position = Vector2(373.12088, 153.99133)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_fgof0")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1869771818]
-position = Vector2(-28.37912, 73.60065)
-scale = Vector2(0.25, 0.25)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=899647096]
-position = Vector2(-0.496521, 159.72964)
-shape = SubResource("RectangleShape2D_2tufo")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=613074947]
-position = Vector2(457.16785, 156.8417)
-shape = SubResource("RectangleShape2D_60gg2")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2118958183]
-position = Vector2(1147.6261, 159.09555)
-shape = SubResource("RectangleShape2D_83ysk")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1748286548]
-position = Vector2(1608.9332, 162.10086)
-shape = SubResource("RectangleShape2D_83ysk")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)
