@@ -48,7 +48,7 @@ func _ready():
 	#_change_scene("menu/main_menu")
 	#_change_scene("menu/credits")
 	#_change_scene("top_down/grandma_house")
-	#_change_scene("top_down/school_3")
+	_change_scene("top_down/school_3")
 	#_change_scene("top_down/final_area")
 	#_change_scene("top_down/waterfront")
 	#_change_scene("top_down/neo_bossfight")

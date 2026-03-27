@@ -391,7 +391,7 @@ position = Vector2(5534, -3268)
 new_area_scene_path = "top_down/waterfront"
 camera_node = NodePath("../../Camera2D")
 new_song = "waterfront"
-new_player_position = Vector2(-1804, -20)
+new_player_position = Vector2(-1010, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition2" unique_id=454583173]
 position = Vector2(36, -7)

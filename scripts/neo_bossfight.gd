@@ -330,7 +330,7 @@ func _new_attack():
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 80
+var bullet_damage: int = 8
 
 var dying: bool = false
 
