@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cpeksh24y22pd" path="res://sprites/highschool_props/box.png" id="17_qqh2o"]
 [ext_resource type="Texture2D" uid="uid://dvrcp7kcbxb81" path="res://sprites/highschool_props/cup.png" id="18_4blpd"]
 [ext_resource type="Texture2D" uid="uid://bnrtcgouaq3u2" path="res://sprites/highschool_props/pencils.png" id="19_f443k"]
+[ext_resource type="Texture2D" uid="uid://b8ocy13y43ouj" path="res://sprites/highschool_props/dust.png" id="20_tqr12"]
+[ext_resource type="Texture2D" uid="uid://h4k2eia7hkgu" path="res://sprites/highschool_props/dust_2.png" id="21_brb8f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mjh5"]
 texture = ExtResource("3_o4mts")
@@ -324,7 +326,7 @@ scale = Vector2(18.200848, 12.875913)
 texture = ExtResource("2_42bwl")
 
 [node name="TileMapLayerGround2" type="TileMapLayer" parent="." unique_id=321458508]
-z_index = -2
+z_index = -3
 position = Vector2(-29, -37)
 scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AAD//wMAAAABAAYAAAAAAAMAAAABAAYAAAABAAMAAAABAAYAAAACAAMAAAABAAYAAAADAAMAAAABAAYAAAAEAAMAAAABAAYAAAD//wQAAAABAAgAAAAAAAQAAAABAAgAAAABAAQAAAABAAgAAAACAAQAAAABAAgAAAADAAQAAAABAAgAAAAEAAQAAAABAAgAAAD+/wMAAAABAAYAAAD9/wMAAAABAAYAAAD8/wMAAAABAAYAAAD9/wQAAAABAAgAAAD8/wQAAAABAAgAAAD+/wQAAAABAAgAAAD7/wMAAAABAAYAAAD6/wMAAAABAAYAAAD5/wMAAAABAAYAAAD7/wQAAAABAAgAAAD6/wQAAAABAAgAAAD5/wQAAAABAAgAAAAFAAMAAAABAAYAAAAGAAMAAAABAAYAAAAHAAMAAAABAAYAAAAIAAMAAAABAAYAAAAJAAMAAAABAAYAAAAFAAQAAAABAAgAAAAGAAQAAAABAAgAAAAHAAQAAAABAAgAAAAIAAQAAAABAAgAAAAJAAQAAAABAAgAAAAKAAQAAAABAAgAAAAKAAMAAAABAAYAAAALAAMAAAABAAYAAAAMAAMAAAABAAYAAAANAAMAAAABAAYAAAAOAAMAAAABAAcAAAALAAQAAAABAAgAAAAMAAQAAAABAAgAAAAOAAQAAAABAAgAAAANAAQAAAABAAgAAAAPAAMAAAACAAcAAAAPAAQAAAACAAgAAAAAAP//AAABAAUAAAAAAAAAAAABAAUAAAAAAAEAAAABAAUAAAAAAAIAAAABAAUAAAABAP//AAABAAUAAAABAAAAAAABAAUAAAABAAEAAAABAAUAAAABAAIAAAABAAUAAAACAP//AAABAAUAAAACAAAAAAABAAUAAAACAAEAAAABAAUAAAACAAIAAAABAAUAAAADAP//AAABAAUAAAADAAAAAAABAAUAAAADAAEAAAABAAUAAAADAAIAAAABAAUAAAAEAP//AAABAAUAAAAEAAAAAAABAAUAAAAEAAEAAAABAAUAAAAEAAIAAAABAAUAAAAAAP7/AAABAAUAAAABAP7/AAABAAUAAAACAP7/AAABAAUAAAADAP7/AAABAAUAAAAEAP7/AAABAAUAAAALAP7/AAABAAUAAAALAP//AAABAAUAAAALAAAAAAABAAUAAAALAAEAAAABAAUAAAALAAIAAAABAAUAAAAMAP7/AAABAAUAAAAMAP//AAABAAUAAAAMAAAAAAABAAUAAAAMAAEAAAABAAUAAAAMAAIAAAABAAUAAAANAP7/AAABAAUAAAANAP//AAABAAUAAAANAAAAAAABAAUAAAANAAEAAAABAAUAAAANAAIAAAABAAUAAAAOAP7/AAABAAUAAAAOAP//AAABAAUAAAAOAAAAAAABAAUAAAAOAAEAAAABAAUAAAAOAAIAAAABAAUAAAAPAP7/AAABAAUAAAAPAP//AAABAAUAAAAPAAAAAAABAAUAAAAPAAEAAAABAAUAAAAPAAIAAAABAAUAAAA=")
@@ -358,7 +360,7 @@ tile_set = SubResource("TileSet_i47x5")
 y_sort_enabled = true
 
 [node name="player" parent="everything else" unique_id=1233949163 instance=ExtResource("4_k4oe5")]
-position = Vector2(-360, 232)
+position = Vector2(-360, 237)
 
 [node name="door" parent="everything else" unique_id=736313575 instance=ExtResource("5_xjlc8")]
 position = Vector2(-202, 239)
@@ -393,6 +395,7 @@ new_player_position = Vector2(-357, 215)
 shape = SubResource("RectangleShape2D_i47x5")
 
 [node name="Desk" type="Sprite2D" parent="everything else" unique_id=989782381]
+z_index = -3
 position = Vector2(74.93671, 120.26875)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_ke6tm")
@@ -404,6 +407,7 @@ position = Vector2(0, 64.77948)
 shape = SubResource("RectangleShape2D_fg32p")
 
 [node name="Desk2" type="Sprite2D" parent="everything else" unique_id=2095675670]
+z_index = -3
 position = Vector2(221.31085, 120.26875)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_ke6tm")
@@ -415,6 +419,7 @@ position = Vector2(0, 64.77948)
 shape = SubResource("RectangleShape2D_fg32p")
 
 [node name="Desk3" type="Sprite2D" parent="everything else" unique_id=1319439547]
+z_index = -3
 position = Vector2(372.45737, 120.26875)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_ke6tm")
@@ -459,16 +464,19 @@ position = Vector2(0, 64.77948)
 shape = SubResource("RectangleShape2D_fg32p")
 
 [node name="Chair" type="Sprite2D" parent="everything else" unique_id=1719052182]
+z_index = -3
 position = Vector2(73.272736, 159.72723)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_tqr12")
 
 [node name="Chair2" type="Sprite2D" parent="everything else" unique_id=1141379052]
+z_index = -3
 position = Vector2(222.36366, 159.72723)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_tqr12")
 
 [node name="Chair3" type="Sprite2D" parent="everything else" unique_id=949011247]
+z_index = -3
 position = Vector2(371.45453, 159.72714)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("14_brb8f")
@@ -504,13 +512,123 @@ z_index = 1
 scale = Vector2(0.25, 0.25)
 
 [node name="Box" type="Sprite2D" parent="aboveprops" unique_id=2142217563]
+z_index = -4
 position = Vector2(1558.9662, 405.1145)
 texture = ExtResource("17_qqh2o")
 
 [node name="Cup" type="Sprite2D" parent="aboveprops" unique_id=486228242]
+z_index = -4
 position = Vector2(1357.2661, 323.27695)
 texture = ExtResource("18_4blpd")
 
 [node name="Pencils" type="Sprite2D" parent="aboveprops" unique_id=280067617]
+z_index = -1
 position = Vector2(959.87646, -285.22586)
 texture = ExtResource("19_f443k")
+
+[node name="dustparticles" type="Node2D" parent="." unique_id=1094648745]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="dustparticles" unique_id=1636736940]
+position = Vector2(-543, 296)
+texture = ExtResource("20_tqr12")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="dustparticles" unique_id=1431208207]
+position = Vector2(-83, 308)
+texture = ExtResource("21_brb8f")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="dustparticles" unique_id=1036053006]
+position = Vector2(202, 301)
+texture = ExtResource("21_brb8f")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="dustparticles" unique_id=1632055143]
+position = Vector2(221, -119)
+texture = ExtResource("21_brb8f")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="dustparticles" unique_id=1794918106]
+position = Vector2(650, 357)
+texture = ExtResource("21_brb8f")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="dustparticles" unique_id=1283946758]
+position = Vector2(1274, 301)
+texture = ExtResource("21_brb8f")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D7" type="CPUParticles2D" parent="dustparticles" unique_id=1292022276]
+position = Vector2(1312, -14)
+texture = ExtResource("21_brb8f")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2

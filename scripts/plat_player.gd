@@ -114,9 +114,23 @@ func _take_damage():
 	x_velocity_add = -10
 	velocity.y = -700
 	
+	_flash()
+	
 	await inst.finished
 	
 	inst.queue_free()
+
+func _flash():
+	var tween: Tween
+	
+	for i in range(6):
+		tween = create_tween()
+		tween.tween_property(self, "modulate", Color(5, 5, 5), 0.25)
+		await tween.finished
+		
+		tween = create_tween()
+		tween.tween_property(self, "modulate", Color(1, 1, 1), 0.25)
+		await tween.finished
 
 func _die():
 	self.z_index = 999

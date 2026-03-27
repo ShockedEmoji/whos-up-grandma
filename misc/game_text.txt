@@ -176,11 +176,22 @@ And this, will be the time when you shall finally perish for your sins...
 *waaahhhhhh* ....|My Honey....Pie....
 DIE!!!!!!!!!!
 
+}mafia intro top down
+Heya
+Wassa kid like ya doin in these parts?
+{Heyy do you have any bracken leafs`mafia has things
+{Wahhh I need ingredients for medicine to save my grandma! You have?`mafia has things
+
+}mafia has things
+Hmmm... mayhaps
+But ya ain't gettin' em for free...
+'m actually rather insulted you asked...
+Y'know what!?!? DIE!!
+
 }mafia fight intro
 Whassis... Ya want summa mine bracken leafers??
 I ain't giving 'ese out fer free, kid...
-'m actually rather insulted...
-Y'know what... DIE!!
+DIE!!
 (Also, press X to yell insults if you want)
 
 }mafia defeat
@@ -188,12 +199,15 @@ G-gah... What is this?
 This... pernicious feeling?
 Issis defeat?
 Aaaaaiihhhhh~~~~~
-Hey kid, take em bracken leafers... 
+Hey kid, you have bested me....
+take em bracken leafers... 
 << you got the BRACKEN LEAVES >>
-gaaaahjkkgfjuhoansdoinwoiuncdszojnxczokjbnasdojd
-likujbndioal;kkjjnposiaduhbnzxcoutyyvvfoukajshbek,awjmn
-xco;zuhiycvsdbggbjn awdkljndashkuczxhkasdjnlaskdngihhoasidhjj
-*dies*
+Whatter you even needing those for?
+Huh, medicine?
+Ayy, I heard of sum crazy dweeb in some far-off, abandoned school... Sum self-proclaimed 'King of da game jim'
+He had some sort of... buttery cuppies. Mayhaps he will give you summa them?
+Mmm... I can take you there now iffu want!
+Actually, ya, you young'uns are annoying... to the abandoned school ya go!
 
 }brendan defeat
 W-WHATT?!???

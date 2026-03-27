@@ -83,6 +83,18 @@ func _physics_process(_delta: float) -> void:
 const BULLET = preload("uid://cxi0ncap5jkgi")
 const DAMAGE_PARTICLES = preload("uid://da3flgkgmdqof")
 
+func _flash():
+	var tween: Tween
+	
+	for i in range(6):
+		tween = create_tween()
+		tween.tween_property(self, "modulate", Color(5, 5, 5), 0.25)
+		await tween.finished
+		
+		tween = create_tween()
+		tween.tween_property(self, "modulate", Color(1, 1, 1), 0.25)
+		await tween.finished
+
 func _take_damage():
 	print("ouchie")
 	DATA.root._play_sound("damage")
@@ -91,6 +103,8 @@ func _take_damage():
 	inst.position = self.position
 	inst.emitting = true
 	$"..".add_child(inst)
+	
+	_flash()
 	
 	await inst.finished
 	

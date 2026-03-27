@@ -40,7 +40,6 @@ func _death():
 	$".."._stop_music()
 	get_tree().paused = true
 	await camera_2d._death()
-	$".."._play_music("mafia fight")
 
 func _reduce_health():
 	if touching_legal:

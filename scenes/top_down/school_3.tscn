@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="11_moa3q"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="11_t1wmd"]
 [ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="11_xisa3"]
+[ext_resource type="Texture2D" uid="uid://b8ocy13y43ouj" path="res://sprites/highschool_props/dust.png" id="14_k15a0"]
+[ext_resource type="Texture2D" uid="uid://h4k2eia7hkgu" path="res://sprites/highschool_props/dust_2.png" id="15_y55sv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3lpr"]
 texture = ExtResource("3_moa3q")
@@ -337,20 +339,20 @@ scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AAD5//3/AAAGAAUAAAD6//7/AAAGAAUAAAD7//7/AAAGAAUAAAD8//7/AAAGAAUAAAD7//3/AAAGAAUAAAD6//3/AAAGAAUAAAD5//7/AAAGAAUAAAD9//7/AAAGAAUAAAD9//3/AAAGAAUAAAD8//3/AAAGAAUAAAA=")
 tile_set = SubResource("TileSet_xisa3")
 script = ExtResource("4_qilny")
-y_position_to_dissapear = -790.0
+y_position_to_dissapear = -1062.0
 player = NodePath("../everything else/player")
 
 [node name="AreaCollision" type="StaticBody2D" parent="." unique_id=783427154]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaCollision" unique_id=86426499]
 build_mode = 1
-polygon = PackedVector2Array(-929, -1635, -231, -1635, -229, -1036, -729, -1038, -729, -737, -230, -735, -229, -138, -728, -135, -727, 264, -417, 263, -404, 204, -305, 204, -293, 264, -262, 264, -263, 73, -141, 72, -141, 264, -32, 263, -30, 462, -929, 462)
+polygon = PackedVector2Array(-929, -1736, -731, -1736, -731, -1635, -231, -1635, -229, -1036, -729, -1038, -729, -737, -230, -735, -229, -138, -728, -135, -727, 264, -417, 263, -404, 204, -305, 204, -293, 264, -262, 264, -263, 73, -141, 72, -141, 264, -32, 263, -30, 462, -929, 462)
 
 [node name="everything else" type="Node2D" parent="." unique_id=1803871574]
 y_sort_enabled = true
 
 [node name="player" parent="everything else" unique_id=1233949163 instance=ExtResource("4_xisa3")]
-position = Vector2(-357, 249)
+position = Vector2(-357, 266)
 
 [node name="door" parent="everything else" unique_id=736313575 instance=ExtResource("5_k15a0")]
 position = Vector2(-202, 240)
@@ -399,3 +401,125 @@ scale = Vector2(0.25, 0.25)
 [node name="aboveprops" type="Node2D" parent="." unique_id=245509154]
 z_index = 1
 scale = Vector2(0.25, 0.25)
+
+[node name="dustparticles" type="Node2D" parent="." unique_id=88470152]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="dustparticles" unique_id=486693932]
+position = Vector2(-225, 296)
+texture = ExtResource("14_k15a0")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="dustparticles" unique_id=270938092]
+position = Vector2(-708, 301)
+texture = ExtResource("15_y55sv")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="dustparticles" unique_id=1780695729]
+position = Vector2(-847, -41)
+texture = ExtResource("15_y55sv")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="dustparticles" unique_id=1121676]
+position = Vector2(-480, -447)
+texture = ExtResource("15_y55sv")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="dustparticles" unique_id=1135195671]
+position = Vector2(-852, -465)
+texture = ExtResource("15_y55sv")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="dustparticles" unique_id=539092486]
+position = Vector2(-863, -904)
+texture = ExtResource("15_y55sv")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D7" type="CPUParticles2D" parent="dustparticles" unique_id=714193252]
+position = Vector2(-459, -1374)
+texture = ExtResource("15_y55sv")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D8" type="CPUParticles2D" parent="dustparticles" unique_id=742478439]
+position = Vector2(-805, -1416)
+texture = ExtResource("15_y55sv")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
