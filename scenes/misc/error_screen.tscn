@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ds5vmicvhnpn7" path="res://sprites/stupid/maid.jpg" id="1_e2ufc"]
 [ext_resource type="Texture2D" uid="uid://c48keda25vxyq" path="res://sprites/stupid/uh-oh-stinky.png" id="2_1fws4"]
 [ext_resource type="Texture2D" uid="uid://caqag02tf0van" path="res://sprites/stupid/error_text.png" id="3_cr5lj"]
+[ext_resource type="AudioStream" uid="uid://cgvj5sgo5m8rb" path="res://audio/Uh oh, This seems to be a Error, a ERROR.ogg" id="4_dwgwy"]
 
 [sub_resource type="Animation" id="Animation_1fws4"]
 length = 0.001
@@ -677,3 +678,7 @@ scale = Vector2(3.59167, 3.59167)
 sprite_frames = SubResource("SpriteFrames_jsipi")
 autoplay = "default"
 frame_progress = 0.853686
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=215730790]
+stream = ExtResource("4_dwgwy")
+autoplay = true

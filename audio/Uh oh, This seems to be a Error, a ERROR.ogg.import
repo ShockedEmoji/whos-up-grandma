@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgvj5sgo5m8rb"
+path="res://.godot/imported/Uh oh, This seems to be a Error, a ERROR.ogg-c7b799ddddca0348480f53dc8d619d14.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Uh oh, This seems to be a Error, a ERROR.ogg"
+dest_files=["res://.godot/imported/Uh oh, This seems to be a Error, a ERROR.ogg-c7b799ddddca0348480f53dc8d619d14.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
