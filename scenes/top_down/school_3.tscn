@@ -8,9 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://d1gtsxrfmu2a3" path="res://scenes/top_down/door.tscn" id="5_k15a0"]
 [ext_resource type="PackedScene" uid="uid://dfmomiw8cxqn2" path="res://scenes/top_down/key.tscn" id="6_y55sv"]
 [ext_resource type="Texture2D" uid="uid://84ay3uuc7rvc" path="res://sprites/highschool_props/chair_2.png" id="7_8ib2i"]
+[ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="10_qilny"]
 [ext_resource type="Script" uid="uid://065iub8ikrms" path="res://scripts/camera_2d.gd" id="10_w8chn"]
 [ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="11_moa3q"]
 [ext_resource type="PackedScene" uid="uid://xfbcm44i0sxi" path="res://scenes/top_down/text_system.tscn" id="11_t1wmd"]
+[ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="11_xisa3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3lpr"]
 texture = ExtResource("3_moa3q")
@@ -253,6 +255,47 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xisa3"]
 size = Vector2(104, 30)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k15a0"]
+atlas = ExtResource("11_xisa3")
+region = Rect2(1600, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y55sv"]
+atlas = ExtResource("11_xisa3")
+region = Rect2(0, 400, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xr3ra"]
+atlas = ExtResource("11_xisa3")
+region = Rect2(400, 400, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otohe"]
+atlas = ExtResource("11_xisa3")
+region = Rect2(800, 400, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgof0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k15a0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y55sv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xr3ra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otohe")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
 [node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_8ib2i")
 
@@ -330,6 +373,12 @@ new_player_position = Vector2(-357, 215)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition" unique_id=1404123562]
 shape = SubResource("RectangleShape2D_xisa3")
+
+[node name="npc" parent="everything else" unique_id=151370311 instance=ExtResource("10_qilny")]
+position = Vector2(-285, -1585)
+sprite_frames = SubResource("SpriteFrames_fgof0")
+animation = &"talk"
+dialogue = "chair hint"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=50296915 node_paths=PackedStringArray("what_am_i_following")]
 position = Vector2(354, 286)

@@ -1,0 +1,82 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cywhqbvfe32d2"]
+
+[ext_resource type="Texture2D" uid="uid://d3oxfrwjqkgv5" path="res://sprites/image1.png" id="1_nxb15"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pomq"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(2800, 0, 400, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s07hi"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(3200, 0, 400, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa3mv"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(400, 0, 400, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vxvr"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(0, 0, 400, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw2s7"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(2000, 0, 400, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47ed1"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(1200, 0, 400, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hksb7"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(4000, 0, 400, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgebs"]
+atlas = ExtResource("1_nxb15")
+region = Rect2(4400, 0, 400, 500)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pomq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s07hi")
+}],
+"loop": false,
+"name": &"down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa3mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vxvr")
+}],
+"loop": false,
+"name": &"left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw2s7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47ed1")
+}],
+"loop": false,
+"name": &"right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hksb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgebs")
+}],
+"loop": false,
+"name": &"up",
+"speed": 10.0
+}]

@@ -1,89 +1,10 @@
 [gd_scene format=3 uid="uid://drlpg66pmewg3"]
 
 [ext_resource type="Script" uid="uid://cugbj1yyvn5b" path="res://scripts/player_2.gd" id="1_w0di7"]
-[ext_resource type="Texture2D" uid="uid://dh8y3d14wg43v" path="res://sprites/stupidplaceholderrpg.png" id="2_h305f"]
+[ext_resource type="SpriteFrames" uid="uid://cywhqbvfe32d2" path="res://sprites/spriteframes/player.tres" id="2_w0di7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg10y"]
 size = Vector2(42, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_klcrk"]
-atlas = ExtResource("2_h305f")
-region = Rect2(0, 100, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0pomq"]
-atlas = ExtResource("2_h305f")
-region = Rect2(0, 200, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s07hi"]
-atlas = ExtResource("2_h305f")
-region = Rect2(100, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xa3mv"]
-atlas = ExtResource("2_h305f")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6vxvr"]
-atlas = ExtResource("2_h305f")
-region = Rect2(100, 200, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_47ed1"]
-atlas = ExtResource("2_h305f")
-region = Rect2(200, 200, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tw2s7"]
-atlas = ExtResource("2_h305f")
-region = Rect2(200, 100, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hksb7"]
-atlas = ExtResource("2_h305f")
-region = Rect2(200, 0, 100, 100)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_sg10y"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_klcrk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0pomq")
-}],
-"loop": false,
-"name": &"down",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s07hi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xa3mv")
-}],
-"loop": false,
-"name": &"left",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6vxvr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_47ed1")
-}],
-"loop": false,
-"name": &"right",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tw2s7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hksb7")
-}],
-"loop": false,
-"name": &"up",
-"speed": 15.0
-}]
 
 [node name="player" type="CharacterBody2D" unique_id=1233949163]
 z_as_relative = false
@@ -97,7 +18,8 @@ position = Vector2(0, 22)
 shape = SubResource("RectangleShape2D_sg10y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=649164376]
-sprite_frames = SubResource("SpriteFrames_sg10y")
+scale = Vector2(0.25, 0.25)
+sprite_frames = ExtResource("2_w0di7")
 animation = &"down"
 
 [node name="shoot" type="Timer" parent="." unique_id=1669800557]
