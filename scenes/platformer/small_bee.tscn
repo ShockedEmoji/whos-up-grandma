@@ -58,7 +58,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ys8qj"]
-radius = 14.035668
+radius = 34.0147
 
 [node name="small_bee" type="Area2D" unique_id=495566029]
 position = Vector2(921, 190)

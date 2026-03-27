@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://da3flgkgmdqof"]
 
-[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="1_yb5mm"]
+[ext_resource type="Texture2D" uid="uid://d3kg1mqtq6ste" path="res://sprites/pain.png" id="1_yb5mm"]
 
 [sub_resource type="Curve" id="Curve_yb5mm"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

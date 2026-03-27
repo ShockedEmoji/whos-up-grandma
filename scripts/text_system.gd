@@ -93,8 +93,7 @@ func _say_dialogue(title_name: String):
 			
 			text_printing = false
 			
-			if !text_list[text_list.size() - 1].contains('['):
-				DATA.player_frozen = false
+			DATA.player_frozen = false
 			
 			$"../.."._shut_up_npc()
 			$"../..".dialogue_finished.emit()
@@ -139,7 +138,6 @@ func _load_text(text_to_load: String):
 	# for every letters_before_new_line characters, go back to the last space and replace it with \n
 	# if no space in the last letters_before_new_line characters, add \n after space letters_before_new_line
 	
-	text_to_load = text_to_load.replace('[', '')
 	text_to_load = text_to_load.replace('&', '')
 	text_to_load = text_to_load.replace('|', '\n')
 	

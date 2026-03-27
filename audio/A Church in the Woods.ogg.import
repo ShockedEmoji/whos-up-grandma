@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fwww1bss0xss"
+path="res://.godot/imported/A Church in the Woods.ogg-761b830acc15943c7ca5b01e7bb1ca99.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/A Church in the Woods.ogg"
+dest_files=["res://.godot/imported/A Church in the Woods.ogg-761b830acc15943c7ca5b01e7bb1ca99.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

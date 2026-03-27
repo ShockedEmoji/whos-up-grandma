@@ -260,6 +260,14 @@ func _play_music(song: String):
 			m_path = "res://audio/Bigshot Brendan.ogg"
 			music_high = 1.0
 			loop = true
+		"school":
+			m_path = "res://audio/Highschool Jam.ogg"
+			music_high = 0.8
+			loop = true
+		"church":
+			m_path = "res://audio/A Church in the Woods.ogg"
+			music_high = 0.8
+			loop = true
 	
 	print("playing song ", m_path, "   from input " + song)
 	
@@ -292,6 +300,7 @@ const BUZZOFF = preload("uid://cppa0gw0blm74")
 const FLUNG_AWAY = preload("uid://bxqlbac83poq3")
 const VOICE_BEEP = preload("uid://bl43qfhw2c6b2")
 const SCARY_BOOM = preload("uid://bwnkk33mg4exx")
+const SPLASH = preload("uid://bfs061037gif")
 
 
 func _play_sound(sound: String):
@@ -335,6 +344,9 @@ func _play_sound(sound: String):
 			volume_alter = 0.6
 		"boom":
 			sound_stream = SCARY_BOOM
+			volume_alter = 1.3
+		"splash":
+			sound_stream = SPLASH
 			volume_alter = 1.3
 	
 	var player: AudioStreamPlayer = AudioStreamPlayer.new()
