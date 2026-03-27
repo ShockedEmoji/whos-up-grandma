@@ -133,6 +133,8 @@ func _new_attack():
 				1.0
 			).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_SINE)
 			
+			await tween.finished
+			
 			sprite_2d.play("idle")
 			
 			boss_state = BOSS_STATES.IDLE

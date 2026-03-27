@@ -15,6 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="11_xisa3"]
 [ext_resource type="Texture2D" uid="uid://b8ocy13y43ouj" path="res://sprites/highschool_props/dust.png" id="14_k15a0"]
 [ext_resource type="Texture2D" uid="uid://h4k2eia7hkgu" path="res://sprites/highschool_props/dust_2.png" id="15_y55sv"]
+[ext_resource type="Texture2D" uid="uid://mfaxbsdn3762" path="res://sprites/highschool_props/plastic_sheet_4.png" id="16_otohe"]
+[ext_resource type="Texture2D" uid="uid://b6guo1dypwbl2" path="res://sprites/highschool_props/paint.png" id="16_y55sv"]
+[ext_resource type="Texture2D" uid="uid://fl7altpuw3qe" path="res://sprites/highschool_props/painting.png" id="17_xr3ra"]
+[ext_resource type="Texture2D" uid="uid://c6t8jyvwevyga" path="res://sprites/highschool_props/rooftop_weed_3.png" id="19_fgof0"]
+[ext_resource type="Texture2D" uid="uid://bc51i1iukiclj" path="res://sprites/highschool_props/rooftop_weed_4.png" id="20_w8chn"]
+[ext_resource type="Texture2D" uid="uid://bsukkek7fbr3k" path="res://sprites/highschool_props/rooftop_weed_5.png" id="21_t1wmd"]
+[ext_resource type="Texture2D" uid="uid://c70lcyprb2aln" path="res://sprites/highschool_props/rooftop_weed_2.png" id="22_slxml"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3lpr"]
 texture = ExtResource("3_moa3q")
@@ -399,8 +406,20 @@ position = Vector2(0, 47.916016)
 scale = Vector2(0.25, 0.25)
 
 [node name="aboveprops" type="Node2D" parent="." unique_id=245509154]
-z_index = 1
+z_index = -3
 scale = Vector2(0.25, 0.25)
+
+[node name="Paint" type="Sprite2D" parent="aboveprops" unique_id=411710795]
+position = Vector2(-1052, -2800)
+texture = ExtResource("16_y55sv")
+
+[node name="Painting" type="Sprite2D" parent="aboveprops" unique_id=1332292545]
+position = Vector2(-2672, -2956)
+texture = ExtResource("17_xr3ra")
+
+[node name="PlasticSheet4" type="Sprite2D" parent="aboveprops" unique_id=212740340]
+position = Vector2(-1356, -1200)
+texture = ExtResource("16_otohe")
 
 [node name="dustparticles" type="Node2D" parent="." unique_id=88470152]
 
@@ -523,3 +542,19 @@ tangential_accel_min = -50.0
 tangential_accel_max = 50.0
 scale_amount_min = 0.04
 scale_amount_max = 0.2
+
+[node name="RooftopWeed3" type="Sprite2D" parent="." unique_id=438340703]
+position = Vector2(-228, -1233)
+texture = ExtResource("19_fgof0")
+
+[node name="RooftopWeed4" type="Sprite2D" parent="." unique_id=848199867]
+position = Vector2(-741, -1662)
+texture = ExtResource("20_w8chn")
+
+[node name="RooftopWeed5" type="Sprite2D" parent="." unique_id=1302177953]
+position = Vector2(-747, -964)
+texture = ExtResource("21_t1wmd")
+
+[node name="RooftopWeed2" type="Sprite2D" parent="." unique_id=1159694852]
+position = Vector2(-919, 435)
+texture = ExtResource("22_slxml")

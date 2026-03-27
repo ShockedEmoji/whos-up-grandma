@@ -1,32 +1,32 @@
 [gd_scene format=3 uid="uid://bwvyteks5omhs"]
 
-[ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="1_0dc24"]
+[ext_resource type="Texture2D" uid="uid://cmeq63p70747a" path="res://sprites/mafiaspritesheet.png" id="1_0dc24"]
 [ext_resource type="Script" uid="uid://cx41lgnryl1rw" path="res://scripts/mafiabossnpc.gd" id="2_0dc24"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2qiym"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a50nt"]
 atlas = ExtResource("1_0dc24")
-region = Rect2(1600, 1600, 400, 400)
+region = Rect2(0, 826, 672, 826)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d32kj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u17h"]
 atlas = ExtResource("1_0dc24")
-region = Rect2(2000, 0, 400, 400)
+region = Rect2(672, 826, 672, 826)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3tlad"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hharm"]
 atlas = ExtResource("1_0dc24")
-region = Rect2(2000, 400, 400, 400)
+region = Rect2(0, 0, 672, 826)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vttku"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cued"]
 atlas = ExtResource("1_0dc24")
-region = Rect2(2000, 800, 400, 400)
+region = Rect2(672, 0, 672, 826)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xgefk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2qiym")
+"texture": SubResource("AtlasTexture_a50nt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d32kj")
+"texture": SubResource("AtlasTexture_1u17h")
 }],
 "loop": true,
 "name": &"idle",
@@ -34,10 +34,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3tlad")
+"texture": SubResource("AtlasTexture_hharm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vttku")
+"texture": SubResource("AtlasTexture_2cued")
 }],
 "loop": true,
 "name": &"talk",
@@ -45,10 +45,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cp61h"]
-radius = 120.90514
+radius = 175.1983
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d3568"]
-radius = 229.31812
+radius = 321.509
 
 [node name="mafiaboss" type="AnimatedSprite2D" unique_id=1135864980]
 z_as_relative = false
@@ -56,7 +56,7 @@ y_sort_enabled = true
 texture_filter = 1
 scale = Vector2(0.24000001, 0.24)
 sprite_frames = SubResource("SpriteFrames_xgefk")
-animation = &"idle"
+animation = &"talk"
 script = ExtResource("2_0dc24")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1807790511]

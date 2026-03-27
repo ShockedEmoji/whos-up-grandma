@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://l27nfo2j53bw" path="res://scenes/top_down/neo_boss.tscn" id="10_5cixg"]
 [ext_resource type="PackedScene" uid="uid://drlpg66pmewg3" path="res://scenes/top_down/player_2.tscn" id="11_oh1o4"]
 [ext_resource type="PackedScene" uid="uid://bfbucd0usre1o" path="res://scenes/platformer/hazard.tscn" id="12_x356q"]
+[ext_resource type="Texture2D" uid="uid://b8ocy13y43ouj" path="res://sprites/highschool_props/dust.png" id="15_kavq3"]
+[ext_resource type="Texture2D" uid="uid://h4k2eia7hkgu" path="res://sprites/highschool_props/dust_2.png" id="16_c65a3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g1wnd"]
 texture = ExtResource("2_cyq5a")
@@ -376,3 +378,95 @@ z_index = -26
 position = Vector2(908, 298)
 scale = Vector2(12.120104, 12.120104)
 texture = ExtResource("2_x356q")
+
+[node name="dustparticles" type="Node2D" parent="." unique_id=1935431298]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="dustparticles" unique_id=429892915]
+position = Vector2(260, 205)
+texture = ExtResource("15_kavq3")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="dustparticles" unique_id=1989237752]
+position = Vector2(262, 572)
+texture = ExtResource("16_c65a3")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="dustparticles" unique_id=698056962]
+position = Vector2(674, 205)
+texture = ExtResource("15_kavq3")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="dustparticles" unique_id=822872953]
+position = Vector2(676, 572)
+texture = ExtResource("16_c65a3")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="dustparticles" unique_id=97243080]
+position = Vector2(1116, 205)
+texture = ExtResource("15_kavq3")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="dustparticles" unique_id=270407875]
+position = Vector2(1118, 572)
+texture = ExtResource("16_c65a3")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(200, 200)
+spread = 104.7
+gravity = Vector2(0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 40.0
+tangential_accel_min = -50.0
+tangential_accel_max = 50.0
+scale_amount_min = 0.04
+scale_amount_max = 0.2

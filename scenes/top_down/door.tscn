@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://d1gtsxrfmu2a3"]
 
 [ext_resource type="Script" uid="uid://da4uvl4js4356" path="res://scripts/door.gd" id="1_t74r1"]
-[ext_resource type="Texture2D" uid="uid://dmb3to5i4vf4u" path="res://sprites/icon.svg" id="2_c6173"]
+[ext_resource type="Texture2D" uid="uid://c1hgehna7gfar" path="res://sprites/fencelocked.png" id="2_c6173"]
+[ext_resource type="Texture2D" uid="uid://bnssd3s7ho16y" path="res://sprites/fenceunlocked.png" id="3_vnh4s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t74r1"]
 animations = [{
@@ -15,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_c6173")
+"texture": ExtResource("3_vnh4s")
 }],
 "loop": true,
 "name": &"open",
@@ -32,7 +33,7 @@ size = Vector2(116, 88)
 script = ExtResource("1_t74r1")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1698370873]
-scale = Vector2(0.921875, 0.390625)
+scale = Vector2(0.30463573, 0.30463576)
 sprite_frames = SubResource("SpriteFrames_t74r1")
 animation = &"closed"
 
