@@ -13,7 +13,7 @@ config_version=5
 config/name="Life on the edge"
 run/main_scene="uid://2lpyj70ogi8c"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://dgh6fsddkgs57"
+config/icon="uid://bgu8xb0q4kd2e"
 
 [autoload]
 

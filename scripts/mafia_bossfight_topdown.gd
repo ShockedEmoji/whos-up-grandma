@@ -226,10 +226,9 @@ func _new_attack():
 			await get_tree().create_timer(1.0).timeout
 			await text_system._say_dialogue("mafia defeat")
 			
-			DATA.post_transition_player_pos = Vector2(400.0, 200)
-			DATA.mafia_killed = true
-			$".."._play_music("waterfront")
-			$".."._fade_transition("top_down/waterfront", 0.2, 0, 3, $Camera2D)
+			DATA.post_transition_player_pos = Vector2(168, -32)
+			$".."._play_music("school")
+			$".."._fade_transition("top_down/school", 0.5, 1.0, 0.5, $Camera2D)
 
 var npc_to_shut_up: AnimatedSprite2D = null
 

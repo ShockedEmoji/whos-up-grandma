@@ -12,7 +12,7 @@ const MAFIA_BULLET = preload("uid://d3gg5o6nym2cu")
 @onready var text_system: Node2D = $text_system/text_system
 
 
-var touching_legal = true
+var touching_legal = false
 
 func _reduce_health():
 	if touching_legal:
@@ -30,6 +30,8 @@ func _ready() -> void:
 	DATA.root._stop_music()
 	
 	await text_system._say_dialogue("neo fight intro")
+	
+	texture_progress_bar.value = 1000
 	
 	DATA.root._play_music("brendan fight")
 	
@@ -309,17 +311,26 @@ func _new_attack():
 			await get_tree().create_timer(1.0).timeout
 			await text_system._say_dialogue("brendan defeat")
 			
-			DATA.post_transition_player_pos = Vector2(400.0, 200)
-			DATA.mafia_killed = true
-			$".."._play_music("waterfront")
-			$".."._fade_transition("top_down/waterfront", 0.2, 0, 3, $Camera2D)
+			await get_tree().create_timer(1.0).timeout
+			
+			DATA.root._play_sound("brendan boom")
+			
+			tween = create_tween()
+			tween.tween_property(boss, "position:y", -500, 0.5).set_trans(Tween.TRANS_LINEAR)
+			await get_tree().create_timer(2.0).timeout
+			
+			DATA.post_transition_player_pos = Vector2(566, 2177)
+			$".."._play_music("final area")
+			$".."._fade_transition("top_down/final_area", 0.5, 1.0, 0.5, $Camera2D)
+			
+			await get_tree().create_timer(2.0).timeout
 	
 	_new_attack()
 
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 
-var bullet_damage: int = 8
+var bullet_damage: int = 80
 
 var dying: bool = false
 

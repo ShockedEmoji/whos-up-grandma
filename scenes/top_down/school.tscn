@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://its1f8lh1v44" path="res://scripts/wall_dissapear.gd" id="4_7hxw8"]
 [ext_resource type="PackedScene" uid="uid://d1gtsxrfmu2a3" path="res://scenes/top_down/door.tscn" id="5_yfiuj"]
 [ext_resource type="PackedScene" uid="uid://dfmomiw8cxqn2" path="res://scenes/top_down/key.tscn" id="6_d5glq"]
+[ext_resource type="PackedScene" uid="uid://dq0yltl1yj71i" path="res://scenes/top_down/area_transition.tscn" id="7_f48u0"]
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="7_ohtfh"]
 [ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="8_0gdwh"]
 [ext_resource type="Texture2D" uid="uid://crnmrxwcjqx1f" path="res://sprites/npc_spritesheet_1.png" id="9_kh7ls"]
@@ -32,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ocy13y43ouj" path="res://sprites/highschool_props/dust.png" id="29_10ybh"]
 [ext_resource type="Texture2D" uid="uid://h4k2eia7hkgu" path="res://sprites/highschool_props/dust_2.png" id="30_uhait"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhait"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f48u0"]
 texture = ExtResource("3_uuomv")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
@@ -103,7 +104,10 @@ texture_region_size = Vector2i(400, 400)
 [sub_resource type="TileSet" id="TileSet_3dnpt"]
 tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 2
-sources/0 = SubResource("TileSetAtlasSource_uhait")
+sources/0 = SubResource("TileSetAtlasSource_f48u0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xesw"]
+size = Vector2(104, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e63eq"]
 atlas = ExtResource("9_kh7ls")
@@ -175,7 +179,7 @@ scale = Vector2(18.200848, 12.875913)
 texture = ExtResource("2_p4gxv")
 
 [node name="TileMapLayerGround" type="TileMapLayer" parent="." unique_id=1217575540]
-z_index = -2
+z_index = -3
 position = Vector2(-29, -37)
 scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AAD//wAAAAAGAAMAAAD//wEAAAAGAAMAAAD//wIAAAAGAAMAAAAAAAAAAAAGAAMAAAAAAAEAAAAGAAMAAAAAAAIAAAAGAAMAAAABAAAAAAAGAAMAAAABAAEAAAAGAAMAAAABAAIAAAAGAAMAAAACAAAAAAAGAAMAAAACAAEAAAAGAAMAAAACAAIAAAAGAAMAAAADAAAAAAAGAAMAAAADAAEAAAAGAAMAAAADAAIAAAAGAAMAAAAEAAAAAAAGAAMAAAAEAAEAAAAGAAMAAAAEAAIAAAAGAAMAAAAOAAIAAAABAAUAAAANAAIAAAABAAUAAAAMAAIAAAABAAUAAAALAAIAAAABAAUAAAAKAAIAAAABAAUAAAAKAAEAAAABAAUAAAALAAEAAAABAAUAAAAMAAEAAAABAAUAAAANAAEAAAABAAUAAAAOAAEAAAABAAUAAAAKAAAAAAABAAUAAAALAAAAAAABAAUAAAAMAAAAAAABAAUAAAANAAAAAAABAAUAAAAOAAAAAAABAAUAAAAOAP//AAABAAUAAAANAP//AAABAAUAAAAMAP//AAABAAUAAAALAP//AAABAAUAAAAKAP//AAABAAUAAAAJAP//AAABAAUAAAAJAAAAAAABAAUAAAAJAAEAAAABAAUAAAAJAAIAAAABAAUAAAA=")
@@ -235,27 +239,39 @@ tile_set = SubResource("TileSet_3dnpt")
 [node name="everything else" type="Node2D" parent="." unique_id=1803871574]
 y_sort_enabled = true
 
+[node name="area_transition" parent="everything else" unique_id=1546945762 node_paths=PackedStringArray("camera_node") instance=ExtResource("7_f48u0")]
+position = Vector2(-203, 177)
+new_area_scene_path = "top_down/school_2"
+camera_node = NodePath("../../Camera2D")
+new_player_position = Vector2(-360, 232)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="everything else/area_transition" unique_id=699625861]
+shape = SubResource("RectangleShape2D_3xesw")
+
 [node name="player" parent="everything else" unique_id=1233949163 instance=ExtResource("7_ohtfh")]
+position = Vector2(168, -32)
 
 [node name="AreaCollision" type="StaticBody2D" parent="everything else" unique_id=1282704449]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="everything else/AreaCollision" unique_id=885150586]
-polygon = PackedVector2Array(-130.44513, 261.97678, -439.71136, 263.3395, -440.00104, 304.9063, -603.3485, 308.50818, -618.3847, 263.5924, -729.55493, 264.39255, -728.7497, 461.68002, 471.0805, 460.8747, 469.47003, 485.83765, -758.54395, 493.8902, -753.71246, 235.40332, -129.6399, -72.20407, 510.53802, -77.03549, 505.70648, 261.97693, 467.85956, 262.78217, 470.27533, -39.188477, -129.63974, -34.356964)
+polygon = PackedVector2Array(-129, 263, -141, 263, -142, 126, -265, 125, -262.06308, 262.55676, -439.71136, 263.3395, -440.00104, 304.9063, -603.3485, 308.50818, -618.3847, 263.5924, -729.55493, 264.39255, -728.7497, 461.68002, 1571, 463, 1574, 492, -758.54395, 493.8902, -753.71246, 235.40332, -129, -155, 511, -157, 886, -328, 1466, -328, 1462.0527, 61.46147, 1681, 261, 1607, 464, 1571, 459, 1569.5723, 262.51257, 1460, 264, 1444, 265, 1450, -139, 881, -137, 882, 250, 1298, 252, 1297, 262, 467.85956, 262.78217, 470.27533, -39.188477, 248, -39, 95, -37, -129.63974, -34.356964)
 
 [node name="door" parent="everything else" unique_id=736313575 instance=ExtResource("5_yfiuj")]
-position = Vector2(172.475, -242.525)
+position = Vector2(-202, 240)
 locked_dialogue = "locked door 1"
 open_dialogue = "unlocked door 1"
 
 [node name="key" parent="everything else" unique_id=1135864980 node_paths=PackedStringArray("door_to_open") instance=ExtResource("6_d5glq")]
-position = Vector2(650, -212.99998)
+z_index = -3
+position = Vector2(976, 143)
 dialogue = "key 1"
 door_to_open = NodePath("../door")
 
 [node name="npc2" parent="everything else" unique_id=504357653 instance=ExtResource("8_0gdwh")]
-position = Vector2(1366, -58)
+position = Vector2(-643, 388.00003)
 sprite_frames = SubResource("SpriteFrames_uuomv")
 animation = &"talk"
+flip_h = true
 dialogue = "school wasp"
 
 [node name="ShoeStorage" type="Sprite2D" parent="everything else" unique_id=1268215809]

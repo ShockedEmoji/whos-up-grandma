@@ -15,13 +15,13 @@ func _ready() -> void:
 	area_2d.body_entered.connect(_body_entered)
 	area_2d.body_exited.connect(_body_exited)
 
-func _body_entered(body: CharacterBody2D) -> void:
+func _body_entered(body) -> void:
 	if body.name == "player":
 		player_node = body
 		print("hey you can interact!")
 		penetrated_by_player = true
 
-func _body_exited(body: CharacterBody2D) -> void:
+func _body_exited(body) -> void:
 	if body.name == "player":
 		print("hey you can  not  interact!")
 		penetrated_by_player = false

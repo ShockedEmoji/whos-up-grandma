@@ -6,15 +6,8 @@ var where_to_send_player: Vector2 = Vector2.ZERO
 var barrel_direction: Vector2
 
 var speed: float = 200
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var spash: AudioStreamPlayer2D = $spash
 
 
-func _ready() -> void:
-	await get_tree().process_frame
-	
-	audio_stream_player_2d.volume_linear = DATA.master_volume * DATA.sound_volume
-	spash.volume_linear = DATA.master_volume * DATA.sound_volume * 2
 
 var rolling = true
 
@@ -26,7 +19,6 @@ func _process(delta: float) -> void:
 			lifetime -= delta
 		else: 
 			rolling = false
-			spash.play()
 			var tween: Tween = create_tween()
 			
 			tween.tween_property(self, "modulate:a", 0, 1.0)

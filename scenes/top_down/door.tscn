@@ -23,16 +23,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t74r1"]
-size = Vector2(266, 326)
+size = Vector2(116, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6173"]
-size = Vector2(398, 468)
+size = Vector2(116, 88)
 
 [node name="door" type="Node2D" unique_id=736313575]
 script = ExtResource("1_t74r1")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1698370873]
-scale = Vector2(2.09375, 2.625)
+scale = Vector2(0.921875, 0.390625)
 sprite_frames = SubResource("SpriteFrames_t74r1")
 animation = &"closed"
 

@@ -47,11 +47,11 @@ func _ready():
 	
 	#_change_scene("menu/main_menu")
 	#_change_scene("menu/credits")
-	_change_scene("top_down/grandma_house")
-	#_change_scene("top_down/school")
+	#_change_scene("top_down/grandma_house")
+	#_change_scene("top_down/school_3")
 	#_change_scene("top_down/final_area")
 	#_change_scene("top_down/waterfront")
-	#_change_scene("top_down/neo_bossfight")
+	_change_scene("top_down/neo_bossfight")
 	#_change_scene("platformer/final_bossfight")
 	#_change_scene("top_down/mafia_bossfight")
 	
@@ -301,6 +301,7 @@ const FLUNG_AWAY = preload("uid://bxqlbac83poq3")
 const VOICE_BEEP = preload("uid://bl43qfhw2c6b2")
 const SCARY_BOOM = preload("uid://bwnkk33mg4exx")
 const SPLASH = preload("uid://bfs061037gif")
+const BRENDAN_BOOM = preload("uid://b7qw1wcptgb68")
 
 
 func _play_sound(sound: String):
@@ -348,6 +349,9 @@ func _play_sound(sound: String):
 		"splash":
 			sound_stream = SPLASH
 			volume_alter = 1.3
+		"brendan boom":
+			sound_stream = BRENDAN_BOOM
+			volume_alter = 1.0
 	
 	var player: AudioStreamPlayer = AudioStreamPlayer.new()
 	player.stream = sound_stream
