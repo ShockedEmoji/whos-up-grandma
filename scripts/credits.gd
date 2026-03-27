@@ -35,6 +35,5 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(3.0).timeout
 	
-	DATA.root._play_music("menu")
 	DATA._reset_data()
 	DATA.root._fade_transition("menu/main_menu")

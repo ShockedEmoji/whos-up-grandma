@@ -47,8 +47,8 @@ func _ready():
 	
 	#_change_scene("menu/main_menu")
 	#_change_scene("menu/credits")
-	#_change_scene("top_down/grandma_house")
-	_change_scene("top_down/school")
+	_change_scene("top_down/grandma_house")
+	#_change_scene("top_down/school")
 	#_change_scene("top_down/final_area")
 	#_change_scene("top_down/waterfront")
 	#_change_scene("top_down/neo_bossfight")
@@ -241,9 +241,9 @@ func _play_music(song: String):
 			music_high = 1.0
 			loop = true
 		"credits":
-			m_path = "res://audio/Waterfront.ogg"
+			m_path = "res://audio/Credits 2.ogg"
 			music_high = 1.0
-			loop = true
+			loop = false
 		"final area":
 			m_path = "res://audio/Dark maze.ogg"
 			music_high = 1.0

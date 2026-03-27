@@ -18,10 +18,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0, 718)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-610, 146)]
+}
 
 [sub_resource type="Animation" id="Animation_2ckv8"]
 resource_name = "scroll"
-length = 20.0
+length = 30.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -29,10 +41,22 @@ tracks/0/path = NodePath("scroll:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 20),
+"times": PackedFloat32Array(0, 29.866667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 718), Vector2(0, -557)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(16.898415, 17.279583),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-610, 146), Vector2(1232, 146)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0ctdu"]
@@ -49,6 +73,18 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(672.9999, 307.99997)
 scale = Vector2(5.8, 5.8)
 texture = ExtResource("3_0l22u")
+
+[node name="Label2" type="Label" parent="." unique_id=1647819096]
+offset_left = -610.0
+offset_top = 146.0
+offset_right = -22.0
+offset_bottom = 253.0
+theme_override_fonts/font = ExtResource("2_ff4am")
+theme_override_font_sizes/font_size = 34
+text = "Jasmine Penelope Craw was also slightly here but didn't help at all"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="scroll" type="Node2D" parent="." unique_id=1515170874]
 position = Vector2(0, 718)

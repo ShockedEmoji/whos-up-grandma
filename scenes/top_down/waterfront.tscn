@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://dyud3i0co0y4v" path="res://sprites/wharf_props/dead_fish_3.png" id="33_1yccd"]
 [ext_resource type="Texture2D" uid="uid://ba30bpw2b6ar4" path="res://sprites/wharf_props/fish_crate_2.png" id="34_ms64r"]
 [ext_resource type="Texture2D" uid="uid://cug4i3aiyjd6m" path="res://sprites/wharf_props/wharf_entrance.png" id="37_1yccd"]
+[ext_resource type="Texture2D" uid="uid://bt772cpj71avu" path="res://sprites/mist.png" id="42_pcs5j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms64r"]
 texture = ExtResource("3_0sbdo")
@@ -188,6 +189,36 @@ size = Vector2(207.31604, 261.71063)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkoei"]
 size = Vector2(290, 104)
+
+[sub_resource type="Gradient" id="Gradient_pcs5j"]
+offsets = PackedFloat32Array(0, 0.4848485, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.32156864, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4mevt"]
+gradient = SubResource("Gradient_pcs5j")
+
+[sub_resource type="Curve" id="Curve_pcs5j"]
+_data = [Vector2(0, 0.39325845), 0.0, 0.0, 0, 0, Vector2(0.20982143, 0.6292135), 0.0, 0.0, 0, 0, Vector2(0.8526786, 0.61797756), 0.0, 0.0, 0, 0, Vector2(1, 0.43820232), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_4mevt"]
+curve = SubResource("Curve_pcs5j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pcs5j"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(17.025, 0, 0)
+emission_shape_scale = Vector3(4000, 5000, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -4.730002
+linear_accel_max = -0.9200022
+radial_accel_min = -8.440002
+radial_accel_max = -3.6300023
+scale_min = 0.29999998
+scale_max = 0.79999995
+scale_curve = SubResource("CurveTexture_4mevt")
+color_ramp = SubResource("GradientTexture1D_4mevt")
 
 [node name="tutorial2" type="Node2D" unique_id=1000960487]
 script = ExtResource("1_j7hsf")
@@ -637,3 +668,12 @@ polygon = PackedVector2Array(1, 1, 401, 1, 410, 28, 438, 35, 483, -28, 626, -43,
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2136646802]
 position = Vector2(-250, 46)
 polygon = PackedVector2Array(0, -1, 104, -2, 105, 97, 405, 97, 407, 197, 799, 195, 799, 355, -5, 361)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1468523917]
+z_index = 144
+position = Vector2(1341, -2068)
+amount = 50
+texture = ExtResource("42_pcs5j")
+preprocess = 30.0
+visibility_rect = Rect2(-5000, -5000, 10000, 10000)
+process_material = SubResource("ParticleProcessMaterial_pcs5j")

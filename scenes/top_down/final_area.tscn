@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://c60dra31y8xc5" path="res://sprites/stupid/edwardkissaer.png" id="2_hpgxd"]
 [ext_resource type="Texture2D" uid="uid://cend41sphinm7" path="res://sprites/grass_tileset.png" id="3_po684"]
 [ext_resource type="Texture2D" uid="uid://46fmc7ky8dul" path="res://sprites/stupidplaceholdertilemap.png" id="4_am5x4"]
-[ext_resource type="Texture2D" uid="uid://cv86a3hornoly" path="res://sprites/black_gradient.png" id="5_vpa4w"]
 [ext_resource type="PackedScene" uid="uid://w534xn3qlh5f" path="res://scenes/top_down/player.tscn" id="7_edxpv"]
 [ext_resource type="PackedScene" uid="uid://u5ukks8as8hi" path="res://scenes/top_down/npc.tscn" id="8_fkfjb"]
 [ext_resource type="Texture2D" uid="uid://blqwrs3wk4f1e" path="res://sprites/npc_spritesheet_2.png" id="9_3s0us"]
@@ -485,13 +484,6 @@ position = Vector2(613, 2937)
 rotation = 1.5707964
 scale = Vector2(5.16, 2.8533335)
 texture = ExtResource("4_am5x4")
-
-[node name="BlackGradient" type="Sprite2D" parent="everything else" unique_id=2089439021]
-z_index = 5
-position = Vector2(585, 1882.9999)
-rotation = 3.1415927
-scale = Vector2(1, 1.41)
-texture = ExtResource("5_vpa4w")
 
 [node name="player" parent="everything else" unique_id=1233949163 instance=ExtResource("7_edxpv")]
 z_as_relative = true
