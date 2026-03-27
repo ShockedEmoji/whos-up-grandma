@@ -233,8 +233,8 @@ func _play_music(song: String):
 			music_high = 1.0
 			loop = true
 		"mafia fight":
-			m_path = "res://audio/Flight of the Killer B.ogg"
-			music_high = 1.0
+			m_path = "res://audio/Here comes the Boss.ogg"
+			music_high = 0.6
 			loop = true
 		"waterfront":
 			m_path = "res://audio/Waterfront.ogg"
@@ -257,7 +257,7 @@ func _play_music(song: String):
 			music_high = 1.0
 			loop = false
 		"brendan fight":
-			m_path = "res://audio/Bigshot Brendan.ogg"
+			m_path = "res://audio/Bigshot Brendan v2.ogg"
 			music_high = 1.0
 			loop = true
 		"school":
